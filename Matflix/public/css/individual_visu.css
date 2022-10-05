@@ -1,0 +1,44 @@
+html{
+    font-family: 'Bebas Neue';
+}
+
+body{
+    background-color: #666262;
+    color: #1d1a1a;
+}
+
+#main{
+    background-color: #221F1F;
+    color: #d7d7d7;
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    box-shadow:  5px 10px #0000;
+}
+
+#title {
+    color: #AF0C19;
+    font-size: 55px;
+    text-align: justify;
+    font-weight: bold;
+    padding: 20px;
+}
+
+#logo-min{
+    padding: 0px;
+    margin-bottom: 10px;
+}
+
+#back {
+    font-family: 'Bebas Neue';
+    background-color: #AF0C19;
+    color:#666262;
+    margin: 5px;
+}
+#back:hover {
+    background-color: #666262;
+    color: #AF0C19;
+    
+}
+
+
