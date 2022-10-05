@@ -28,6 +28,7 @@ body{
 #logo-min{
     padding: 0;
     margin-bottom: 10px;
+    width:50px;
 }
 
 #back {
@@ -41,5 +42,16 @@ body{
     color: #AF0C19;
     
 }
+
+@media only screen and (max-width: 600px) {
+    #title {
+        font-size: 30px;
+    }
+    #logo-min{
+        width:30px;
+    }
+}
+    
+
 
 
