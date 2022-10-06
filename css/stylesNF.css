@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2? family= Bebas+Neue & display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Bebas Neue', 'cursiva';
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+.navbar-container {
+    background-color: #221F1F;
+}
+
+.navbar-container img {
+    margin-right: 10px;
+    width: 70px;
+    height: 70px;
+    border-radius: 5px;
+}
+
+.navbar-links {
+    justify-content: right;
+}
+
+.navbar-links li {
+    padding: 10px;
+    font-size: 1.1rem;
+}
+
+.navbar-container a, .navbar-links a {
+    color: #d7d7d7;
+}
+
+.navbar-container a:hover, .navbar-links a:hover {
+    color: #d7d7d7;
+}
+
+.navbar-container a:focus, .navbar-links a:focus {
+    color: #d7d7d7;
+}
