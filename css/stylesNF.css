@@ -13,6 +13,12 @@ body {
     overflow-x: hidden;
 }
 
+.page-container {
+    position: relative;
+    min-height: 100vh;
+    background-color: #000;
+}
+
 /* NAVBAR */
 .navbar-container {
     background-color: #221F1F;
@@ -20,8 +26,8 @@ body {
 
 .navbar-container img {
     margin-right: 10px;
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     border-radius: 5px;
 }
 
@@ -43,5 +49,37 @@ body {
 }
 
 .navbar-container a:focus, .navbar-links a:focus {
+    color: #d7d7d7;
+}
+
+/* CONTEÚDO */
+.page-content {
+    padding-bottom: 4rem;
+}
+ 
+/* FOOTER */
+footer {
+    width: 100%;
+    height: 4rem; 
+    position: absolute;
+    bottom: 0;
+    background-color: #221F1F;
+}
+
+.footer-container {
+    width: auto;
+    height: auto;
+}
+
+footer h3 {
+    margin-top: 10px;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer p{
+    margin-bottom: 0;
     color: #d7d7d7;
 }
