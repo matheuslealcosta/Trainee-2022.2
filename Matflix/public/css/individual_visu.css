@@ -72,21 +72,22 @@ body{
     transition: ease-in-out 0.32s;
 }
 
+
+@media only screen and (max-width: 1000px) {
+    #title {
+        font-size: 35px;
+    }
+    #logo-min{
+        width:35px;
+    }
+}
+
 @media only screen and (max-width: 600px) {
     #title {
         font-size: 30px;
     }
     #logo-min{
         width:30px;
-    }
-}
-
-@media only screen and (max-width: 980px) {
-    #title {
-        font-size: 35px;
-    }
-    #logo-min{
-        width:35px;
     }
 }
 
