@@ -2,42 +2,33 @@ body {
     background-color: #221F1F;
 }
 
-.logomatflix{
+.carousel-here{
     display: inline-block;
-    margin-left: 34%;
+    padding: 0%;
+    width: 70%;
+    margin-top:10%;
+    margin-left: 5%;
 }
-.logomatflix img{
+
+.line1 {
     width: 100%;
+    border-top: 1px solid red;
+    padding: 0;
+    padding-top: 0%;
+    height: 2px;
+    margin-top: 3%;
+    margin-bottom: 1%;
 }
 
-.texto1 {
-    width: 30%;
-    display: inline-block;
-    margin-left: 8%;
-}
-
-
-.logospotify2{
-    display: inline-block;
-    margin-left: 27%;
-}
-.logospotify2 img{
-    width: 100%;
-}
-
-.texto2 {
-    width: 40%;
-    margin-top: 0%;
-    display: inline-block;
-    margin-left: 8%;
-}
-
+/*cardsultimosposts */
 
 .ultposts {
     width: 40%;
+    padding: 0;
     margin-top: 0%;
     display: inline-block;
-    margin-left: 8%;
+    margin-left: 5%;
+    margin-bottom: 3%;
 }
 .ultposts h1{
     text-align: left;
@@ -46,72 +37,82 @@ body {
     color: white;
 }
 .cartas{
+
+    padding: 0%;
     display: flex;
     justify-content: center;
 }
+.card-title{
+    color: #E21221;
+}
+.btn-primary{
+    border-radius: 20px;
+    border: 1px solid transparent;
+    transition: .5s;
+    background-color: #E21221;
+    color: white;
+    border-color: #E21221;
+    font-family: 'Bebas Neue', cursive;
+    text-transform: uppercase;
+}
+.btn-primary:hover{
+    color: #d7d7d7;
+    background-color: transparent;
+    border-color: #E21221;
 
-.carousel-here{
-    display: inline-block;
-    padding: 0%;
-    width: 70%;
-    margin-top:10%;
+}
+.card{
+    background: #221F1F;
+    color: #d7d7d7;
     margin-left: 5%;
-    
-
-
+}
+.card:hover{
+    transform:scale3d(1.1, 1.1, 1)
 }
 
 
-
-
-
-
-
-
-
-
-.line1 {
-
-    width: 100%;
-    border-top: 1px solid red;
-    padding: 0;
-    padding-top: 0%;
-    height: 2px;
-    margin-top: 3%;
-    margin-bottom: 2%;
+  /*   */
+  .juntspotify{
+    display: flex;
+    justify-content:space-between;
 }
+.logospotify2{
+    margin-right: 10%;
 
- .texto1 h1{
-    padding-bottom: -20%;
+}
+.logospotify2:hover{
+    transform:scale3d(1.1, 1.1, 15)
+}
+.texto2spotify h1{
+    padding-left: 15%;
     text-align: center;
     margin-top: 15%;
     font-family: 'Bebas Neue', cursive;
     color: white;
+ }
+/*  */
+.juntdiscord{
+    display: flex;
+    justify-content:space-between;
 }
-
-.texto2 h1{
-    text-align: center;
-    margin-top: 15%;
-    font-family: 'Bebas Neue', cursive;
-    color: white;
-}
-
-.texto3 {
-    width: 30%;
-    display: inline-block;
-    margin-left: 8%;
-}
-.texto3 h1{
-    text-align: center;
-    margin-top: 15%;
-    font-family: 'Bebas Neue', cursive;
-    color: white;
-}
-
 .logodiscord{
-    display: inline-block;
-    margin-left: 37.5%;
+    margin-right: 10%;
 }
-.logosdiscord img{
-    width: 100%;
+
+.logodiscord:hover{
+    transform:scale3d(1.1, 1.1, 5)
 }
+
+.texto3discord h1{
+    padding-left: 15%;
+    text-align: center;
+    margin-top: 15%;
+    font-family: 'Bebas Neue', cursive;
+    color: white;
+}
+
+
+
+
+
+
