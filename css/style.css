@@ -2,506 +2,100 @@ body {
     background-color: #221F1F;
 }
 
+.logomatflix{
+    display: inline-block;
+    margin-left: 34%;
+}
+.logomatflix img{
+    width: 100%;
+}
+
+.texto1 {
+    width: 30%;
+    display: inline-block;
+    margin-left: 8%;
+}
+
+
+.logospotify2{
+    display: inline-block;
+    margin-left: 27%;
+}
+.logospotify2 img{
+    width: 100%;
+}
+
+.texto2 {
+    width: 40%;
+    margin-top: 0%;
+    display: inline-block;
+    margin-left: 8%;
+}
+
+
+
+
+
 .carousel-here{
-    margin-top:-10rem;
-    margin-bottom: 5rem;
-    margin-left: 0rem;
-    justify-content: left;
+    padding: 0%;
+    width: 100%;
+    margin-top:10%;
+    margin-left: 0%;
+    
+
 
 }
-.container{
-    width: 50%;
-    margin-left: 10%;
-    float: left;
+
+
+.container {
+    display: inline-block;
 }
 
-.text {
+
+
+
+
+
+
+.line1 {
+
+    width: 100%;
+    border-top: 1px solid red;
+    padding: 0;
+    height: 2px;
+    margin-top: 3%
+}
+
+ .texto1 h1{
+    text-align: center;
+    margin-top: 15%;
     font-family: 'Bebas Neue', cursive;
     color: white;
 }
 
-@media screen and (min-width: 900px) 
-{
-
-    .text h1
-    {
-        width: 89%;
-        font-size: 4rem;
-        background-color: #AF0C19;
-        margin-left: 10.9%;
-        
-        margin-top: 5%;
-        margin-bottom: 12rem;
-    }
-}
-
-@media screen and (min-width: 690px) and (max-width: 899px)
-{
-
-    .text h1
-    {
-        width: 89%;
-        font-size: 3rem;
-        background-color: #AF0C19;
-        margin-left: 10.9%;
-        
-        margin-top: 5%;
-        margin-bottom: 12rem;
-    }
-}
-
-@media screen and (min-width: 500px) and (max-width: 689px)
-{
-
-    .text h1
-    {
-        width: 89%;
-        font-size: 2rem;
-        background-color: #AF0C19;
-        margin-left: 10.9%;
-        
-        margin-top: 5%;
-        margin-bottom: 12rem;
-    }
-}
-
-
-
-
-@media screen and (min-width: 1350px) 
-{
-    .btn{
-        display:inline-block;
-        font-weight: 300;
-        background-color: #fefefe;
-        font-family: 'Bebas Neue', cursive;
-        font-size: 150%;
-        color: rgb(0, 0, 0);
-    
-        padding: 10%px;
-        text-align: center;
-        transform: translate(-3rem,15rem);
-        border-radius: 0%;
-        position: absolute;
-        width: 10%;
-        margin-top: -10rem;
-        margin-left: 63%;
-        }
-}
-
-@media screen and (min-width: 1264px) and (max-width: 1349px) 
-{
-    .btn{
-        display:inline-block;
-        font-weight: 300;
-        background-color: #fefefe;
-        font-family: 'Bebas Neue', cursive;
-        font-size: 150%;
-        color: rgb(0, 0, 0);
-    
-        padding: 10%px;
-        text-align: center;
-        transform: translate(-3rem,15rem);
-        border-radius: 0%;
-        position: absolute;
-        width: 10%;
-        margin-top: -10rem;
-        margin-left: 63%;
-        }
-}
-
-@media screen and (min-width: 1080px) and (max-width: 1263px) 
-{
-    .btn{
-        display:inline-block;
-        font-weight: 300;
-        background-color: #fefefe;
-        font-family: 'Bebas Neue', cursive;
-        font-size: 150%;
-        color: rgb(0, 0, 0);
-    
-        padding: 10%px;
-        text-align: center;
-        transform: translate(-3rem,15rem);
-        border-radius: 0%;
-        position: absolute;
-        width: 10%;
-        margin-top: -10rem;
-        margin-left: 64%;
-        }
-}
-@media screen and (min-width: 1020px) and (max-width: 1079px) 
-{
-    .btn{
-        display:inline-block;
-        font-weight: 300;
-        background-color: #fefefe;
-        font-family: 'Bebas Neue', cursive;
-        font-size: 150%;
-        color: rgb(0, 0, 0);
-    
-        padding: 10%px;
-        text-align: center;
-        transform: translate(-3rem,15rem);
-        border-radius: 0%;
-        position: absolute;
-        width: 10%;
-        margin-top: -11rem;
-        margin-left: 64%;
-        }
-}
-
-@media screen and (min-width: 800px) and (max-width: 1020px) 
-{
-    .btn{
-        display:inline-block;
-        font-weight: 300;
-        background-color: #fefefe;
-        font-family: 'Bebas Neue', cursive;
-        font-size: 150%;
-        color: rgb(0, 0, 0);
-    
-        padding: 10%px;
-        text-align: center;
-        transform: translate(-3rem,15rem);
-        border-radius: 0%;
-        position: absolute;
-        width: 10%;
-        margin-top: -15rem;
-        margin-left: 64%;
-        }
-}
-
-@media screen and (min-width: 499px) and (max-width: 799px) 
-{
-    .btn{
-        display:inline-block;
-        font-weight: 300;
-        background-color: #fefefe;
-        font-family: 'Bebas Neue', cursive;
-        font-size: 150%;
-        color: rgb(0, 0, 0);
-    
-        padding: 10%px;
-        text-align: center;
-        transform: translate(-2rem,10rem);
-        border-radius: 0%;
-        position: absolute;
-        width: 20%;
-        margin-top: -16rem;
-        margin-left: 65%;
-        }
-}
-
-
-.btn:hover{
-    background-color: #E21221;
+.texto2 h1{
+    text-align: center;
+    margin-top: 15%;
+    font-family: 'Bebas Neue', cursive;
     color: white;
-    
 }
 
-
-.part2 div{
-    display: inline-block
+.texto3 {
+    width: 30%;
+    display: inline-block;
+    margin-left: 8%;
+}
+.texto3 h1{
+    text-align: center;
+    margin-top: 15%;
+    font-family: 'Bebas Neue', cursive;
+    color: white;
 }
 
-
-@media screen and (min-width: 1601px) 
-{
-    .spotifylogo5 img{
-        transform: translate(5rem,-29rem);
-        margin-left: 13%;
-        width: 40%;
-    }
-    
-    .headphone img{
-        transform: translate(22rem,6rem);
-        width: 75%;
-    }
+.logodiscord{
+    display: inline-block;
+    margin-left: 37.5%;
 }
-
-
-
-
-
-
-
-
-
-@media screen and (min-width: 1401px) and (max-width: 1700px) 
-{
-    .spotifylogo5 img{
-        transform: translate(10rem,-29rem);
-        margin-left: 13%;
-        width: 40%;
-    }
-    
-    .headphone img{
-        transform: translate(22rem,5rem);
-        width: 75%;
-    }
+.logosdiscord img{
+    width: 100%;
 }
-
-@media screen and (min-width: 1273px) and (max-width: 1400px) 
-{
-    .spotifylogo5 img{
-        transform: translate(-1rem,-29rem);
-        margin-left: 13%;
-        width: 50%;
-    }
-    
-    .headphone img{
-        transform: translate(9rem,2.5rem);
-        width: 70%;
-    }
-}
-
-
-
-
-
-
-
-
-
-@media screen and (min-width: 1222px) and (max-width: 1272px) 
-{
-    .spotifylogo5 img{
-        transform: translate(0rem,-29rem);
-        margin-left: 13%;
-        width: 50%;
-    }
-    
-    .headphone img{
-        transform: translate(9rem,2rem);
-        width: 70%;
-    }
-}
-@media screen and (min-width: 1150px) and (max-width: 1221px) 
-{
-    .spotifylogo5 img{
-        transform: translate(0rem,-29rem);
-        margin-left: 13%;
-        width: 50%;
-    }
-    
-    .headphone img{
-        transform: translate(9rem,1rem);
-        width: 70%;
-    }
-}
-
-
-
-
-
-
-
-@media screen and (min-width: 1001px) and (max-width: 1150px) 
-{
-    .spotifylogo5 img{
-        transform: translate(1rem,-29rem);
-        margin-left: 13%;
-        width: 50%;
-    }
-    
-    .headphone img{
-        transform: translate(9rem,1rem);
-        width: 70%;
-    }
-}
-
-@media screen and (min-width: 922px) and (max-width: 1000px) 
-{
-    .spotifylogo5 img{
-        transform: translate(1rem,-29rem);
-        margin-left: 13%;
-        width: 50%;
-    }
-    
-    .headphone img{
-        transform: translate(9rem,-1rem);
-        width: 70%;
-    }
-}
-
-
-
-
-
-
-@media screen and (min-width: 824px) and (max-width: 921px) 
-{
-    .spotifylogo5 img{
-        transform: translate(5rem,-28rem);
-        margin-left: 13%;
-        width: 50%;
-    }
-    
-    .headphone img{
-        transform: translate(9rem,-1rem);
-        width: 70%;
-    }
-}
-
-
-
-
-@media screen and (min-width: 723px) and (max-width: 823px) 
-{
-    .spotifylogo5 img{
-        transform: translate(5rem,-27rem);
-        margin-left: 13%;
-        width: 50%;
-    }
-    
-    .headphone img{
-        transform: translate(9rem,-1rem);
-        width: 70%;
-    }
-}
-
-
-
-
-@media screen and (min-width: 659px) and (max-width: 722px) 
-{
-    .spotifylogo5 img{
-        transform: translate(5rem,-25rem);
-        margin-left: 13%;
-        width: 50%;
-    }
-    
-    .headphone img{
-        transform: translate(9rem,-1rem);
-        width: 70%;
-    }
-}
-
-
-
-@media screen and (min-width: 552px) and (max-width: 658px) 
-{
-    .spotifylogo5 img{
-        transform: translate(5rem,-23rem);
-        margin-left: 13%;
-        width: 50%;
-    }
-    
-    .headphone img{
-        transform: translate(6rem,-1rem);
-        width: 70%;
-    }
-}
-
-
-
-
-
-
-
-@media screen and (min-width: 499px) and (max-width: 551px) 
-{
-    .spotifylogo5 img{
-        transform: translate(5rem,-20rem);
-        margin-left: 13%;
-        width: 50%;
-    }
-    
-    .headphone img{
-        transform: translate(6rem,-1rem);
-        width: 70%;
-    }
-}
-
-@media screen and (min-width: 1721px) 
-{
-
-    .text2 h1
-    {
-        width: 89%;
-        font-size: 4rem;
-        color: white;
-        background-color: #AF0C19;
-        margin-left: 10.9%;
-        font-family: 'Bebas Neue', cursive;
-        margin-top: 5%;
-        margin-bottom: 12rem;
-    }
-}
-
-
-
-
-@media screen and (min-width: 1600px) and (max-width: 1720px)
-{
-
-    .text2 h1
-    {
-        width: 89%;
-        font-size: 4rem;
-        color: white;
-        background-color: #AF0C19;
-        margin-left: 10.9%;
-        font-family: 'Bebas Neue', cursive;
-        margin-top: 5%;
-        margin-bottom: 12rem;
-    }
-}
-
-
-@media screen and (min-width: 900px) and (max-width: 1600px)
-{
-
-    .text2 h1
-    {
-        width: 89%;
-        font-size: 4rem;
-        color: white;
-        background-color: #AF0C19;
-        margin-left: 10.9%;
-        font-family: 'Bebas Neue', cursive;
-        margin-top: 5%;
-        margin-bottom: 12rem;
-    }
-}
-
-@media screen and (min-width: 690px) and (max-width: 899px)
-{
-
-    .text2 h1
-    {
-        font-family: 'Bebas Neue', cursive;
-        width: 89%;
-        font-size: 3rem;
-        background-color: #AF0C19;
-        color: white;
-        margin-left: 10.9%;
-        
-        margin-top: 5%;
-        margin-bottom: 12rem;
-    }
-}
-
-@media screen and (min-width: 499px) and (max-width: 689px)
-{
-
-    .text2 h1
-    {
-        font-family: 'Bebas Neue', cursive;
-        width: 89%;
-        font-size: 1.5rem;
-        background-color: #AF0C19;
-        color: white;
-        margin-left: 10.9%;
-        
-        margin-top: 5%;
-        margin-bottom: 12rem;
-    }
-}
-
-
-
-
-
-
