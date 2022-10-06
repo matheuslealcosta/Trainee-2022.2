@@ -26,16 +26,33 @@ body{
 
 #title:hover{
     color: #d7d7d7;
-    transition: ease-in-out 0.3s;
+    transition: ease-in-out 1s;
+    background: linear-gradient(90deg,#221F1F, #AF0C19, #221F1F);
+    background-repeat: no-repeat;
+    background-size: 70%;
+    animation: grad 2s linear forwards;
+}
+
+@keyframes grad{
+    0%{
+        background-position: -500%;
+    }
+    55%{
+        background-position: 500%;
+    }
+    100%{
+        background-position: 500%;
+        background: none;
+    }
 }
 
 #logo-min{
     padding: 0;
     margin-bottom: 10px;
     width:50px;
-    -webkit-transition-property: all; 
-    -webkit-transition-duration: 0.3s; 
-    -webkit-transition-timing-function: ease; 
+    transition-property: all; 
+    transition-duration: 0.3s; 
+    transition-timing-function: ease; 
 }
 
 #logo-min:hover{
@@ -63,6 +80,16 @@ body{
         width:30px;
     }
 }
+
+@media only screen and (max-width: 980px) {
+    #title {
+        font-size: 35px;
+    }
+    #logo-min{
+        width:35px;
+    }
+}
+
     
 
 
