@@ -52,6 +52,10 @@ body {
     color: #d7d7d7;
 }
 
+.navbar-container button[type="button"]:focus {
+    box-shadow: none;
+}
+
 /* CONTEÚDO */
 .page-content {
     padding-bottom: 4rem;
