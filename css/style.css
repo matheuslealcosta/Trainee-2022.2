@@ -101,15 +101,13 @@ body {
     border-color: #E21221;
 
 }
-.page-item{
-    margin-left: 0.5%;
-}
+
 .page-link{
     background-color: #E21221;
     color: #d7d7d7;
     border-color: black;
     font-family: 'Bebas Neue', cursive;
-    scale: 150%;
+    scale: 100%;
     
 }
 .previouss{
@@ -119,13 +117,11 @@ body {
 .nextt{
     background-color:#8e0c17;
     color: #d7d7d7;
-    margin-left: 0.66%;
 }
 .pagination{
 
     border: 10px solid transparent;
     transition: 0.5s;
-    border-radius: 30px;
     margin-top: 2%;
     margin-bottom: 3%;
 }
