@@ -77,7 +77,7 @@ body {
 }
 .btn-search:hover{
     color: #d7d7d7;
-    background-color: #E21221;;
+    background-color: #E21221;
     border-color: #E21221;
     transform:scale3d(1.1, 1.1, 1)
 }
@@ -97,3 +97,42 @@ body {
     margin-top: 5%;
     margin-left: 10%;
   }
+  .btn-primary:hover{
+    color: #d7d7d7;
+    background-color: transparent;
+    border-color: #E21221;
+
+}
+.page-item{
+    margin-left: 0.5%;
+}
+.page-link{
+    background-color: #E21221;
+    color: #d7d7d7;
+    border-color: black;
+    font-family: 'Bebas Neue', cursive;
+    scale: 150%;
+    
+}
+.previouss{
+    background-color:#8e0c17;
+    color: #d7d7d7;
+}
+.nextt{
+    background-color:#8e0c17;
+    color: #d7d7d7;
+    margin-left: 0.66%;
+}
+.pagination{
+
+    border: 10px solid transparent;
+    transition: 0.5s;
+    border-radius: 30px;
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+.page-link:hover{
+    background-color: #d7d7d7;
+    color: black;
+}
+
