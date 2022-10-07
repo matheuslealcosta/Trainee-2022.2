@@ -1,101 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
     background-color: #221F1F;
 }
 
-.logomatflix{
-    display: inline-block;
-    margin-left: 34%;
-}
-.logomatflix img{
-    width: 100%;
-}
-
-.texto1 {
-    width: 30%;
-    display: inline-block;
-    margin-left: 8%;
-}
-
-
-.logospotify2{
-    display: inline-block;
-    margin-left: 27%;
-}
-.logospotify2 img{
-    width: 100%;
-}
-
-.texto2 {
-    width: 40%;
-    margin-top: 0%;
-    display: inline-block;
-    margin-left: 8%;
-}
-
-
-
-
-
-.carousel-here{
-    padding: 0%;
-    width: 100%;
-    margin-top:10%;
-    margin-left: 0%;
-    
-
-
-}
-
-
-.container {
-    display: inline-block;
-}
-
-
-
-
-
-
-
 .line1 {
-
     width: 100%;
     border-top: 1px solid red;
     padding: 0;
+    padding-top: 0%;
     height: 2px;
-    margin-top: 3%
+    margin-top: 3%;
+    margin-bottom: 3%;
 }
 
- .texto1 h1{
-    text-align: center;
-    margin-top: 15%;
-    font-family: 'Bebas Neue', cursive;
+.cartas-filme{
+
+    padding: 0%;
+    display: flex;
+    justify-content: center;
+}
+.card-title{
+    color: #E21221;
+}
+.card-body{
+    font-size: 20px;
+}
+.btn-primary{
+    border-radius: 20px;
+    border: 1px solid transparent;
+    transition: .5s;
+    background-color: #E21221;
     color: white;
-}
-
-.texto2 h1{
-    text-align: center;
-    margin-top: 15%;
+    border-color: #E21221;
     font-family: 'Bebas Neue', cursive;
-    color: white;
+    text-transform: uppercase;
 }
+.btn-primary:hover{
+    color: #d7d7d7;
+    background-color: transparent;
+    border-color: #E21221;
 
-.texto3 {
-    width: 30%;
-    display: inline-block;
-    margin-left: 8%;
 }
-.texto3 h1{
-    text-align: center;
-    margin-top: 15%;
+.card{
+    background: #221F1F;
+    color: #d7d7d7;
+    margin-left: 5%;
+}
+.card:hover{
+    transform:scale3d(1.1, 1.1, 1)
+}
+.d-flex{
+    margin-left: 25%;
+    width: 50%;
+}
+.btn-search{
+    border-radius: 20px;
+    border: 1px solid transparent;
+    transition: .5s;
+    background-color: #E21221;
+    color: white;
+    border-color: #E21221;
     font-family: 'Bebas Neue', cursive;
-    color: white;
+    text-transform: uppercase;
 }
-
-.logodiscord{
-    display: inline-block;
-    margin-left: 37.5%;
+.btn-search:hover{
+    color: #d7d7d7;
+    background-color: transparent;
+    border-color: #E21221;
 }
-.logosdiscord img{
-    width: 100%;
-}
+.logo{
+    width: 300px;
+    margin: auto;
+    display: block;
+    margin-top: -30px;
+  
+  }
