@@ -1,262 +1,151 @@
 body {
-    background-color: #221F1F;
+  background-color: #221F1F;
 }
 
 .carousel-here{
-    display: inline-block;
-    padding: 0%;
-    width: 70%;
-    margin-top:10%;
-    margin-left: 5%;
+  display: inline-block;
+  padding: 0%;
+  width: 70%;
+  margin-top:10%;
+  margin-left: 15%;
 }
 
 .line1 {
-    width: 100%;
-    border-top: 1px solid red;
-    padding: 0;
-    padding-top: 0%;
-    height: 2px;
-    margin-top: 3%;
-    margin-bottom: 1%;
+  width: 100%;
+  border-top: 1px solid red;
+  padding: 0;
+  padding-top: 0%;
+  height: 2px;
+  margin-top: 3%;
+  margin-bottom: 1%;
 }
 
 /*cardsultimosposts */
 
 .ultposts {
-    width: 40%;
-    padding: 0;
-    margin-top: 0%;
-    display: inline-block;
-    margin-left: 5%;
-    margin-bottom: 3%;
+  width: 40%;
+  padding: 0;
+  margin-top: 0%;
+  display: inline-block;
+  margin-left: 5%;
+  margin-bottom: 3%;
 }
 .ultposts h1{
-    text-align: left;
-    margin-top: 0%;
-    font-family: 'Bebas Neue', cursive;
-    color: white;
-}
-@media only screen and (min-width: 2100px) {
-    .ultposts h1{
-        text-align: center;
-        margin-top: 0%;
-        font-family: 'Bebas Neue', cursive;
-        color: white;
-    }
-    .ultposts {
-        width: 40%;
-        padding: 0;
-        margin-top: 0%;
-        display: inline-block;
-        margin-left: 5%;
-        margin-bottom: 3%;
-    }
+  text-align: left;
+  margin-top: 0%;
+  font-family: 'Bebas Neue', cursive;
+  color: white;
 }
 .cartas{
 
-    padding: 0%;
-    display: flex;
-    justify-content: center;
+  padding: 0%;
+  display: flex;
+  justify-content: center;
 }
 .card-title{
-    color: #E21221;
+  color: #E21221;
+}
+.card-body{
+  font-size: 20px;
 }
 .btn-primary{
-    border-radius: 20px;
-    border: 1px solid transparent;
-    transition: .5s;
-    background-color: #E21221;
-    color: white;
-    border-color: #E21221;
-    font-family: 'Bebas Neue', cursive;
-    text-transform: uppercase;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  transition: .5s;
+  background-color: #E21221;
+  color: white;
+  border-color: #E21221;
+  font-family: 'Bebas Neue', cursive;
+  text-transform: uppercase;
 }
 .btn-primary:hover{
-    color: #d7d7d7;
-    background-color: transparent;
-    border-color: #E21221;
+  color: #d7d7d7;
+  background-color: transparent;
+  border-color: #E21221;
 
 }
+.main-btn {
+  background-color: #E21221;
+  color: #d7d7d7;
+  text-transform: uppercase;
+  width: 200px;
+  height: 60px;
+  padding: 10px 50px;
+  border-radius: 30px;
+  border: 3px solid transparent;
+  transition: .5s;
+  text-decoration: none;
+}
+
+.main-btn:hover {
+  text-decoration: none;
+  color: #d7d7d7;
+  background-color: #221F1F;
+  border-color: #E21221;
+}
+ .carousel-caption {
+  top: 80%;
+}
+.logo{
+  width: 300px;
+  margin: auto;
+  display: block;
+  margin-top: -30px;
+
+}
+
 .card{
-    background: #221F1F;
-    color: #d7d7d7;
-    margin-left: 5%;
+  background: #221F1F;
+  color: #d7d7d7;
+  margin-left: 5%;
 }
-
 .card:hover{
-    transform:scale3d(1.1, 1.1, 1)
+  transform:scale3d(1.1, 1.1, 1)
 }
 
 
-  /*   */
-  .juntspotify{
-    display: flex;
-    justify-content:space-between;
+/*   */
+.juntspotify{
+  display: flex;
+  justify-content:space-between;
 }
 .logospotify2{
-    margin-right: 10%;
+  margin-right: 10%;
 
 }
 .logospotify2:hover{
-    transform:scale3d(1.1, 1.1, 15)
+  transform:scale3d(1.1, 1.1, 15)
 }
 .texto2spotify h1{
-    padding-left: 15%;
-    text-align: center;
-    margin-top: 15%;
-    font-family: 'Bebas Neue', cursive;
-    color: white;
- }
+  padding-left: 15%;
+  text-align: center;
+  margin-top: 15%;
+  font-family: 'Bebas Neue', cursive;
+  color: white;
+}
 /*  */
 .juntdiscord{
-    display: flex;
-    justify-content:space-between;
+  display: flex;
+  justify-content:space-between;
 }
 .logodiscord{
-    margin-right: 10%;
+  margin-right: 10%;
 }
 
 .logodiscord:hover{
-    transform:scale3d(1.1, 1.1, 5)
+  transform:scale3d(1.1, 1.1, 5)
 }
 
 .texto3discord h1{
-    padding-left: 15%;
-    text-align: center;
-    margin-top: 15%;
-    font-family: 'Bebas Neue', cursive;
-    color: white;
+  padding-left: 15%;
+  text-align: center;
+  margin-top: 15%;
+  font-family: 'Bebas Neue', cursive;
+  color: white;
 }
 
 
-body {
-    background-color: #221F1F;      
-  }
-  
-  .container {
-    padding: 70px 0;
-  }
-  
-  .logo{
-    width: 300px;
-    margin: auto;
-    display: block;
-    margin-top: -30px;
-  
-  }
-  
-  .container-fluid {
-    padding: 0;
-  }
-    
-  #mainSlider .carousel-inner, #mainSlider .carousel-item {
-    height: 80vh;
-    margin-top: -50px;
-  }
-    
-    #mainSlider .carousel-caption {
-      top: 30%;
-    }
-    
-    #mainSlider .carousel-caption h2 {
-      font-size: 50px;
-      margin-bottom: 30px;
-    }
-    
-    #mainSlider .carousel-caption p {
-      font-size: 22px;
-      font-weight: 300;
-      margin-bottom: 100px;
-      color: #d7d7d7;
-    }
-    
-    .main-btn {
-      background-color: #E21221;
-      color: #d7d7d7;
-      text-transform: uppercase;
-      width: 200px;
-      height: 60px;
-      padding: 10px 20px;
-      border-radius: 30px;
-      border: 3px solid transparent;
-      transition: .5s;
-      text-decoration: none;
-    }
-    
-    .main-btn:hover {
-      text-decoration: none;
-      color: #d7d7d7;
-      background-color: #221F1F;
-      border-color: #E21221;
-    }
-    
-    .carousel-indicators .active {
-      background-color: #E21221
-    }
-    
-  
-  
-    /* responsive */
-    @media(max-width: 768px) {
-    
-      /* geral */
-      .container {
-        padding: 20px 0;
-      }
-      
-      /* slider */
-      #mainSlider .carousel-inner, #mainSlider .carousel-item {
-        height: 80vh;
-      }
-    
-      #mainSlider .carousel-caption h2 {
-        font-size: 28px;
-      }
-    
-      #mainSlider .carousel-caption p {
-        font-size: 18px;
-        margin-bottom: 40px;
-      }
-    
-      .carousel-caption {
-        left: 10%;
-        right: 10%;
-      }
-  
-          .carousel-caption .main-btn {
-        font-size: 14px;
-      }
-      
-    }
-    
-    
-    @media(max-width: 425px) {
-    
-      /* slider */
-      #mainSlider {
-        margin-top: 90px;
-      }
-    
-      #mainSlider .carousel-caption {
-        top: 5%;
-      }
-    
-      #mainSlider .carousel-caption h2 {
-        font-size: 18px;
-        margin-bottom: 40px;
-      }
-    
-      #mainSlider .carousel-caption p {
-        display: none;
-      }
-    
-      .carousel-caption .main-btn {
-        font-size: 14px;
-      }
-    
-    
-    }
-  
+
 
 
 
