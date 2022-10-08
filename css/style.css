@@ -108,6 +108,7 @@ body {
     border-color: black;
     font-family: 'Bebas Neue', cursive;
     scale: 100%;
+    font-size: 30px;
     
 }
 .previouss{
@@ -119,7 +120,6 @@ body {
     color: #d7d7d7;
 }
 .pagination{
-
     border: 10px solid transparent;
     transition: 0.5s;
     margin-top: 2%;
