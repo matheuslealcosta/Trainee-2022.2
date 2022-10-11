@@ -40,10 +40,9 @@ body{
     margin-bottom: 0%;
   }
 
-
-
-
-
+  ol, ul {
+    padding-left: 0rem;
+}
 
  }
 
