@@ -78,6 +78,47 @@ body {
   text-decoration: none;
 }
 
+
+	.carousel-inner {
+		position: relative;
+		scale: 130%;
+		width: 100%;
+		overflow: hidden;
+	}
+	.primarr{
+		margin-top: 10%;
+	}
+	@media (max-width: 768px){
+
+		.main-btn {
+			font-family: "Bebas Neue", cursive;
+			font-size: 20px;
+			text-transform: uppercase;
+			width: 100px;
+			height: 100px;
+			padding: 0px 30px;
+			border-radius: 30px;
+			border: 3px solid transparent;
+		}
+		.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+			--bs-gutter-x: 0rem;
+			--bs-gutter-y: 0rem;
+			width: 100%;
+			padding-right: calc(var(--bs-gutter-x) * .5);
+			padding-left: calc(var(--bs-gutter-x) * .5);
+			margin-right: auto;
+			margin-left: auto;
+		}
+
+
+
+
+
+
+
+
+	}
+
 .main-btn:hover {
   text-decoration: none;
   color: #d7d7d7;
