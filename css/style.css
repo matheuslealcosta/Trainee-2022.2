@@ -7,7 +7,7 @@
   font-family: 'Bebas Neue', cursive;
 }
 body{
-	background: #d7d7d7;
+	background: #221F1F;
 }
 .wrapper{
 	position: relative;
@@ -16,7 +16,7 @@ body{
 	position: fixed;
 	width: 300px;
 	height: 100%;
-	background: #221F1F;
+	background: #252222;
   color: blue;
 	padding: 0px 0;
   margin-bottom: 0%;
@@ -34,8 +34,7 @@ body{
     position: fixed;
     width: 117px;
     height: 100%;
-    background: #221F1F;
-    color: blue;
+	background: #252222;
     padding: 0px 0;
     margin-bottom: 0%;
   }
@@ -57,6 +56,7 @@ body{
 .sidebar ul li a .fas{
 	width: 30px;
 	color: #AF0C19;
+	
 }
 
 .sidebar ul li:hover{
