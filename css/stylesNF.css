@@ -1,9 +1,8 @@
-@import url('https://fonts.googleapis.com/css2? family= Bebas+Neue & display=swap');
-
 * {
     margin: 0;
     padding: 0;
     text-decoration: none;
+    letter-spacing: 2px;
     font-family: 'Bebas Neue', 'cursiva';
 }
 
@@ -45,7 +44,7 @@ body {
 }
 
 .navbar-container a:hover, .navbar-links a:hover {
-    color: #d7d7d7;
+    color: #b2afaf;
 }
 
 .navbar-container a:focus, .navbar-links a:focus {
