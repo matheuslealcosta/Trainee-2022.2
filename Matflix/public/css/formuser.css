@@ -19,4 +19,5 @@ body{
 #arq{
     background: linear-gradient(90deg,#221F1F, #AF0C19, #221F1F);
     background-repeat: no-repeat;
+    color: #d7d7d7;
 }
