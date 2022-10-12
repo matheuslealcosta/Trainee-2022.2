@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/x-icon" href="./img/m3dPNG.png">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue">
+        <link rel="stylesheet" href="../../../public/css/formuser.css">
+        <title>Visu individual</title>
+    </head>
+    <body>
+        <div class="container overflow-hidden" id="main">
+           <form action="POST" class="row gy-2 gx-3 align-items-center">
+                <div class="form-group row mb-3">
+                    <label for="titulo" class="col-sm-auto col-form-label">Título da Postagem:</label>
+                    <div class="col-sm-4">
+                        <input type="text" name="" id="titulo" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group row mb-3">
+                    <label for="prim_para" class="col-sm-auto col-form-label">Primeiro Parágrafo:</label>
+                    <div class="col-sm-5">
+                        <textarea name="" id="prim_para" cols="3" rows="5" class="form-control"></textarea>
+                    </div>
+                </div>
+                <div class="input-group mb-3 row">
+
+                    <label class="col-sm-2 col-form-label" for="arq">Enviar mídia:</label>
+                    
+                    <input type="file" class="custom-file-input form-control" id="arq">
+                  </div>  
+           </form>
+        </div>
+    </body>
+</html>
