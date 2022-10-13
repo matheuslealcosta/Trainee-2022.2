@@ -1,0 +1,176 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #221F1F;
+}
+
+.page1{
+    display: inline-block;
+    text-align: center;
+}
+
+
+.cartas-filme{
+    padding: 0%;
+    display: flex;
+    justify-content: center;
+}
+.card-title{
+    color: #E21221;
+}
+.card-body{
+    font-size: 20px;
+}
+.btn-primary{
+    border-radius: 20px;
+    border: 1px solid transparent;
+    transition: .5s;
+    background-color: #E21221;
+    color: white;
+    border-color: #E21221;
+    font-family: 'Bebas Neue', cursive;
+    text-transform: uppercase;
+}
+.btn-primary:hover{
+    color: #d7d7d7;
+    background-color: transparent;
+    border-color: #E21221;
+
+}
+.items{
+    margin-top: 3%;
+    margin-left: 0%;
+}
+.card{
+    width: 25rem;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background: #221F1F;
+    color: #d7d7d7;
+    margin-left: 9%;
+}
+.card:hover{
+    transform:scale3d(1.1, 1.1, 1)
+}
+.d-flex{
+    margin-left: 25%;
+    width: 50%;
+}
+.btn-search{
+
+    border-radius: 30px;
+    border: 10px solid transparent;
+    font-size: 20px;
+    transition: 0.5s;
+    background-color: #E21221;
+    color: white;
+    border-color: #E21221;
+    font-family: 'Bebas Neue', cursive;
+    text-transform: uppercase;
+}
+.btn-search:hover{
+    color: #d7d7d7;
+    background-color: #E21221;
+    border-color: #E21221;
+    transform:scale3d(1.1, 1.1, 1)
+}
+.logo{
+    width: 300px;
+    margin: auto;
+    display: block;
+    margin-bottom: 100px;
+    margin-top: 100px;
+  
+  }
+
+  .text{
+    font-family: 'Bebas Neue', cursive;
+    color: white;
+    font-size: 60px;
+    margin-top: 5%;
+    margin-left: 10%;
+  }
+  .btn-primary:hover{
+    color: #d7d7d7;
+    background-color: transparent;
+    border-color: #E21221;
+
+}
+
+.page-link{
+    background-color: #E21221;
+    color: #d7d7d7;
+    border-color: black;
+    font-family: 'Bebas Neue', cursive;
+    scale: 100%;
+    font-size: 30px;
+    
+}
+
+.pagination{
+    border: 10px solid transparent;
+    transition: 0.5s;
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+.page-link:hover{
+    background-color: #d7d7d7;
+    color: black;
+}
+
+@media screen and (max-width: 550px) {
+    .page1{
+        display: flex;
+
+    }
+
+    .logo{
+        width: 300px;
+        margin: auto;
+        display: block;
+        margin-bottom: 100px;
+        margin-top: 100px;
+        margin-left: 13%;
+      
+      }
+
+      .form-control {
+        width: 100%;
+        padding: 0.190rem  9rem;
+        font-size: 0.1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #212529;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border-radius: .375rem;
+        transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    }
+
+    .btn-search{
+        border-radius: 30px;
+        border: 1px solid transparent;
+        font-size:10px;
+        transition: 0.5s;
+        background-color: #E21221;
+        color: white;
+        border-color: #E21221;
+        font-family: 'Bebas Neue', cursive;
+        text-transform: uppercase;
+    }
+    .d-flex {
+        margin-left: 3%;
+        width: 100%;
+    }
+    .pagination{
+        scale: 80%;
+        padding-left: 50%;
+    }
+  }
