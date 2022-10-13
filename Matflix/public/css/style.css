@@ -46,12 +46,12 @@ body {
 }
 .carta1{
     display: inline-block;
-    width: 25rem;
+    width: 20rem;
     margin-top: 2%;
     margin-bottom: 2%;
     background: #221F1F;
     color: #d7d7d7;
-    margin-left: 9%;
+    margin-left: 5%;
 }
 .carta1:hover{
     transform:scale3d(1.1, 1.1, 1)
