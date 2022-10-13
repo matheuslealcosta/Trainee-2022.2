@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+
 }
 body {
     background-color: #221F1F;
@@ -18,13 +18,13 @@ body {
     display: flex;
     justify-content: center;
 }
-.card-title{
+.cardtitulo2{
     color: #E21221;
 }
-.card-body{
+.corpodocard{
     font-size: 20px;
 }
-.btn-primary{
+.botao1{
     border-radius: 20px;
     border: 1px solid transparent;
     transition: .5s;
@@ -34,7 +34,7 @@ body {
     font-family: 'Bebas Neue', cursive;
     text-transform: uppercase;
 }
-.btn-primary:hover{
+.botao1:hover{
     color: #d7d7d7;
     background-color: transparent;
     border-color: #E21221;
@@ -44,7 +44,8 @@ body {
     margin-top: 3%;
     margin-left: 0%;
 }
-.card{
+.carta1{
+    display: inline-block;
     width: 25rem;
     margin-top: 2%;
     margin-bottom: 2%;
@@ -52,14 +53,14 @@ body {
     color: #d7d7d7;
     margin-left: 9%;
 }
-.card:hover{
+.carta1:hover{
     transform:scale3d(1.1, 1.1, 1)
 }
-.d-flex{
+.barrabranca{
     margin-left: 25%;
     width: 50%;
 }
-.btn-search{
+.botaosearch{
 
     border-radius: 30px;
     border: 10px solid transparent;
@@ -71,7 +72,7 @@ body {
     font-family: 'Bebas Neue', cursive;
     text-transform: uppercase;
 }
-.btn-search:hover{
+.botaosearch:hover{
     color: #d7d7d7;
     background-color: #E21221;
     border-color: #E21221;
@@ -85,6 +86,12 @@ body {
     margin-top: 100px;
   
   }
+  [type="search"]{
+
+    font-size: 20px;
+
+    
+}
 
   .text{
     font-family: 'Bebas Neue', cursive;
@@ -93,14 +100,14 @@ body {
     margin-top: 5%;
     margin-left: 10%;
   }
-  .btn-primary:hover{
+  .botao1:hover{
     color: #d7d7d7;
     background-color: transparent;
     border-color: #E21221;
 
 }
 
-.page-link{
+.linkdapagina{
     background-color: #E21221;
     color: #d7d7d7;
     border-color: black;
@@ -110,37 +117,51 @@ body {
     
 }
 
-.pagination{
-    border: 10px solid transparent;
+.barradepag{
+    border: 5px solid transparent;
     transition: 0.5s;
     margin-top: 2%;
     margin-bottom: 3%;
 }
-.page-link:hover{
+.linkdapagina:hover{
     background-color: #d7d7d7;
     color: black;
 }
 
-@media screen and (max-width: 550px) {
-    .page1{
-        display: flex;
+@media screen and (max-width: 980px) {
 
+    .corpodocard{
+        font-size: 10px;
+    }
+    .carta1{
+        text-align: center;
+        width: 13rem;
+        margin-top: 2%;
+        margin-left: 0%;
+    }
+    .cardtitulo2 .cardtexto{
+        font-size: smaller
+    }
+    .itens{
+        padding-left: 0%;
+        text-align: center;
     }
 
     .logo{
         width: 300px;
         margin: auto;
         display: block;
-        margin-bottom: 100px;
-        margin-top: 100px;
-        margin-left: 13%;
+        margin-bottom: 5px;
+        margin-top: 0px;
+        margin-left: -5%;
+        scale: 80%;
       
       }
 
       .form-control {
-        width: 100%;
-        padding: 0.190rem  9rem;
-        font-size: 0.1rem;
+        width: 50%;
+        padding: 0.190rem  0.18rem;
+        font-size: 0.8rem;
         font-weight: 400;
         line-height: 1.5;
         color: #212529;
@@ -154,7 +175,7 @@ body {
         transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     }
 
-    .btn-search{
+    .botaosearch{
         border-radius: 30px;
         border: 1px solid transparent;
         font-size:10px;
@@ -165,12 +186,15 @@ body {
         font-family: 'Bebas Neue', cursive;
         text-transform: uppercase;
     }
-    .d-flex {
-        margin-left: 3%;
+    .barrabranca {
+        padding-left: 15%;
+        margin-bottom: 50px;
+        margin-left: 0%;
         width: 100%;
     }
-    .pagination{
-        scale: 80%;
-        padding-left: 50%;
+
+    .barradepag{
+        scale: 50%;
     }
+
   }
