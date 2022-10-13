@@ -228,11 +228,14 @@ body {
         font-size: 14px;
       }
       .card{
-        width: 13rem;
+        width: 12rem;
       }
       .main-btn {
         font-size: 8px;
         padding: 10px 50px;
+      }
+      .cartas{
+        text-align: center;
       }
 
 
