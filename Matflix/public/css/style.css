@@ -6,11 +6,11 @@ font-family: 'Bebas Neue', cursive;
 }
 
 body{
-    background-color: #221F1F;
+    background-color: #221F1F; /*nao mexer*/
     width: 100%;
 }
 .home-section{
-    background:#f5f6f5;
+    background:#221F1F; /*nao mexer*/
     position: relative;
     width: 100%
 }
@@ -32,8 +32,8 @@ nav .profile-details{
     display: flex;
     height: 50px;
     align-items: center;
-    background-color: #cecbcbec;
-    border: 2px solid #e7dfdf;
+    background-color: #cecbcbec; /*naomexer*/
+    border: 2px solid #221F1F; /*talvezmexer*/
     border-radius: 6px;
     padding: 0 15px 0 2px;
 }
@@ -47,12 +47,12 @@ nav .profile-details img{
 nav .profile-details .admin_name{
     font-size:15px;
     font-weight: 500;
-    color: #333;
+    color: #252222;
     margin: 0 10px;
     white-space: nowrap;
 }
 nav .profile-details i{
-    color: #333;
+    color: #252222;
     font-size: 25px;
 }
 /*a partir daqui é oq n foi comitado */
@@ -64,7 +64,7 @@ nav .profile-details i{
     display: flex;
     align-items: center;
     padding: 15px 14px;
-    background:#fff ;
+    background:#a39696ba ; /*cor das caixas com emoji*/
     border-radius: 30px;
     justify-content: center;
     
@@ -173,6 +173,9 @@ border-radius: 12px;
             border-radius: 12px;
 }
 /*sales parte*/
+.details{
+    text-align: center;
+}
 .home-section .sales-boxes .box .sales-details{
     display: flex;
     justify-content: space-between;
@@ -180,7 +183,7 @@ border-radius: 12px;
 }
 .home-section .sales-boxes .recent-sale{
     width: 65%;
-    background: #fff;
+    background: #a39696ba;
     border-radius: 12px;
     box-sizing: 0 5px 10px rgba(0,0,0,0,1);
     padding: 20px;
@@ -194,7 +197,7 @@ border-radius: 12px;
     font-size: 15px;
     font-weight: 400;
     color: #fff;
-    background: #0A2558;
+    background: #E21221;
     padding: 4px 12px;
     text-decoration: none;
     border-radius: 4px;
@@ -217,7 +220,7 @@ border-radius: 12px;
     object-fit: cover;
 }
 .sales-boxes .button a:hover{
-    background-color: #0d3073;
+    background-color: #AF0C19;
 
 
 
@@ -226,7 +229,7 @@ border-radius: 12px;
 .home-section .sales-boxes .top-sales{
     width: 35%;
     margin-left: 20px;
-    background: #fff;
+    background: #a39696ba;
     border-radius: 12px;
     box-sizing: 0 5px 10px rgba(0,0,0,0,1);
     padding: 20px;
