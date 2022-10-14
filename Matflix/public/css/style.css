@@ -66,6 +66,7 @@ nav .profile-details i{
     padding: 15px 14px;
     background:#fff ;
     border-radius: 30px;
+    justify-content: center;
     
 }
 .home-content .overview-boxes .box_topic{
@@ -73,6 +74,7 @@ nav .profile-details i{
     font-weight: 500;
 }
 .home-content .overview-boxes{
+    padding: 0 30px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -84,7 +86,7 @@ nav .profile-details i{
 
     }
     .home-content .overview-boxes .box{
-        width: 80%;
+        width: 100%;
         margin: auto;
         border-radius: 30px;
         margin-bottom: 2%;
@@ -148,7 +150,7 @@ border-radius: 12px;
     border-radius: 12px;
     }
 
-    .overview-boxes .box .bxl-instagram{
+.overview-boxes .box .bxl-instagram{
         font-size: 32px;
         font-weight: 500;
         height: 50px;
@@ -158,8 +160,8 @@ border-radius: 12px;
         line-height: 50px;
         text-align: center;
         border-radius: 12px;
-        } 
-        .overview-boxes .box .bx-sad{
+} 
+.overview-boxes .box .bx-sad{
             font-size: 32px;
             font-weight: 500;
             height: 50px;
@@ -169,4 +171,116 @@ border-radius: 12px;
             line-height: 50px;
             text-align: center;
             border-radius: 12px;
-            }
+}
+/*sales parte*/
+.home-section .sales-boxes .box .sales-details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.home-section .sales-boxes .recent-sale{
+    width: 65%;
+    background: #fff;
+    border-radius: 12px;
+    box-sizing: 0 5px 10px rgba(0,0,0,0,1);
+    padding: 20px;
+}
+.sales-boxes .button{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.sales-boxes .recent-sale .button a{
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+    background: #0A2558;
+    padding: 4px 12px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+.sales-boxes .top-sales li a{
+    display: flex;
+    align-items: center;
+}
+.sales-boxes .top-sales li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sales-boxes .top-sales img{
+    margin-right: 8px;
+    height: 40px;
+    width: 40px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+.sales-boxes .button a:hover{
+    background-color: #0d3073;
+
+
+
+
+}
+.home-section .sales-boxes .top-sales{
+    width: 35%;
+    margin-left: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-sizing: 0 5px 10px rgba(0,0,0,0,1);
+    padding: 20px;
+}
+.home-section .sales-boxes .box .title{
+    font-size:24px;
+    font-weight: 500;
+}
+.home-section .sales-boxes{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+.home-section .sales-boxes .box .topic{
+font-size: 20px;
+font-weight: 500;
+}
+.home-section .sales-boxes .box li{
+list-style: none;
+margin: 8px 0;
+}
+
+.sales-boxes .box li a{
+    color: #333;
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+@media (max-width:1078px){
+    .home-section .sales-boxes{
+        flex-direction: column;
+    }
+    .home-section .sales-boxes .box{
+        margin-bottom: 20px;
+        width: 100%;
+        overflow-x: scroll;
+    }
+    .home-section .sales-boxes .top-sales{
+        margin-left: 0;
+    }
+}
+@media (max-width:658px){
+    .home-section nav .sidebar-button .dashboard,
+    nav .profile-details .admin_name,
+    nav .profile-details  i{
+        display: none;
+    }
+
+    .home-section nav .profile-details{
+      min-width: 50px;
+      height: 50px; 
+    }
+    .home-section .sales-boxes .sales-details{
+        width: 590px;
+    }
+}
