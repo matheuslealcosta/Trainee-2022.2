@@ -60,11 +60,12 @@ nav .profile-details i{
     position: relative;
 }
 .home-content .overview-boxes .box{
-    width: calc(100%/4 -15px);
+    width: calc(100%/4 - 15px);
     display: flex;
     align-items: center;
     padding: 15px 14px;
     background:#fff ;
+    border-radius: 30px;
     
 }
 .home-content .overview-boxes .box_topic{
@@ -76,18 +77,26 @@ nav .profile-details i{
     display: flex;
     justify-content: space-between;
 }
-@media screen and (max-width: 530px){
+@media screen and (max-width: 550px){
     .home-content .overview-boxes{
 
         display: block;
 
     }
-}
+    .home-content .overview-boxes .box{
+        width: 80%;
+        margin: auto;
+        border-radius: 30px;
+        margin-bottom: 2%;
+
+        
+    }
 .home-content .overview-boxes .number{
     font-size: 35px;
     font-weight: 500;
     margin-top: -5px;
     display: inline-block;
+}
 }
 .overview-boxes .indicator {
 display: flex;
