@@ -1,0 +1,57 @@
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+font-family: 'Bebas Neue', cursive;
+}
+
+body{
+    background-color: #221F1F;
+    width: 100%;
+}
+.home-section{
+    background:#f5f6f5;
+    position: relative;
+    width: 100%
+}
+
+.home-section nav{
+    height: 80px;
+    background: #d7d7d7;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dashboard{
+    font-size: 20px;
+}
+
+nav .profile-details{
+    display: flex;
+    height: 50px;
+    align-items: center;
+    background-color: #cecbcbec;
+    border: 2px solid #e7dfdf;
+    border-radius: 6px;
+    padding: 0 15px 0 2px;
+}
+
+nav .profile-details img{
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+nav .profile-details .admin_name{
+    font-size:15px;
+    font-weight: 500;
+    color: #333;
+    margin: 0 10px;
+    white-space: nowrap;
+}
+nav .profile-details i{
+    color: #333;
+    font-size: 25px;
+}
