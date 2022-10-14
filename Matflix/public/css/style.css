@@ -2,7 +2,7 @@
 padding: 0;
 margin: 0;
 box-sizing: border-box;
-font-family: 'Bebas Neue', cursive;
+font-family: 'Roboto', sans-serif;
 }
 
 body{
@@ -175,25 +175,29 @@ border-radius: 12px;
 /*sales parte*/
 .details{
     text-align: center;
+    text-transform: uppercase;
+
+    color: #AF0C19;
 }
-.home-section .sales-boxes .box .sales-details{
+
+.home-section .funcionarios-boxes .box .funcionarios-details{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.home-section .sales-boxes .recent-sale{
+.home-section .funcionarios-boxes .recent-sale{
     width: 65%;
     background: #a39696ba;
     border-radius: 12px;
     box-sizing: 0 5px 10px rgba(0,0,0,0,1);
     padding: 20px;
 }
-.sales-boxes .button{
+.funcionarios-boxes .button{
     width: 100%;
     display: flex;
     justify-content: flex-end;
 }
-.sales-boxes .recent-sale .button a{
+.funcionarios-boxes .recent-sale .button a{
     font-size: 15px;
     font-weight: 400;
     color: #fff;
@@ -203,30 +207,30 @@ border-radius: 12px;
     border-radius: 4px;
     transition: all 0.3s ease;
 }
-.sales-boxes .top-sales li a{
+.funcionarios-boxes .top-show li a{
     display: flex;
     align-items: center;
 }
-.sales-boxes .top-sales li {
+.funcionarios-boxes .top-show li {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.sales-boxes .top-sales img{
+.funcionarios-boxes .top-show img{
     margin-right: 8px;
     height: 40px;
     width: 40px;
     border-radius: 4px;
     object-fit: cover;
 }
-.sales-boxes .button a:hover{
+.funcionarios-boxes .button a:hover{
     background-color: #AF0C19;
 
 
 
 
 }
-.home-section .sales-boxes .top-sales{
+.home-section .funcionarios-boxes .top-show{
     width: 35%;
     margin-left: 20px;
     background: #a39696ba;
@@ -234,41 +238,51 @@ border-radius: 12px;
     box-sizing: 0 5px 10px rgba(0,0,0,0,1);
     padding: 20px;
 }
-.home-section .sales-boxes .box .title{
+.home-section .funcionarios-boxes .box .title{
     font-size:24px;
     font-weight: 500;
 }
-.home-section .sales-boxes{
+.home-section .funcionarios-boxes{
     display: flex;
     justify-content: space-between;
     padding: 20px;
 }
-.home-section .sales-boxes .box .topic{
+.home-section .funcionarios-boxes .box .topic{
 font-size: 20px;
 font-weight: 500;
 }
-.home-section .sales-boxes .box li{
+.home-section .funcionarios-boxes .box li{
 list-style: none;
 margin: 8px 0;
 }
-
-.sales-boxes .box li a{
-    color: #333;
+.title{
+    color: white;
+}
+.bx{
+    margin-left: 5%;
+}
+.funcionarios-boxes .box li a{
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    color: #d7d7d7;
     font-size: 18px;
     font-weight: 400;
     text-decoration: none;
 }
+.postagens{
+    color: #d7d7d7;
+}
 
 @media (max-width:1078px){
-    .home-section .sales-boxes{
+    .home-section .funcionarios-boxes{
         flex-direction: column;
     }
-    .home-section .sales-boxes .box{
+    .home-section .funcionarios-boxes .box{
         margin-bottom: 20px;
         width: 100%;
         overflow-x: scroll;
     }
-    .home-section .sales-boxes .top-sales{
+    .home-section .funcionarios-boxes .top-show{
         margin-left: 0;
     }
 }
@@ -283,7 +297,7 @@ margin: 8px 0;
       min-width: 50px;
       height: 50px; 
     }
-    .home-section .sales-boxes .sales-details{
+    .home-section .funcionarios-boxes .funcionarios-details{
         width: 590px;
     }
 }
