@@ -5,12 +5,27 @@ html{
 body{
     background-color: #666262;
     color: #1d1a1a;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#logo{
+    width:200px;
+    margin: -15px;
+    transition-property: all; 
+    transition-duration: 0.3s; 
+    transition-timing-function: ease; 
+}
+
+#logo:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
 }
 
 #title {
     color: #AF0C19;
     font-size: 35px;
-    text-align: justify;
+    text-align: center;
     font-weight: bold;
     transition: 0.1s;
 }
@@ -44,6 +59,8 @@ body{
     margin-top: 15px;
     margin-bottom: 15px;
     padding: 25px;
+    width: 500px;
+    height: auto;
 }
 
 #arq{
