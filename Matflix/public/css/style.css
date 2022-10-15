@@ -44,11 +44,11 @@ body {
   display: flex;
   justify-content: center;
 }
-.card-title{
+.titulo-card{
   color: #E21221;
   font-size: 20px;
 }
-.card-body{
+.card-corpo{
   font-size: 20px;
 
 }
@@ -61,7 +61,7 @@ body {
     color: #d7d7d7;
     margin-left: 5%;
 }
-.carousel-inner {
+.carrosseliner {
     position: absolute;
     scale: 100%;
     width: 100%;
@@ -100,7 +100,7 @@ body {
 }
 
 
-	.carousel-inner {
+	.carrosseliner {
 		position: relative;
 		scale: 100%;
 		width: 100%;
@@ -131,7 +131,7 @@ body {
 .card{
   background: #221F1F;
   color: #d7d7d7;
-  margin-left: 5%;
+  margin-left: 0%;
   width: 20rem;
 }
 .card:hover{
@@ -216,27 +216,27 @@ body {
 
     margin-left: 0%;
 }
-    .cartas{
-        margin: 0%;
-        display: block;
-        justify-content: center;
-      }
-      .card-body{
+.cartas{
+    margin: 0%;
+    display: block;
+    justify-content: center;
+}
+.card-corpo{
         font-size: 14px;
-      }
-      .card-title{
-        font-size: 14px;
-      }
-      .card{
-        width: 12rem;
-      }
-      .main-btn {
-        font-size: 8px;
-        padding: 10px 50px;
-      }
-      .cartas{
-        text-align: center;
-      }
+}
+.titulo-card{
+    font-size: 14px;
+}
+.card{
+    width: 12rem;
+}
+.main-btn {
+    font-size: 8px;
+    padding: 10px 50px;
+    }
+.cartas{
+    text-align: center;
+}
 
 
 
