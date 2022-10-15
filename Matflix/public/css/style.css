@@ -51,12 +51,14 @@ body {
     margin-bottom: 2%;
     background: #221F1F;
     color: #d7d7d7;
-    margin-left: 5%;
+    margin-left: 0%;
 }
 .carta1:hover{
     transform:scale3d(1.1, 1.1, 1)
 }
 .barrabranca{
+    display: flex;
+    justify-content: center;
     margin-left: 25%;
     width: 50%;
 }
@@ -115,6 +117,10 @@ body {
     scale: 100%;
     font-size: 30px;
     
+}
+.itens{
+    padding-left: 0%;
+    text-align: center;
 }
 
 .barradepag{
