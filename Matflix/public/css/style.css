@@ -2,7 +2,7 @@
 padding: 0;
 margin: 0;
 box-sizing: border-box;
-font-family: 'Roboto', sans-serif;
+font-family: 'Bebas Neue', cursive;
 }
 
 body{
@@ -210,7 +210,7 @@ border-radius: 12px;
     justify-content: space-between;
     align-items: center;
 }
-.home-section .funcionarios-boxes .recent-sale{
+.home-section .funcionarios-boxes .funcionario-box{
     width: 65%;
     background: #a39696ba;
     border-radius: 12px;
@@ -220,9 +220,10 @@ border-radius: 12px;
 .funcionarios-boxes .button{
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
 }
-.funcionarios-boxes .recent-sale .button a{
+
+.funcionarios-boxes .funcionario-box .button a{
     font-size: 15px;
     font-weight: 400;
     color: #fff;
@@ -251,10 +252,6 @@ border-radius: 12px;
 }
 .funcionarios-boxes .button a:hover{
     background-color: #AF0C19;
-
-
-
-
 }
 .home-section .funcionarios-boxes .top-show{
     width: 35%;
@@ -295,13 +292,13 @@ margin: 8px 0;
     margin-left: 5%;
 }
 .funcionarios-boxes .box li a{
-    font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
     color: #d7d7d7;
     font-size: 18px;
     font-weight: 400;
     text-decoration: none;
 }
+
 .postagens{
     color: #AF0C19;
 }
@@ -318,9 +315,10 @@ margin: 8px 0;
     .home-section .funcionarios-boxes .top-show{
         margin-left: 0;
     }
+    
 }
 @media (max-width:658px){
-    .home-section nav .sidebar-button .dashboard,
+    .home-section nav .dashboard,
     nav .profile-details .admin_name,
     nav .profile-details  i{
         display: none;
