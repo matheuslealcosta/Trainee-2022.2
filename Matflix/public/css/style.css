@@ -68,3 +68,10 @@ a{
     margin-left: 10px;
     padding-top: 0;
 }
+
+
+@media(max-width: 768px) {
+    .area-login {
+      padding: 20px 0;
+    }
+}
