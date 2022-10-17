@@ -3,8 +3,11 @@ html{
 }
 
 body{
+    display:flex;
     background-color: #666262;
     color: #1d1a1a;
+    align-items: center;
+    justify-content:center;
 }
 
 .editar{
@@ -20,12 +23,14 @@ body{
 }
 
 #main{
+   
     background-color: #221F1F;
     color: #d7d7d7;
     border-radius: 5px;
     margin-top: 15px;
     margin-bottom: 15px;
     padding: 25px;
+    
 }
 
 #title {

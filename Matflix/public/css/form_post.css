@@ -7,6 +7,20 @@ body{
     color: #1d1a1a;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+p{
+    text-align: center;
 }
 
 #logo{
@@ -60,7 +74,6 @@ body{
     margin-bottom: 15px;
     padding: 25px;
     width: 500px;
-    height: auto;
 }
 
 #arq{
