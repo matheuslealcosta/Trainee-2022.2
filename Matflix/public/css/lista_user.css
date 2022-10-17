@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    letter-spacing: 2px;
+    font-family: 'Bebas Neue', cursive;
+    color: #d7d7d7;
+}
+
+body, .page-container {
+    max-width: 100%;
+    max-height: 100%;
+    background-color: #221F1F;
+}
+
+h1 {
+    padding: 60px 0;
+    text-align: center;
+}
+
+
+/* BOTÃO DE ADICIONAR USUÁRIO */
+.btn-adicionar {
+    width: 100%;
+    margin-bottom: 20px;
+    padding-right: 20px;
+    text-align: right;
+}
+
+.btn-adicionar button {
+    width: 170px;
+    height: 32px;
+    border: none;
+    border-radius: 5px;
+    background-color: #AF0C19;
+}
+
+/* TABELA DA LISTA DE USUÁRIO */
+table thead {
+    background-color: #AF0C19;
+}
+
+.title-acao {
+    text-align: center;
+}
+
+table td {
+    font-size: .9rem;
+}
+
+table tr {
+    line-height: 40px;
+    border-bottom: 2px solid #AF0C19;
+}
+
+i{
+    transition: ease-in-out 0.2s;
+}
+
+i:hover{
+    color: #AF0C19;
+    transition: ease-in 0.1s;
+}
+
+table tr:hover {
+    --bs-table-hover-color: 0;
+    color: #d7d7d7;
+    cursor: pointer;
+}
+
+.btn-acoes {
+    width: 100%;
+    height: 40px;
+    padding: 1px 0 0 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-acoes i {
+    font-size: 1rem;
+}
+
+.number {
+    text-align: center;
+}
+
+.modal-user{
+    position: fixed;
+    background-color: rgb(54, 53, 53);
+    z-index: 5;
+    left: 50%;
+    right: 50%;
+}
+
+.fader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.4;
+    z-index: 1;
+}
+
+@media (min-width: 768px) {
+    .btn-acoes {
+        justify-content: space-evenly;
+    }
+}
