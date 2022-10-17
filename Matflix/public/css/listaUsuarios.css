@@ -17,6 +17,10 @@ h1 {
     text-align: center;
 }
 
+h1:hover {
+    cursor: default;
+}
+
 
 /* BOTÃO DE ADICIONAR USUÁRIO */
 .btn-adicionar {
@@ -55,7 +59,7 @@ table tr {
 table tr:hover {
     --bs-table-hover-color: 0;
     color: #d7d7d7;
-    cursor: pointer;
+    cursor: default;
 }
 
 .btn-acoes {
@@ -65,10 +69,20 @@ table tr:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 15px;
+}
+
+.btn-acoes button {
+    border: none;
+    background-color: transparent;
 }
 
 .btn-acoes i {
     font-size: 1rem;
+}
+
+.btn-acoes i:hover {
+    cursor: pointer;
 }
 
 .number {
