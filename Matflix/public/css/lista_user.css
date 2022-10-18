@@ -90,6 +90,7 @@ table tr:hover {
     z-index: 5;
     left: 50%;
     right: 50%;
+    transition: all 0.1s ease-in-out;
 }
 
 .fader {
@@ -98,9 +99,16 @@ table tr:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: black;
-    opacity: 0.4;
+    background-color: rgb(0, 0, 0,0.4);
+    pointer-events: all;
     z-index: 1;
+}
+
+
+.hide{
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s ease-in-out;
 }
 
 @media (min-width: 768px) {
