@@ -20,6 +20,20 @@ body, .page-container {
     border-radius: 5px;
     background-color: #221F1F;
 }
+@media (max-width: 603px)
+{
+    .page-content{
+        display: block;
+        padding-top: 0px;
+        scale: 90%;
+        margin: auto;
+    }
+    .page-container{
+        display: flex;
+        justify-content:center;
+    }
+}
+
 
 .title {
     width: 96%;
@@ -28,9 +42,10 @@ body, .page-container {
     flex-direction: row;
     text-align: center;
     justify-content: space-between;
-    border-bottom: 2px solid #AF0C19;
 }
-
+hr{
+    border: 1px dashed #AF0C19;
+}
 .title i {
     font-size: 1.5rem;
     height: 1.5rem;
@@ -46,7 +61,6 @@ body, .page-container {
     padding: 7px;
     display: flex;
     align-items: center;
-    border-bottom: 2px solid #AF0C19;
 }
 
 .text p {
