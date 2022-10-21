@@ -115,3 +115,9 @@ textarea {
     flex-direction: row;
     justify-content: flex-end;
 }
+
+@media (max-width: 480px) {
+    .modal-post {
+        width: 100%;
+    }
+}
