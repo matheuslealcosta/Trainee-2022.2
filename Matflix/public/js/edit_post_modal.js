@@ -6,7 +6,7 @@ const botaoModal = [...botoes].filter((el) => {
     return el.dataset.modal != null;
 });
 
-const modalCurrent = () => {
+const modalAberto = () => {
     const modal = document.getElementsByClassName("modal-post");
     const modalOpen = [...modal].filter((el) => {
         return !el.classList.contains("hide");
@@ -15,10 +15,10 @@ const modalCurrent = () => {
     return modalOpen[0];
 }
 
-const toggleModal = (id) => {
+const afModal = (id) => {
     if(id == undefined)
     {
-        const modalOpen = modalCurrent();
+        const modalOpen = modalAberto();
         fadeModal.classList.toggle("hide");
         modalOpen.classList.toggle("hide");
     }
@@ -31,5 +31,5 @@ const toggleModal = (id) => {
 }
 
 [...botaoModal, fadeModal, ...fechar].forEach((el) => {
-    el.addEventListener("click", () => toggleModal(el.dataset.modal))
+    el.addEventListener("click", () => afModal(el.dataset.modal))
 })
