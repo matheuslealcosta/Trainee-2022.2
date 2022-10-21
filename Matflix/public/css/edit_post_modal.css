@@ -32,7 +32,7 @@ body {
     top: 0;
     left: 0;
     z-index: 5;
-    pointer-events: none;
+    pointer-events: all;
     background-color: rgba(0,0,0,0.5);
 }
 
@@ -114,6 +114,12 @@ textarea {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+}
+
+/*tag hide usada no modal*/
+.hide {
+    opacity: 0;
+    pointer-events: none;
 }
 
 @media (max-width: 480px) {
