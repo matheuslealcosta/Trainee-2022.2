@@ -30,6 +30,6 @@ const toggleModal = (id) => {
     }
 }
 
-[...botaoModal, fadeModal].forEach((el) => {
+[...botaoModal, fadeModal, ...fechar].forEach((el) => {
     el.addEventListener("click", () => toggleModal(el.dataset.modal))
 })
