@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    letter-spacing: 2px;
+    font-family: 'Bebas Neue', cursive;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.botao {
+    width: 100px;
+    height: 33px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    color: #d7d7d7;
+    background-color: #AF0C19;
+}
+
+.botao:hover {
+    cursor: pointer;
+}
+
+.fade {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    pointer-events: none;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-post {
+    width: 400px;
+    height: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    color: #d7d7d7;
+    background-color: #221F1F;
+}
+
+.img-logo {
+    width: 100%;
+    height: 100px;
+    text-align: center;
+}
+
+.img-logo img {
+    width: 200px;
+}
+
+.title-post {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-post {
+    padding: 0 15px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input[type="text"] {
+    height: 20px;
+    margin-bottom: 20px;
+    padding: 5px;
+    outline: none;
+    border-radius: 3px;
+    border: none;
+}
+textarea {
+    padding: 7px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+}

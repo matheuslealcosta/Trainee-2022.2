@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editando Post</title>
+
+    <!-- link da font utilizada -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <!-- link do css -->
+    <link rel="stylesheet" href="../../../public/css/edit_post_modal.css">
+
+</head>
+<body>
+
+    <!-- botão para editar post -->
+    <button type="button" class="botao" data-modal="editarPost">Editar Post</button>
+
+    <!-- modal da edição dos posts -->
+    <div class="fade"></div>
+    <div class="modal-post">
+        <div class="img-logo">
+            <img src="../../../public/assets/MatflixLogoText.png" alt="imagem da logo matflix">
+        </div>
+        <div class="title-post">
+            <h2>Edição de Post</h2>
+        </div>
+        <div class="form-post">
+            <form>
+                <label for="title-postagem">Título da Postagem:</label>
+                <input type="text" name="title-postagem" id="title-postagem">
+                <label for="paragrafo-1">Primeiro Parágrafo:</label>
+                <textarea name="paragrafo-1" id="paragrafo-1" cols="30" rows="5"></textarea>
+                <label for="midia">Mídia Inclusa:</label>
+                <input type="file" name="midia" id="midia" accept=".jpg,.png">
+            </form>
+        </div>
+        <div class="buttons">
+            <input type="button" class="botao" value="Fechar">
+            <input type="submit" class="botao" value="Editar">
+        </div>
+    </div>
+</body>
+</html>
