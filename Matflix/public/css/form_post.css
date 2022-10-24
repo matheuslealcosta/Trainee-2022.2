@@ -19,6 +19,10 @@ body{
     gap: 20px;
 }
 
+label {
+    font-weight: bold;
+}
+
 p{
     text-align: center;
 }

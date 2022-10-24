@@ -9,40 +9,38 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue">
         <link rel="icon" type="image/x-icon" href="../../../public/assets/m3dPNG.png">
         <link rel="stylesheet" href="../../../public/css/form_post.css">
-        <title>Edição de Posts</title>
+        <title>Criação de Posts</title>
     </head>
     <body>
         <div class="container overflow-hidden" id="main">
-            <img src="../../../public/assets/MatflixLogoText.png" class="img-fluid mx-auto d-block" alt="" id="logo">
-           <h2 class="mb-4" id="title">Edição de Post</h2>
+           <img src="../../../public/assets/MatflixLogoText.png" class="img-fluid mx-auto d-block" alt="" id="logo">
+           <h2 class="mb-4" id="title">Edição de Post.</h2>
            <form action="POST" class="row gy-3 gx-3 align-items-center mt-2">
-
-                <div class="form-group row mb-3">
+                <div class="form-group mb-3">
                     <label for="titulo" class="col-sm-auto col-form-label">Título da Postagem:</label>
-                    <div class="col-sm-7">
-                        <input type="text" name="" id="titulo" class="form-control" placeholder="Estréia de La casa de Papel">
-                    </div>
+                    
+                    <input type="text" name="" id="titulo" class="form-control" placeholder="TITULO">
+                   
                 </div>
 
-                <div class="form-group row mb-3">
+                <div class="form-group mb-3">
                     <label for="prim_para" class="col-sm-auto col-form-label">Primeiro Parágrafo:</label>
-                    <div class="col-sm-7">
-                        <textarea name="" id="prim_para" cols="3" rows="5" class="form-control" placeholder="Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                        Sint nostrum ullam maiores dolores, provident quod ea voluptatum itaque quia nisi, corporis corrupti! Hic reiciendis 
-                        culpa maiores, cum provident dolorem dolor."></textarea>
-                    </div>
+                    
+                    <textarea name="" id="prim_para" cols="3" rows="5" class="form-control" placeholder="PARAGRAFO"></textarea>
                 </div>
 
-                <div class="input-group mb-3 row">
-                    <label class="col-sm-auto col-form-label me-4" for="arq">Mídia Inclusa:</label>
-                    <div class="col-sm-8">
-                        <input type="file" class="custom-file-input form-control" id="arq">
-                    </div>
-                </div>  
-    
-                <input type="submit" value="Editar" class="btn btn-lg formbtn form-control col-lg"></input>
-                <button class="btn btn-lg formbtn form-control col-lg">Cancelar</button>
+                <div class="form-group mb-3">
+                    <label class="col-sm-auto col-form-label me-5" for="arq">Mídia inclusa:</label>
+                    
+                    <input type="file" class="custom-file-input form-control" id="arq">
 
+                </div>  
+                <div class="col-sm-6">
+                    <input type="submit" value="Editar" class="btn btn-lg formbtn form-control"></input>
+                </div>
+                <div class="col-sm-6">
+                    <button class="btn btn-lg formbtn form-control align-self-center col-sm-6">Cancelar</button>
+                </div>
            </form>
         </div>
     </body>
