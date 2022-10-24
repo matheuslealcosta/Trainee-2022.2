@@ -17,6 +17,10 @@ h1 {
     text-align: center;
 }
 
+h1:hover {
+    cursor: default;
+}
+
 
 /* BOTÃO DE ADICIONAR USUÁRIO */
 .btn-adicionar {
@@ -52,19 +56,10 @@ table tr {
     border-bottom: 2px solid #AF0C19;
 }
 
-i{
-    transition: ease-in-out 0.2s;
-}
-
-i:hover{
-    color: #AF0C19;
-    transition: ease-in 0.1s;
-}
-
 table tr:hover {
     --bs-table-hover-color: 0;
     color: #d7d7d7;
-    cursor: pointer;
+    cursor: default;
 }
 
 .btn-acoes {
@@ -74,23 +69,33 @@ table tr:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 15px;
+}
+
+.btn-acoes button {
+    border: none;
+    background-color: transparent;
 }
 
 .btn-acoes i {
     font-size: 1rem;
 }
 
-.number {
-    text-align: center;
+i{
+    transition: ease-in-out 0.2s;
 }
 
-.modal-user{
-    position: fixed;
-    background-color: rgb(54, 53, 53);
-    z-index: 5;
-    left: 50%;
-    right: 50%;
-    transition: all 0.1s ease-in-out;
+i:hover{
+    color: #AF0C19;
+    transition: ease-in 0.1s;
+}
+
+.btn-acoes i:hover {
+    cursor: pointer;
+}
+
+.number {
+    text-align: center;
 }
 
 .fader {
@@ -110,6 +115,18 @@ table tr:hover {
     pointer-events: none;
     transition: all 0.2s ease-in-out;
 }
+
+.modal-user{
+    position: fixed;
+    background-color: rgb(54, 53, 53);
+    z-index: 5;
+    left: 50%;
+    right: 50%;
+    top: 5px;
+    transition: all 0.1s ease-in-out;
+}
+
+
 
 @media (min-width: 768px) {
     .btn-acoes {
