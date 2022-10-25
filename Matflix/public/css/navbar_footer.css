@@ -10,6 +10,7 @@ body {
     width: 100%;
     height: 100vh;
     overflow-x: hidden;
+    background-color: #221F1F;
 }
 
 .page-container {
@@ -57,14 +58,14 @@ body {
 
 /* CONTEÚDO */
 .page-content {
-    padding-bottom: 10rem;
+    padding-bottom: 13rem;
 }
  
 /* FOOTER */
 footer {
     padding: 10px 0;
     width: 100%;
-    height: 10rem;
+    height: auto;
     text-align: center;
     position: absolute;
     bottom: 0;
