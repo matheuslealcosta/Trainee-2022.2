@@ -125,8 +125,9 @@ table tr:hover {
         padding-right: 20px;
         text-align: right;
     }
-    
+
     .email {
+        width: auto;
         display: table-cell;
     }
 }
