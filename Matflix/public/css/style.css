@@ -11,6 +11,10 @@ body{
     justify-content: center;
 }
 
+.criar{
+    cursor: pointer;
+}
+
 .login{
     display: flex;
     flex-direction: column;
