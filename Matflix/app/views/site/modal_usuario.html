@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Criação de Usuário</title>
+    <link rel="stylesheet" href="..\..\..\public\css\styles.css">
+    <script src="..\..\..\public\js\scripts.js" defer></script>
+</head>
+<body>
+    <h1>Modal Criação de Usuário</h1>
+    <button id="open-modal">Criar Usuário</button>
+    <div id="fade" class="hide"></div>
+    <div id="modal" class="hide">
+        <div class="modal-header">
+            <h2>Criar novo usuário</h2>
+            <button id="close-modal">X</button>
+        </div>
+        <div class="modal-body">
+        </div>
+
+        <form>
+            <input type="text" name="nome" placeholder="Digite o nome de Usuário" autofocus>
+            <input type="text" name="nome" placeholder="Digite seu nome completo" autofocus>
+            <input type="text" name="E-mail" placeholder="Digite seu E-mail" autofocus>
+            <input type="password" name="senha" placeholder="Digite sua Senha">
+            <input type="submit" value="Cadastrar">
+        </form>
+
+    </div>
+</body>
+</html>
