@@ -4,6 +4,10 @@ margin: 0;
 box-sizing: border-box;
 font-family: 'Bebas Neue', cursive;
 }
+.cartao{
+    margin-top: 5%;
+    width: 20rem;
+}
 .botao1{
     border-radius: 20px;
     border: 1px solid transparent;
@@ -15,22 +19,17 @@ font-family: 'Bebas Neue', cursive;
     text-transform: uppercase;
 }
 .corpodocard{
-    background-color: #a39696ba;
+    background-color: #221F1F;
 }
 .botao1:hover{
-    color: #d7d7d7;
-    background-color: transparent;
-    border-color: #E21221;
+    color: #E21221;
+    background-color: #d7d7d7;
+    border-color: #d7d7d7;
 
 }
-.itens{
-    padding-left: 0%;
-    text-align: center;
-    display:flex;
-    justify-content: space-around;
-}
+
 .cardtitulo2{
-    color: white;
+    color: #d7d7d7;
 }
 .cartas-filme{
     padding: 0%;
@@ -41,44 +40,25 @@ font-family: 'Bebas Neue', cursive;
     font-size: 20px;
     border-radius: 0;
 }
-.carta1{
-    display: inline-block;
-    width:20rem;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    background: #221F1F;
-    color: #d7d7d7;
-    margin-left: 0%;
-}
-.carta1:hover{
-    transform:scale3d(1.1, 1.1, 1)
-}
-.page1{
-    display: inline-block;
-    text-align: center;
-}
+
+
+
 
 
 body{
     background-color: #221F1F; /*nao mexer*/
     width: 100%;
 }
-.home-section{
-    background:#221F1F; /*nao mexer*/
-    position: relative;
-    width: 100%
-}
 
-.bx-run:hover{
-    color: #E21221;
-}
+
+
 .profile-details, .bx-menu{
     cursor: pointer;
 }
 
 .home-section nav{
     height: 60px;
-    background: #d7d7d7;
+    background: #3d3b3b;
     padding: 0 20px;
     display: flex;
     align-items: center;
@@ -93,7 +73,7 @@ body{
     margin: auto;
     display: block;
     margin-bottom: 0;
-    margin-top: -30px;
+    margin-top: -25px;
   
   }
 nav .profile-details{
@@ -101,7 +81,7 @@ nav .profile-details{
     height: 50px;
     align-items: center;
     background-color: #cecbcbec; /*naomexer*/
-    border: 2px solid #221F1F; /*talvezmexer*/
+    border: 2px solid #443133; /*talvezmexer*/
     border-radius: 6px;
     padding: 0 15px 0 2px;
 }
@@ -112,308 +92,61 @@ nav .profile-details img{
     object-fit: cover;
     border-radius: 6px;
 }
+.more{
+    color: white;
+}
 nav .profile-details .admin_name{
     font-size:15px;
     font-weight: 500;
-    color: #252222;
+    color: #E21221;
     margin: 0 10px;
     white-space: nowrap;
 }
 nav .profile-details i{
-    color: #252222;
+    color: #E21221;
     font-size: 25px;
 }
-/*a partir daqui é oq n foi comitado */
-.home-section .home-content{
-    position: relative;
-}
-.home-content .overview-boxes .box{
-    width: calc(100%/4 - 15px);
-    display: flex;
-    align-items: center;
-    padding: 15px 14px;
-    background:#a39696ba ; /*cor das caixas com emoji*/
-    border-radius: 30px;
-    justify-content: center;
-    
-}
-.home-content .overview-boxes .box_topic{
-    font-size: 20px;
-    font-weight: 500;
-}
-.home-content .overview-boxes{
-    padding: 0 30px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-@media screen and (max-width: 550px){
-    .carta1{
-        width:10rem;
-    }
-    .itens{
-        width: 100%;
-        display:block;
-        justify-content: center;
-    }
-    .home-content .overview-boxes{
+.textocard{
+    color: #221F1F;
 
+}
+.cartoes{
+    text-align: center;
+    margin-top: 0%;
+    display: flex;
+    justify-content: space-around;
+}
+.cardtitulo2{
+    color: #f4f2f2;
+}
+
+@media (max-width: 767px){
+    .cartoes{
+        margin-top: auto;
         display: block;
 
     }
-    .home-content .overview-boxes .box{
-        width: 100%;
+    .cartao{
         margin: auto;
-        border-radius: 30px;
-        margin-bottom: 2%;
-
-        
-    }
-.home-content .overview-boxes .number{
-    font-size: 35px;
-    font-weight: 500;
-    margin-top: -5px;
-    display: inline-block;
-}
-}
-.overview-boxes .indicator {
-display: flex;
-align-items: center;
-}
-.overview-boxes .indicator i{
-    height: 20px;
-    width: 20px;
-    background:#02f236;
-    color: #fff;
-    border-radius: 50%;
-    font-size: 20px;
-    margin-right: 5px;
-}
-.overview-boxes .indicator i.run{
-    height: 20px;
-    width: 20px;
-    background:#E21221;
-    color: #fff;
-    border-radius: 50%;
-    font-size: 20px;
-    margin-right: 5px;
-}
-
-.overview-boxes .indicator .text{
-    font-size:12px;
-    color: white;
-}
-.box_topic{
-    color: black;
-}
-.overview-boxes .box .bx-file{
-font-size: 32px;
-font-weight: 500;
-height: 50px;
-width: 50px;
-background: #d7d7d7;
-color: #AF0C19;
-line-height: 50px;
-text-align: center;
-border-radius: 12px;
-}
-
-.overview-boxes .box .bx-user-plus{
-    font-size: 32px;
-    font-weight: 500;
-    height: 50px;
-    width: 50px;
-    background: #d7d7d7;
-    color: #AF0C19;
-    line-height: 50px;
-    text-align: center;
-    border-radius: 12px;
-    }
-
-.overview-boxes .box .bx-user-voice{
-        font-size: 32px;
-        font-weight: 500;
-        height: 50px;
-        width: 50px;
-        background: #d7d7d7;
-        color: #AF0C19;
-        line-height: 50px;
-        text-align: center;
-        border-radius: 12px;
-} 
-.overview-boxes .box .bxl-discord-alt{
-            font-size: 32px;
-            font-weight: 500;
-            height: 50px;
-            width: 50px;
-            background: #d7d7d7;
-            color: #AF0C19;
-            line-height: 50px;
-            text-align: center;
-            border-radius: 12px;
-}
-.name{
-    font-size: 200%;
-    color: rgb(17, 211, 17) 
-}
-.green{
-    font-size: 200%;
-    color: rgb(17, 211, 17) 
-}
-.discord{
-    font-size: 200%;
-    color: rgb(17, 211, 17);
-    
-}
-
-.number{
-    text-align: center;
-}
-.week{
-    text-align: center;
-}
-/*sales parte*/
-.details{
-    text-align: center;
-    text-transform: uppercase;
-
-    color: #AF0C19;
-}
-
-.home-section .funcionarios-boxes .box .funcionarios-details{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.home-section .funcionarios-boxes .funcionario-box{
-    width: 65%;
-    background: #a39696ba;
-    border-radius: 12px;
-    box-sizing: 0 5px 10px rgba(0,0,0,0,1);
-    padding: 20px;
-}
-.funcionarios-boxes .button{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.funcionarios-boxes .funcionario-box .button a{
-    font-size: 15px;
-    font-weight: 400;
-    color: #fff;
-    background: #E21221;
-    padding: 4px 12px;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-}
-.funcionarios-boxes .top-show li a{
-    display: flex;
-    align-items: center;
-}
-
-.funcionarios-boxes .top-show li {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.funcionarios-boxes .top-show img{
-    margin-right: 8px;
-    height: 40px;
-    width: 40px;
-    border-radius: 4px;
-    object-fit: cover;
-}
-.funcionarios-boxes .button a:hover{
-    background-color: #AF0C19;
-}
-.home-section .funcionarios-boxes .top-show{
-    width: 35%;
-    margin-left: 20px;
-    background: #a39696ba;
-    border-radius: 12px;
-    box-sizing: 0 5px 10px rgba(0,0,0,0,1);
-    padding: 20px;
-}
-.home-section .funcionarios-boxes .box .title{
-    font-size:24px;
-    font-weight: 500;
-}
-.home-section .funcionarios-boxes{
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-}
-.home-section .funcionarios-boxes .box .topic{
-font-size: 20px;
-font-weight: 500;
-}
-.home-section .funcionarios-boxes .box li{
-list-style: none;
-margin: 8px 0;
-}
-.title{
-    color: #AF0C19
-}
-.box_topic{
-    color: #d7d7d7;
-}
-.topic{
-    color: black;
-}
-
-.bx{
-    margin-left: 5%;
-}
-.funcionarios-boxes .box li a{
-    text-transform: uppercase;
-    color: #d7d7d7;
-    font-size: 18px;
-    font-weight: 400;
-    text-decoration: none;
-}
-
-.postagens{
-    color: #AF0C19;
-}
-
-@media (max-width:1078px){
-    .home-section .funcionarios-boxes{
-        flex-direction: column;
-    }
-    
-    .home-section .funcionarios-boxes .box{
-        margin-bottom: 20px;
-        width: 100%;
-        overflow-x: scroll;
-    }
-    .home-section .funcionarios-boxes .top-show{
-        margin-left: 0;
-    }
-    
-}
-@media (max-width:658px){
-    .carta1{
-        width:10rem;
-    }
-    
-    .itens{
-        width: 100%;
-        display:block;
-        justify-content: center;
-    }
-    .home-section nav .dashboard,
-    nav .profile-details .admin_name,
-    nav .profile-details  i{
-        display: none;
-    }
-
-    .home-section nav .profile-details{
-      min-width: 50px;
-      height: 50px; 
-    }
-    .home-section .funcionarios-boxes .funcionarios-details{
-        width: 590px;
+        margin-bottom: 5px;
+        width: 15rem;
     }
 }
+
+/* -------------- */
+@media only screen and (max-width: 1000px) and (min-width: 768px){
+    .cartoes{
+        margin-top: auto;
+        display: block;
+
+    }
+    .cartao{
+        margin: auto;
+        margin-bottom: 8px;
+        width: 25rem;
+    }
+}
+
+
+
+
