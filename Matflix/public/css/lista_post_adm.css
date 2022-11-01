@@ -22,7 +22,7 @@ h1:hover {
 }
 
 
-/* BOTÃO DE ADICIONAR USUÁRIO */
+/* BOTÃO DE ADICIONAR POST */
 .btn-adicionar {
     width: 100%;
     margin-bottom: 20px;
@@ -38,7 +38,7 @@ h1:hover {
     background-color: #AF0C19;
 }
 
-/* TABELA DA LISTA DE USUÁRIO */
+/* TABELA DA LISTA DE POSTS */
 table thead {
     background-color: #AF0C19;
 }
