@@ -1,0 +1,205 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body {
+    background-color: #221F1F;
+}
+
+.page1{
+    display: inline-block;
+    text-align: center;
+}
+
+
+.cartas-filme{
+    padding: 0%;
+    display: flex;
+    justify-content: center;
+}
+.cardtitulo2{
+    color: #E21221;
+}
+.corpodocard{
+    font-size: 20px;
+}
+.botao1{
+    border-radius: 20px;
+    border: 1px solid transparent;
+    transition: .5s;
+    background-color: #E21221;
+    color: white;
+    border-color: #E21221;
+    font-family: 'Bebas Neue', cursive;
+    text-transform: uppercase;
+}
+.botao1:hover{
+    color: #d7d7d7;
+    background-color: transparent;
+    border-color: #E21221;
+
+}
+.items{
+    margin-top: 3%;
+    margin-left: 0%;
+}
+.carta1{
+    display: inline-block;
+    width: 20rem;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background: #221F1F;
+    color: #d7d7d7;
+    margin-left: 0%;
+}
+.carta1:hover{
+    transform:scale3d(1.1, 1.1, 1)
+}
+.barrabranca{
+    display: flex;
+    justify-content: center;
+    margin-left: 25%;
+    width: 50%;
+}
+.botaosearch{
+
+    border-radius: 30px;
+    border: 10px solid transparent;
+    font-size: 20px;
+    transition: 0.5s;
+    background-color: #E21221;
+    color: white;
+    border-color: #E21221;
+    font-family: 'Bebas Neue', cursive;
+    text-transform: uppercase;
+}
+.botaosearch:hover{
+    color: #d7d7d7;
+    background-color: #E21221;
+    border-color: #E21221;
+    transform:scale3d(1.1, 1.1, 1)
+}
+.logo{
+    width: 300px;
+    margin: auto;
+    display: block;
+    margin-bottom: 100px;
+    margin-top: 100px;
+  
+  }
+  [type="search"]{
+
+    font-size: 20px;
+
+    
+}
+
+  .text{
+    font-family: 'Bebas Neue', cursive;
+    color: white;
+    font-size: 60px;
+    margin-top: 5%;
+    margin-left: 10%;
+  }
+  .botao1:hover{
+    color: #d7d7d7;
+    background-color: transparent;
+    border-color: #E21221;
+
+}
+
+.linkdapagina{
+    background-color: #E21221;
+    color: #d7d7d7;
+    border-color: black;
+    font-family: 'Bebas Neue', cursive;
+    scale: 100%;
+    font-size: 30px;
+    
+}
+.itens{
+    padding-left: 0%;
+    text-align: center;
+}
+
+.barradepag{
+    border: 5px solid transparent;
+    transition: 0.5s;
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+.linkdapagina:hover{
+    background-color: #d7d7d7;
+    color: black;
+}
+
+@media screen and (max-width: 980px) {
+
+    .corpodocard{
+        font-size: 10px;
+    }
+    .carta1{
+        text-align: center;
+        width: 13rem;
+        margin-top: 2%;
+        margin-left: 0%;
+    }
+    .cardtitulo2 .cardtexto{
+        font-size: smaller
+    }
+    .itens{
+        padding-left: 0%;
+        text-align: center;
+    }
+
+    .logo{
+        width: 300px;
+        margin: auto;
+        display: block;
+        margin-bottom: 5px;
+        margin-top: 0px;
+        scale: 80%;
+      
+      }
+
+      .form-control {
+        width: 50%;
+        padding: 0.190rem  0.18rem;
+        font-size: 0.8rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #212529;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border-radius: .375rem;
+        transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    }
+
+    .botaosearch{
+        border-radius: 30px;
+        border: 1px solid transparent;
+        font-size:10px;
+        transition: 0.5s;
+        background-color: #E21221;
+        color: white;
+        border-color: #E21221;
+        font-family: 'Bebas Neue', cursive;
+        text-transform: uppercase;
+    }
+    .barrabranca {
+        padding-left: 15%;
+        margin-bottom: 50px;
+        margin-left: 0%;
+        width: 100%;
+    }
+
+    .barradepag{
+        scale: 50%;
+    }
+
+  }
