@@ -3,9 +3,7 @@ const botaoAbrir = document.getElementsByClassName("botao");
 const botoesModal = [...botaoAbrir].filter((el) =>{
     return el.dataset.modal != null
 });
-const modalCurrent= () => {
-    const modal = document.getElementByCl
-}
+
 const toggleModal= (id) => {
     const modalOpen = document.getElementById(id);
     modalOpen.classList.toggle("hide");
