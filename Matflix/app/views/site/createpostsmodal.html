@@ -27,7 +27,7 @@
        <div class="page-content">
            
         <div class="btn-adicionar">
-            <button  class="add" type="button">Adicionar Postagem  +</button>
+            <button  class="add botao " type="button" data-modal="modalnewpost" id="botaoAbrir">Adicionar Postagem  +</button>
         </div>
         <!--início da tabela de posts-->
         <table class="table table-hover">
@@ -45,10 +45,10 @@
                     <td>Terceira temporada de The Witcher anunciada.</td>
                     <td>27/10/2022</td>
                     <td>
-                        <div class="btn-acoes">
-                            <i class="fa fa-eye" aria-hidden="true" > </i>
-                            <i class="fa fa-trash-o" aria-hidden="true"></i>
-                            <i class="fa fa-pencil-square-o" aria-hidden="true" data-modal="modalEdit"></i>
+                        <div class="btn-acoes ">
+                            <i class="fa fa-eye  botao " aria-hidden="true" data-modal="" > </i>
+                            <i class="fa fa-trash-o  botao" aria-hidden="true" data-modal=""></i>
+                            <i class="fa fa-pencil-square-o botao " aria-hidden="true" data-modal="modalEdit"></i>
                         </div>
                     </td>
                 </tr>
@@ -59,13 +59,13 @@
                     <td>
                         <div class="btn-acoes">
                             <button type="button">
-                                <i class="fa fa-eye" aria-hidden="true"></i>
+                                <i class="fa fa-eye  botao" aria-hidden="true" data-modal=""></i>
                             </button>
                             <button type="button">
-                                <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                <i class="fa fa-trash-o  botao" aria-hidden="true" data-modal=""></i>
                             </button>
                             <button type="button">
-                                <i class="fa fa-pencil-square-o" aria-hidden="true" data-modal="modalEdit"></i>
+                                <i class="fa fa-pencil-square-o botao " aria-hidden="true" data-modal="modalEdit"></i>
                             </button>
                         </div>
                     </td>
@@ -77,13 +77,13 @@
                     <td>
                         <div class="btn-acoes">
                             <button type="button">
-                                <i class="fa fa-eye" aria-hidden="true"></i>
+                                <i class="fa fa-eye  botao" aria-hidden="true" data-modal=""></i>
                             </button>
                             <button type="button">
-                                <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                <i class="fa fa-trash-o  botao" aria-hidden="true" data-modal=""></i>
                             </button>
                             <button type="button">
-                                <i class="fa fa-pencil-square-o" aria-hidden="true" data-modal="modalEdit"></i>
+                                <i class="fa fa-pencil-square-o botao " aria-hidden="true" data-modal="modalEdit"></i>
                             </button>
                         </div>
                     </td>
@@ -95,13 +95,13 @@
                     <td>
                         <div class="btn-acoes">
                             <button type="button">
-                                <i class="fa fa-eye" aria-hidden="true"></i>
+                                <i class="fa fa-eye  botao" aria-hidden="true" data-modal=""></i>
                             </button>
                             <button type="button">
-                                <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                <i class="fa fa-trash-o  botao" aria-hidden="true" data-modal=""></i>
                             </button>
                             <button type="button">
-                                <i class="fa fa-pencil-square-o" aria-hidden="true" data-modal="modalEdit"></i>
+                                <i class="fa fa-pencil-square-o botao " aria-hidden="true" data-modal="modalEdit"></i>
                             </button>
                         </div>
                     </td>
@@ -113,13 +113,13 @@
                     <td>
                         <div class="btn-acoes">
                             <button type="button">
-                                <i class="fa fa-eye" aria-hidden="true"></i>
+                                <i class="fa fa-eye  botao" aria-hidden="true" data-modal=""></i>
                             </button>
                             <button type="button">
-                                <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                <i class="fa fa-trash-o  botao" aria-hidden="true" data-modal=""></i>
                             </button>
                             <button type="button">
-                                <i class="fa fa-pencil-square-o" aria-hidden="true" data-modal="modalEdit"></i>
+                                <i class="fa fa-pencil-square-o  botao" aria-hidden="true" data-modal="modalEdit"></i>
                             </button>
                         </div>
                     </td>
@@ -131,13 +131,13 @@
                     <td>
                         <div class="btn-acoes">
                             <button type="button">
-                                <i class="fa fa-eye" aria-hidden="true"></i>
+                                <i class="fa fa-eye botao " aria-hidden="true" data-modal=""></i>
                             </button>
                             <button type="button">
-                                <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                <i class="fa fa-trash-o  botao" aria-hidden="true" data-modal=""></i>
                             </button>
                             <button type="button">
-                                <i class="fa fa-pencil-square-o" aria-hidden="true" data-modal="modalEdit"></i>
+                                <i class="fa fa-pencil-square-o  botao" aria-hidden="true" data-modal="modalEdit"></i>
                             </button>
                         </div>
                     </td>
@@ -149,10 +149,12 @@
    
    </div>
 </div>
-   <div class="container overflow-hidden modal" id="main">
+
+<div class="fade-modal hide" id="fadeModal"></div>
+   <div class="container hide modal" id="modalnewpost">
     <img src="../../../public/assets/MatflixLogoText.png" class="img-fluid mx-auto d-block" alt="" id="logo">
     <h2 class="mb-4" id="title2">Criação de Post</h2>
-    <form action="POST" class="row gy-3 gx-3 align-items-center mt-2">
+    <form  class="row gy-3 gx-3 align-items-center mt-2">
          <div class="form-group row mb-3">
              <label for="titulo" class="col-sm-auto col-form-label">Título da Postagem:</label>
              <div class="col-sm-7">
@@ -182,7 +184,7 @@
          </div>
 
          <div>
-             <button class="btn btn-lg formbtn form-control align-self-center col-sm-6 cancc">Cancelar</button>
+             <button class="btn btn-lg formbtn form-control align-self-center col-sm-6 cancc cancelar" id="Cancel" >Cancelar</button>
          </div>
     </form>
  </div>

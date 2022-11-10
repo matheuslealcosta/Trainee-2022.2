@@ -1,25 +1,26 @@
-const botaopublique = document.querySelector(".add");
-const botaocancelar = document.querySelector(".cancc");
+const fadeModal = document.getElementById("fadeModal");
+const botaoAbrir = document.getElementsByClassName("botao");
+const botaoFechar = document.getElementById("Cancel");
 
-
-botaopublique.addEventListener('click',abrirmodal);
-botaocancelar.addEventListener('click',fecharmodal);
-
-function abrirmodal(){
-    console.log('alo')
-    let modal = document.querySelector("#main");
-    modal.style.display='block';
-    let pagecontainer = document.querySelector(".page-container");
-    pagecontainer.style.display = 'none';
-
+const botoesModal = [...botaoAbrir].filter((el) =>{
+    return el.dataset.modal != null
+});
+const modalCurrent= () => {
+    const modal = document.getElementByCl
 }
+const toggleModal= (id) => {
+    const modalOpen = document.getElementById(id);
+    console.log("hiiii")
+    modalOpen.classList.toggle("hide");
+    fadeModal.classList.toggle("hide");
+}
+[...botoesModal,fadeModal].forEach((el) => {
+    el.addEventListener("click", () => toggleModal(el.dataset.modal));
+})
 
+botaoFechar.addEventListener("click", fechar())
 
-
-function fecharmodal(){
-    console.log('oi')
-    let modal = document.querySelector("#main");
-    modal.style.display='none';
-    let pagecontainer = document.querySelector(".page-container");
-    pagecontainer.style.display = 'block';
+function fechar(){
+    botaoAbrir.className+= " ali";
+    fadeModal.className+= " ali";
 }
