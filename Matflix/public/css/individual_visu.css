@@ -1,0 +1,97 @@
+html{
+    font-family: 'Bebas Neue';
+}
+
+body{
+    background-color: #666262;
+    color: #1d1a1a;
+}
+
+#main{
+    background-color: #221F1F;
+    color: #d7d7d7;
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 25px;
+}
+
+#title {
+    color: #AF0C19;
+    font-size: 55px;
+    text-align: justify;
+    font-weight: bold;
+    transition: 0.1s;
+}
+
+#title:hover{
+    color: #d7d7d7;
+    transition: ease-in-out 1s;
+    background: linear-gradient(90deg,#221F1F, #AF0C19, #221F1F);
+    background-repeat: no-repeat;
+    background-size: 70%;
+    animation: grad 2s linear forwards;
+}
+
+@keyframes grad{
+    0%{
+        background-position: -500%;
+    }
+    55%{
+        background-position: 500%;
+    }
+    100%{
+        background-position: 500%;
+        background: none;
+    }
+}
+
+#logo-min{
+    padding: 0;
+    margin-bottom: 10px;
+    width:50px;
+    transition-property: all; 
+    transition-duration: 0.3s; 
+    transition-timing-function: ease; 
+}
+
+#logo-min:hover{
+    transform: scale(1.3);
+}
+
+#back {
+    font-family: 'Bebas Neue';
+    background-color: #AF0C19;
+    color:#d7d7d7;
+    margin: 5px;
+    transition: ease-in-out 0.32s;
+}
+#back:hover {
+    background-color: #666262;
+    color: #AF0C19;
+    transition: ease-in-out 0.32s;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    #title {
+        font-size: 35px;
+    }
+    #logo-min{
+        width:35px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #title {
+        font-size: 30px;
+    }
+    #logo-min{
+        width:30px;
+    }
+}
+
+    
+
+
+
