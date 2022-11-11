@@ -118,7 +118,12 @@ i:hover{
   }
 }
 /* ---------------------------------------------------------------- */
+.container-modal{
+  display: flex;
+  margin: 0, auto;
+  justify-content: center;
 
+}
 .modal{
   
   position: fixed;
