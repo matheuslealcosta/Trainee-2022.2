@@ -140,7 +140,7 @@ i:hover{
   }
 
   .btn-acoes {
-      flex-direction: column;
+
       height: auto;
   }
 
@@ -242,8 +242,14 @@ p{
 @media (max-width: 768px) {
   #modalnewpost{
     width: auto;
-    flex-direction: column;
+    flex-direction: row;
   }
+  .btn-acoes {
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: auto;
+}
+  
 }
 
 #arq{
