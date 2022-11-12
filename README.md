@@ -1,19 +1,20 @@
 # **Trainee 2022.2**
 
-# **Matflix**
+# **Nome do Blog**
 
-## **Projeto Trainee, Code Jr, Grupo Matflix, 2022.2**
+## **Projeto Trainee, Code Jr, Grupo ?, 2022.2**
 
 #### Desenvolvedores:
 
-* [Marlon Ruffo Nascimento](https://github.com/marlonruffo).
-* [Quezia Emanuelly da Silva Oliveira](https://github.com/queziayxz).
-* [Nicolas Soares Martins](https://github.com/nicolassoam).
-* [Lucas Coelho de Moraes](https://github.com/Chewb17).
+*
+*
+*
+*
+*
 
 #### Scrum Master:
 
-* [Matheus Leal Costa](https://github.com/matheuslealcosta).
+* [Matheus Leal Costa](https://github.com/...).
 
 
 
@@ -49,7 +50,7 @@ git config --global user.email email@codejr.com.br
 
 * Outro jeito de fazer o citado acima: clique com o botão direito na pasta e selecione "Git Bash Here" para abrir o terminal do git
 
-* Crie um clone do repositório: `git clone https://github.com/matheuslealcosta/Trainee-2022.2.git`
+* Crie um clone do repositório: `git clone https://github.com/...`
 
 * Entre na pasta criada pelo comando clone: cd /caminho/para/a/pasta/nova
 
