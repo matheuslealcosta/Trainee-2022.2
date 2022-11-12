@@ -49,6 +49,7 @@ table thead {
 }
 
 table td {
+  
   font-size: .9rem;
 }
 
@@ -128,6 +129,7 @@ i:hover{
   }
 
   table td {
+    
       font-size: .8rem;
   }
 
