@@ -22,7 +22,7 @@ h1:hover {
 }
 
 
-/* BOTÃO DE ADICIONAR POST */
+/* BOTÃO DE ADICIONAR USUÁRIO */
 .btn-adicionar {
     width: 100%;
     margin-bottom: 20px;
@@ -38,7 +38,7 @@ h1:hover {
     background-color: #AF0C19;
 }
 
-/* TABELA DA LISTA DE POSTS */
+/* TABELA DA LISTA DE USUÁRIO */
 table thead {
     background-color: #AF0C19;
 }
@@ -81,47 +81,15 @@ table tr:hover {
     font-size: 1rem;
 }
 
-i{
-    transition: ease-in-out 0.2s;
-}
-
-i:hover{
-    color: #AF0C19;
-    transition: ease-in 0.1s;
-}
-
 .btn-acoes i:hover {
     cursor: pointer;
+    color: #AF0C19;
 }
 
 .number {
     text-align: center;
 }
 
-#logo-min{
-    padding: 0;
-    margin-bottom: 10px;
-    width:50px;
-    transition-property: all; 
-    transition-duration: 0.3s; 
-    transition-timing-function: ease; 
-}
-
-#logo-min:hover{
-    transform: scale(1.3);
-}
-
-
-@media (min-width: 768px) {
-    table tr {
-        line-height: 40px;
-    }
-
-    .btn-acoes {
-        flex-direction: row;
-        justify-content: space-evenly;
-    }
-}
 @media (min-width: 280px) {
     .btn-adicionar {
         padding-right: 0;
@@ -132,6 +100,13 @@ i:hover{
         font-size: .8rem;
     }
 
+    .email {
+        display: block;
+        width: 79px;
+        height: auto;
+        overflow-wrap: break-word;
+        border-bottom: none;
+    }
     
     table tr {
         line-height: 25px;
@@ -151,4 +126,47 @@ i:hover{
         text-align: right;
     }
 
+    .email {
+        width: auto;
+        display: table-cell;
+    }
+}
+
+@media (min-width: 768px) {
+    table tr {
+        line-height: 40px;
+    }
+
+    .btn-acoes {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+
+.fader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0,0.4);
+    pointer-events: all;
+    z-index: 1;
+}
+
+
+.hide{
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.modal-user{
+    position: fixed;
+    background-color: rgb(54, 53, 53);
+    z-index: 5;
+    left: 50%;
+    right: 50%;
+    top: 5px;
+    transition: all 0.1s ease-in-out;
 }

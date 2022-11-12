@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Lista de Usuários</title>
+
+    <!--link do bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    
+    <!--link do css-->
+    <link rel="stylesheet" href="../../../public/css/lista_user_modal.css">
+    <link rel="stylesheet" href="../../../public/css/edituser.css">
+    <!--link do font awesome-->
+    <script src="https://kit.fontawesome.com/b5c9f282d0.js" crossorigin="anonymous"></script>
+    
+    <!-- link da font utilizada -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="fader hide" id="fade"></div>
+    <div class="modal-user hide" id="modalEdit">
+        <section class="area-adduser">
+            <div class="info">
+                <div>
+                    <img src="../../../public/assets/m3dPNG.png">
+                </div>
+                <div class="titulo">
+                    <h1>Editando usuário:</h1>
+                    <hr>
+                </div>
+                <form>
+                    <label for="nome">Nome:</label><br>
+                    <input type="text" name="nome" placeholder="Novo nome de usuário">
+                    <label for="emailuser">E-mail:</label><br>
+                    <input type="text" name="email" placeholder="novo E-mail do usuário">
+                    <label for="senha">Senha:</label><br>
+                    <input type="password" name="senha" placeholder="Nova senha" id="edite-a-senha">
+                    <input type="submit" value="Editar Usuário">
+                    <div class="botoes">
+                        <input type="button" value="Voltar">
+                    </div>     
+                </form>
+            </div>
+        </section>
+    </div>
+       <div class="page-container">
+    
+           <h1>lista de Usuários</h1>
+    
+           <div class="page-content">
+               
+            <div class="btn-adicionar">
+                <button type="button">Adicionar Usuário  +</button>
+            </div>
+            <!--início da tabela de usuários-->
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col" class="number">#</th>
+                        <th scope="col">Nome Completo</th>
+                        <th>E-mail</th>
+                        <th scope="col" class="title-acao">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row" class="number">1</th>
+                        <td>Murilo Lopes da Silva</td>
+                        <td class="email">murilo.lopes@gmail.com</td>
+                        <td>
+                            <div class="btn-acoes">
+                                <button type="button">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </button>
+                                <button type="button">
+                                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                </button>
+                                <button type="button">
+                                    <i class="fa fa-pencil-square-o" aria-hidden="true" data-modal="modalEdit"></i>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="number">2</th>
+                        <td>Vitória Jesus</td>
+                        <td class="email">vitoria.jesus@gmail.com</td>
+                        <td>
+                            <div class="btn-acoes">
+                                <button type="button">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </button>
+                                <button type="button">
+                                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                </button>
+                                <button type="button">
+                                    <i class="fa fa-pencil-square-o" aria-hidden="true" data-modal="modalEdit"></i>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="number">3</th>
+                        <td>Eloah Lima</td>
+                        <td class="email">eloah.lima@gmail.com</td>
+                        <td>
+                            <div class="btn-acoes">
+                                <button type="button">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </button>
+                                <button type="button">
+                                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                </button>
+                                <button type="button">
+                                    <i class="fa fa-pencil-square-o" aria-hidden="true" data-modal="modalEdit"></i>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="number">4</th>
+                        <td>Sophie Teixeira</td>
+                        <td class="email">sophie.teixeira@outlook.com</td>
+                        <td>
+                            <div class="btn-acoes">
+                                <button type="button">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </button>
+                                <button type="button">
+                                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                </button>
+                                <button type="button">
+                                    <i class="fa fa-pencil-square-o" aria-hidden="true" data-modal="modalEdit"></i>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="number">5</th>
+                        <td>João Farias</td>
+                        <td class="email">joao.farias@gmail.com</td>
+                        <td>
+                            <div class="btn-acoes">
+                                <button type="button">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </button>
+                                <button type="button">
+                                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                </button>
+                                <button type="button">
+                                    <i class="fa fa-pencil-square-o" aria-hidden="true" data-modal="modalEdit"></i>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="number">6</th>
+                        <td>Ana Julia Porto</td>
+                        <td class="email">julia.porto@outlook.com</td>
+                        <td>
+                            <div class="btn-acoes">
+                                <button type="button">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </button>
+                                <button type="button">
+                                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                </button>
+                                <button type="button">
+                                    <i class="fa fa-pencil-square-o" aria-hidden="true" data-modal="modalEdit"></i>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+              </table>
+            <!--fim da tabela de usuários-->
+    
+           </div>
+       
+       </div>
+       <script src="../../../public/js/modal_user.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    </body>
+    </html>
