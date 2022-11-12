@@ -123,6 +123,7 @@ i:hover{
   margin: 0, auto;
   justify-content: center;
 
+
 }
 .modal{
   
@@ -201,6 +202,13 @@ p{
   margin-bottom: 15px;
   padding: 25px;
   width: 500px;
+}
+
+@media (max-width: 768px) {
+  #modalnewpost{
+    width: auto;
+    flex-direction: column;
+  }
 }
 
 #arq{
