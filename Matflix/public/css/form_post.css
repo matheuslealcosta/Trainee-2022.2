@@ -5,10 +5,7 @@ html{
 body{
     background-color: #666262;
     color: #1d1a1a;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+   
 }
 
 .form-modal{
@@ -82,6 +79,7 @@ p{
     margin-bottom: 15px;
     padding: 25px;
     flex-direction: column;
+    width: 500px;
 }
 
 #arq{
@@ -101,4 +99,10 @@ p{
     background-color: #666262;
     color: #AF0C19;
     transition: ease-in-out 0.32s;
+}
+
+@media only screen and (max-width: 600px) {
+    .main{
+        width: 100vw;
+    }
 }
