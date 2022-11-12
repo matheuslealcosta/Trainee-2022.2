@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    letter-spacing: 2px;
+    font-family: 'Bebas Neue', cursive;
+    color: #d7d7d7;
+}
+
+body, .page-container {
+    max-width: 100%;
+    max-height: 100%;
+    background-color: #221F1F;
+}
+
+h1 {
+    padding: 60px 0;
+    text-align: center;
+}
+
+h1:hover {
+    cursor: default;
+}
+
+
+/* BOTÃO DE ADICIONAR POST */
+.btn-adicionar {
+    width: 100%;
+    margin-bottom: 20px;
+    padding-right: 20px;
+    text-align: right;
+}
+
+.btn-adicionar button {
+    width: 170px;
+    height: 32px;
+    border: none;
+    border-radius: 5px;
+    background-color: #AF0C19;
+}
+
+/* TABELA DA LISTA DE POSTS */
+table thead {
+    background-color: #AF0C19;
+}
+
+.title-acao {
+    text-align: center;
+}
+
+table td {
+    font-size: .9rem;
+}
+
+table tr {
+    line-height: 40px;
+    border-bottom: 2px solid #AF0C19;
+}
+
+table tr:hover {
+    --bs-table-hover-color: 0;
+    color: #d7d7d7;
+    cursor: default;
+}
+
+.btn-acoes {
+    width: 100%;
+    height: 40px;
+    padding: 1px 0 0 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn-acoes button {
+    border: none;
+    background-color: transparent;
+}
+
+.btn-acoes i {
+    font-size: 1rem;
+}
+
+i{
+    transition: ease-in-out 0.2s;
+}
+
+i:hover{
+    color: #AF0C19;
+    transition: ease-in 0.1s;
+}
+
+.btn-acoes i:hover {
+    cursor: pointer;
+}
+
+.number {
+    text-align: center;
+}
+
+#logo-min{
+    padding: 0;
+    margin-bottom: 10px;
+    width:50px;
+    transition-property: all; 
+    transition-duration: 0.3s; 
+    transition-timing-function: ease; 
+}
+
+#logo-min:hover{
+    transform: scale(1.3);
+}
+
+
+@media (min-width: 768px) {
+    table tr {
+        line-height: 40px;
+    }
+
+    .btn-acoes {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+@media (min-width: 280px) {
+    .btn-adicionar {
+        padding-right: 0;
+        text-align: center;
+    }
+
+    table td {
+        font-size: .8rem;
+    }
+
+    
+    table tr {
+        line-height: 25px;
+        font-size: .8rem;
+    }
+    
+    .btn-acoes {
+        flex-direction: column;
+        height: auto;
+    }
+    
+}
+
+@media (min-width: 480px) {
+    .btn-adicionar {
+        padding-right: 20px;
+        text-align: right;
+    }
+
+}
