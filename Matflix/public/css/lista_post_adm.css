@@ -111,8 +111,44 @@ i:hover{
     transform: scale(1.3);
 }
 
+
 @media (min-width: 768px) {
+    table tr {
+        line-height: 40px;
+    }
+
     .btn-acoes {
+        flex-direction: row;
         justify-content: space-evenly;
     }
+}
+@media (min-width: 280px) {
+    .btn-adicionar {
+        padding-right: 0;
+        text-align: center;
+    }
+
+    table td {
+        font-size: .8rem;
+    }
+
+    
+    table tr {
+        line-height: 25px;
+        font-size: .8rem;
+    }
+    
+    .btn-acoes {
+        flex-direction: column;
+        height: auto;
+    }
+    
+}
+
+@media (min-width: 480px) {
+    .btn-adicionar {
+        padding-right: 20px;
+        text-align: right;
+    }
+
 }
