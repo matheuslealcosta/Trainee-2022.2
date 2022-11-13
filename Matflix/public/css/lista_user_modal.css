@@ -163,10 +163,9 @@ table tr:hover {
 
 .modal-user{
     position: fixed;
-    background-color: rgb(54, 53, 53);
     z-index: 5;
-    left: 50%;
-    right: 50%;
-    top: 5px;
-    transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out; 
+    left: 0;
+    bottom: 0;
+    right: 0;
 }
