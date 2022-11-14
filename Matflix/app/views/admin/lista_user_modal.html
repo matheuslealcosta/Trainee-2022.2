@@ -21,30 +21,40 @@
 </head>
 <body>
     <div class="fader hide" id="fade"></div>
-    <div class="modal-user hide" id="modalEdit">
-        <section class="area-adduser">
-            <div class="info">
-                <div>
-                    <img src="../../../public/assets/m3dPNG.png">
-                </div>
-                <div class="titulo">
-                    <h1>Editando usuário:</h1>
-                    <hr>
-                </div>
-                <form>
-                    <label for="nome">Nome:</label><br>
-                    <input type="text" name="nome" placeholder="Novo nome de usuário">
-                    <label for="emailuser">E-mail:</label><br>
-                    <input type="text" name="email" placeholder="novo E-mail do usuário">
-                    <label for="senha">Senha:</label><br>
-                    <input type="password" name="senha" placeholder="Nova senha" id="edite-a-senha">
-                    <input type="submit" value="Editar Usuário">
-                    <div class="botoes">
-                        <input type="button" value="Voltar">
-                    </div>     
-                </form>
-            </div>
-        </section>
+    <div class="modal-user hide d-flex mx-auto overflow-hidden justify-content-center h-100 main" id="modalEdit">
+            <img src="../../../public/assets/MatflixLogoText.png" class="img-fluid mx-auto d-block" alt="" id="logo">
+            <h2 class="mb-4" id="title">Edição de usuário</h2>
+            <form action="POST" class="row gy-3 gx-3 align-items-center mt-2">
+                 <div class="form-group mb-3">
+                     <label for="novousuario" class="col-sm-auto col-form-label">Novo nome do usuário:</label>
+                     
+                     <input type="text" name="" id="titulo" class="form-control">
+                    
+                 </div>
+ 
+                 <div class="form-group mb-3">
+                     <label for="novoemail" class="col-sm-auto col-form-label">Novo e-mail:</label>
+                     
+                     <input type="text" name="" id="email" class="form-control">
+                 </div>
+ 
+                 <div class="form-group mb-3">
+                     <label for="novasenha" class="col-sm-auto col-form-label">Nova senha:</label>
+                     
+                     <input type="password"  value="" name="myPassword" class="form-control"/>
+                 </div>
+                 <div class="col-sm-6">
+                     <input type="submit" value="Editar" class="btn btn-lg formbtn form-control">
+                 </div>
+ 
+                 <div class="col-sm-6">
+                     <input type="reset" value="Limpar" class="btn btn-lg formbtn form-control">
+                 </div>
+ 
+                 <div class="botoes">
+                     <input class="btn btn-lg formbtn form-control align-self-center col-sm-6" type="button" value="Cancelar">
+                 </div>
+            </form>
     </div>
        <div class="page-container">
     
