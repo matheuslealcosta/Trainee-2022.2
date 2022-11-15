@@ -5,16 +5,16 @@ const editBtns = [...edit_btn].filter((el)=>{
     return el.dataset.modal!=null;
 });
 
-function modalAberto(){
+const modalAberto = () =>{
     const modal = document.getElementsByClassName('modal-user');
     const modalAbr = [...modal].filter((modal)=>{
         return !modal.classList.contains('hide');
     });
 
-    return modal[0];
+    return modalAbr[0];
 }
 
-function toggleModal(id){
+const toggleModal = (id)=>{
 
     if(id == undefined){
         fModal.classList.toggle('hide');
