@@ -19,8 +19,8 @@ const afModal = (id) => {
     if(id == undefined)
     {
         const modalOpen = modalAberto();
-        fadeModal.classList.toggle("hide");
         modalOpen.classList.toggle("hide");
+        fadeModal.classList.toggle("hide");
     }
     else
     {
