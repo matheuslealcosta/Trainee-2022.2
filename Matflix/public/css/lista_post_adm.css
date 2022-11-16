@@ -145,10 +145,13 @@ i:hover{
     
 }
 
-@media (min-width: 480px) {
+@media (max-width: 480px) {
     .btn-adicionar {
         padding-right: 20px;
         text-align: right;
     }
-
+    .btn-acoes {
+        flex-direction: column;
+        height: auto;
+    }
 }

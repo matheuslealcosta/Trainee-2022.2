@@ -135,6 +135,17 @@ p{
 
 @media only screen and (max-width: 600px) {
     .main{
+        margin-top: 0;
+        margin-bottom: 0;
         width: 100vw;
+    }
+
+    input[type="text"] {
+        line-height: 1.2;
+    }
+
+    input[type="submit"], button[type="button"] {
+        font-size: 1.1rem;
+        line-height: 1.5rem;
     }
 }
