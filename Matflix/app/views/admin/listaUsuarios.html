@@ -11,6 +11,7 @@
     
     <!--link do css-->
     <link rel="stylesheet" href="../../../public/css/listaUsuarios.css">
+    <link rel="stylesheet" href="../../../public/css/edit_user_modal.css">
 
     <!--link do font awesome-->
     <script src="https://kit.fontawesome.com/b5c9f282d0.js" crossorigin="anonymous"></script>
@@ -23,12 +24,16 @@
     <div>
    <div class="page-container">
 
-       <h1>lista de Usuários</h1>
+       <h1>Lista de Usuários</h1>
 
        <div class="page-content">
+
+        
             <button1 id="open-modal">Criar Usuário</button1>
-    <div id="fade" class="hide"></div>
-    <div id="modal" class="hide">
+        <div id="fade" class="hide"></div>
+        <div id="modal" class="hide">
+
+        <!--Modal Criar Usuário-->
         <div class="modal-header">
             <h2>Criar novo usuário</h2>
             <button1 id="close-modal">X</button1>
@@ -44,6 +49,46 @@
         </form>
         </div>
 
+        <!-- Modal Editar Usuário-->
+
+        <div class="fader hide" id="fade_edit"></div>
+        <div class="modal-user hide d-flex mx-auto overflow-hidden justify-content-center h-100 main" id="modalEdit">
+                <img src="../../../public/assets/MatflixLogoText.png" class="img-fluid mx-auto d-block" alt="" id="logo">
+                <h2 class="mb-4" id="title">Edição de usuário</h2>
+                <form action="POST">
+                     <div class="form-group mb-3">
+                         <label for="novousuario" class="col-sm-auto col-form-label">Novo nome do usuário:</label>
+                         
+                         <input type="text" name="" id="titulo" class="form-control">
+                        
+                     </div>
+     
+                     <div class="form-group mb-3">
+                         <label for="novoemail" class="col-sm-auto col-form-label">Novo e-mail:</label>
+                         
+                         <input type="text" name="" id="email" class="form-control">
+                     </div>
+     
+                     <div class="form-group mb-3">
+                         <label for="novasenha" class="col-sm-auto col-form-label">Nova senha:</label>
+                         
+                         <input type="password"  value="" name="myPassword" class="form-control"/>
+                     </div>
+                     <div class="form-group row">
+                        <div class="col-sm-6">
+                            <input type="submit" value="Editar" class="btn btn-lg formbtn form-control">
+                        </div>
+        
+                        <div class="col-sm-6">
+                            <input type="reset" value="Limpar" class="btn btn-lg formbtn form-control">
+                        </div>
+        
+                        <div class="botoes">
+                            <input class="btn btn-lg formbtn form-control align-self-center col-sm-6" type="button" value="Cancelar">
+                        </div>
+                    </div>
+                </form>
+            </div>
     </div>
         </div>
         <!--início da tabela de usuários-->
@@ -70,7 +115,7 @@
                                 <i class="fa fa-trash-o" aria-hidden="true"></i>
                             </button>
                             <button type="button">
-                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                <i class="fa fa-pencil-square-o" aria-hidden="true" data-modal="modalEdit"></i>
                             </button>
                         </div>
                     </td>
@@ -88,7 +133,7 @@
                                 <i class="fa fa-trash-o" aria-hidden="true"></i>
                             </button>
                             <button type="button">
-                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                <i class="fa fa-pencil-square-o" aria-hidden="true" data-modal="modalEdit"></i>
                             </button>
                         </div>
                     </td>
@@ -106,7 +151,7 @@
                                 <i class="fa fa-trash-o" aria-hidden="true"></i>
                             </button>
                             <button type="button">
-                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                <i class="fa fa-pencil-square-o" aria-hidden="true" data-modal="modalEdit"></i>
                             </button>
                         </div>
                     </td>
@@ -124,7 +169,7 @@
                                 <i class="fa fa-trash-o" aria-hidden="true"></i>
                             </button>
                             <button type="button">
-                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                <i class="fa fa-pencil-square-o" aria-hidden="true" data-modal="modalEdit"></i>
                             </button>
                         </div>
                     </td>
@@ -142,7 +187,7 @@
                                 <i class="fa fa-trash-o" aria-hidden="true"></i>
                             </button>
                             <button type="button">
-                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                <i class="fa fa-pencil-square-o" aria-hidden="true" data-modal="modalEdit"></i>
                             </button>
                         </div>
                     </td>
@@ -160,7 +205,7 @@
                                 <i class="fa fa-trash-o" aria-hidden="true"></i>
                             </button>
                             <button type="button">
-                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                <i class="fa fa-pencil-square-o" aria-hidden="true" data-modal="modalEdit"></i>
                             </button>
                         </div>
                     </td>
@@ -174,6 +219,7 @@
    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-    <script src="..\..\..\public\js\modal_usuario.js" defer></script>
+    <script src="..\..\..\public\js\modal_create_user.js" defer></script>
+    <script src="../../../public/js/modal_edit_user.js"></script>
 </body>
 </html>

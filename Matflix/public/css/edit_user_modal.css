@@ -1,11 +1,4 @@
-html{
-    font-family: 'Bebas Neue';
-}
 
-body{
-    background-color: #302c2c;
-    color: #1d1a1a;
-}
 
 #wrapper{
     display: flex;
@@ -72,8 +65,8 @@ p{
     border-radius: 5px;
     padding: 25px;
     flex-direction: column;
-    width: 400px;
-   
+    max-width: 400px;
+    height: auto;
 }
 
 #arq{
