@@ -264,7 +264,7 @@ table tr:hover {
     z-index: 5;
     transition: all 0.1s ease-in-out; 
     left: 0;
-    bottom: 0;
+    top: 0;
     right: 0;
 }
 
