@@ -1,0 +1,152 @@
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+font-family: 'Bebas Neue', cursive;
+}
+.cartao{
+    margin-top: 5%;
+    width: 20rem;
+}
+.botao1{
+    border-radius: 20px;
+    border: 1px solid transparent;
+    transition: .5s;
+    background-color: #E21221;
+    color: white;
+    border-color: #E21221;
+    font-family: 'Bebas Neue', cursive;
+    text-transform: uppercase;
+}
+.corpodocard{
+    background-color: #221F1F;
+}
+.botao1:hover{
+    color: #E21221;
+    background-color: #d7d7d7;
+    border-color: #d7d7d7;
+
+}
+
+.cardtitulo2{
+    color: #d7d7d7;
+}
+.cartas-filme{
+    padding: 0%;
+    display: flex;
+    justify-content: center;
+}
+.corpodocard{
+    font-size: 20px;
+    border-radius: 0;
+}
+
+
+
+
+
+body{
+    background-color: #221F1F; /*nao mexer*/
+    width: 100%;
+}
+
+
+
+.profile-details, .bx-menu{
+    cursor: pointer;
+}
+
+.home-section nav{
+    height: 60px;
+    background: #3d3b3b;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dashboard{
+    font-size: 20px;
+}
+.logo{
+    width: 200px;
+    margin: auto;
+    display: block;
+    margin-bottom: 0;
+    margin-top: -25px;
+  
+  }
+nav .profile-details{
+    display: flex;
+    height: 50px;
+    align-items: center;
+    background-color: #cecbcbec; /*naomexer*/
+    border: 2px solid #443133; /*talvezmexer*/
+    border-radius: 6px;
+    padding: 0 15px 0 2px;
+}
+
+nav .profile-details img{
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.more{
+    color: white;
+}
+nav .profile-details .admin_name{
+    font-size:15px;
+    font-weight: 500;
+    color: #E21221;
+    margin: 0 10px;
+    white-space: nowrap;
+}
+nav .profile-details i{
+    color: #E21221;
+    font-size: 25px;
+}
+.textocard{
+    color: #221F1F;
+
+}
+.cartoes{
+    text-align: center;
+    margin-top: 0%;
+    display: flex;
+    justify-content: space-around;
+}
+.cardtitulo2{
+    color: #f4f2f2;
+}
+
+@media (max-width: 767px){
+    .cartoes{
+        margin-top: auto;
+        display: block;
+
+    }
+    .cartao{
+        margin: auto;
+        margin-bottom: 5px;
+        width: 15rem;
+    }
+}
+
+/* -------------- */
+@media only screen and (max-width: 1000px) and (min-width: 768px){
+    .cartoes{
+        margin-top: auto;
+        display: block;
+
+    }
+    .cartao{
+        margin: auto;
+        margin-bottom: 8px;
+        width: 25rem;
+    }
+}
+
+
+
+

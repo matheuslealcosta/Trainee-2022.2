@@ -1,0 +1,104 @@
+html{
+    font-family: 'Bebas Neue';
+}
+
+body{
+    background-color: #302c2c;
+    color: #1d1a1a;
+   
+}
+
+#wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+p{
+    text-align: center;
+}
+
+#logo{
+    width:200px;
+    margin: -15px;
+    transition-property: all; 
+    transition-duration: 0.3s; 
+    transition-timing-function: ease; 
+}
+
+#logo:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+#title {
+    color: #AF0C19;
+    font-size: 35px;
+    text-align: center;
+    font-weight: bold;
+    transition: 0.1s;
+}
+
+#title:hover{
+    color: #d7d7d7;
+    transition: ease-in-out 1s;
+    background: linear-gradient(90deg,#221F1F, #AF0C19, #221F1F);
+    background-repeat: no-repeat;
+    background-size: 70%;
+    animation: grad 2s linear forwards;
+}
+
+@keyframes grad{
+    0%{
+        background-position: -500%;
+    }
+    55%{
+        background-position: 500%;
+    }
+    100%{
+        background-position: 500%;
+        background: none;
+    }
+}
+
+.main{
+    background-color: #221F1F;
+    color: #d7d7d7;
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 25px;
+    flex-direction: column;
+    width: 500px;
+}
+
+#arq{
+    background: linear-gradient(90deg,#221F1F, #AF0C19, #221F1F);
+    background-repeat: no-repeat;
+    color: #d7d7d7;
+}
+
+.formbtn {
+    font-family: 'Bebas Neue';
+    background-color: #AF0C19;
+    color:#d7d7d7;
+    margin: 5px;
+    transition: ease-in-out 0.32s;
+}
+.formbtn:hover {
+    background-color: #666262;
+    color: #AF0C19;
+    transition: ease-in-out 0.32s;
+}
+
+@media only screen and (max-width: 600px) {
+    .main{
+        width: 95vw;
+    }
+}
