@@ -1,0 +1,289 @@
+* {
+  margin: 0;
+  padding: 0;
+  letter-spacing: 2px;
+  font-family: 'Bebas Neue', cursive;
+  color: #d7d7d7;
+}
+
+body, .page-container {
+  max-width: 100%;
+  max-height: 100%;
+  background-color: #221F1F;
+}
+
+h1 {
+  padding: 60px 0;
+  text-align: center;
+}
+
+
+h1:hover {
+  cursor: default;
+}
+
+
+/* BOTÃO DE ADICIONAR POST */
+.btn-adicionar {
+  width: 100%;
+  margin-bottom: 20px;
+  padding-right: 20px;
+  text-align: right;
+}
+
+.btn-adicionar button {
+  width: 170px;
+  height: 32px;
+  border: none;
+  border-radius: 5px;
+  background-color: #AF0C19;
+}
+
+/* TABELA DA LISTA DE POSTS */
+table thead {
+  background-color: #AF0C19;
+}
+
+.title-acao {
+  text-align: center;
+}
+
+table td {
+  
+  font-size: .9rem;
+}
+
+table tr {
+  line-height: 40px;
+  border-bottom: 2px solid #AF0C19;
+}
+
+table tr:hover {
+  --bs-table-hover-color: 0;
+  color: #d7d7d7;
+  cursor: default;
+}
+
+.btn-acoes {
+  width: 100%;
+  height: 40px;
+  padding: 1px 0 0 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.btn-acoes button {
+  border: none;
+  background-color: transparent;
+}
+
+.btn-acoes i {
+  font-size: 1rem;
+}
+
+i{
+  transition: ease-in-out 0.2s;
+}
+
+i:hover{
+  color: #AF0C19;
+  transition: ease-in 0.1s;
+}
+
+.btn-acoes i:hover {
+  cursor: pointer;
+}
+
+.number {
+  text-align: center;
+}
+
+#logo-min{
+  padding: 0;
+  margin-bottom: 10px;
+  width:50px;
+  transition-property: all; 
+  transition-duration: 0.3s; 
+  transition-timing-function: ease; 
+}
+
+#logo-min:hover{
+  transform: scale(1.3);
+}
+
+@media (min-width: 768px) {
+  table tr{
+    line-height: 40px;
+  }
+  .btn-acoes {
+      flex-direction: row;
+      justify-content: space-evenly;
+  }
+}
+@media (min-width: 280px) {
+  .btn-adicionar {
+      padding-right: 0;
+      text-align: center;
+  }
+
+  table td {
+    
+      font-size: .8rem;
+  }
+
+
+  table tr {
+      line-height: 25px;
+      font-size: .8rem;
+  }
+
+  .btn-acoes {
+
+      height: auto;
+  }
+
+}
+
+@media (min-width: 480px) {
+  .btn-adicionar {
+      padding-right: 20px;
+      text-align: right;
+  }
+}
+/* ---------------------------------------------------------------- */
+.container-modal{
+  display: flex;
+  margin: 0, auto;
+  justify-content: center;
+
+
+}
+.modal{
+  
+  position: fixed;
+  display:block;
+  background-color: rgb(10, 12, 10);
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  color: #1d1a1a;
+  letter-spacing: 0px;
+  z-index: 10;
+}
+
+#wrapper{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+p{
+  text-align: center;
+}
+
+#logo{
+  width:200px;
+  margin: -20px;
+  transition-property: all; 
+  transition-duration: 0.3s; 
+  transition-timing-function: ease; 
+}
+
+#logo:hover{
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+#title {
+  color: #AF0C19;
+  font-size: 35px;
+  text-align: center;
+  font-weight: bold;
+  transition: 0.1s;
+}
+
+#title2:hover{
+  color: #d7d7d7;
+  transition: ease-in-out 1s;
+  background: linear-gradient(90deg,#221F1F, #AF0C19, #221F1F);
+  background-repeat: no-repeat;
+  background-size: 70%;
+  animation: grad 2s linear forwards;
+}
+
+@keyframes grad{
+  0%{
+      background-position: -500%;
+  }
+  55%{
+      background-position: 500%;
+  }
+  100%{
+      background-position: 500%;
+      background: none;
+  }
+}
+
+#modalnewpost,#editarPost{
+  
+  left: auto;
+  background-color: #221F1F;
+  color: #d7d7d7;
+  border-radius: 5px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 25px;
+  width: 500px;
+}
+
+@media (max-width: 768px) {
+  #modalnewpost,#editarPost{
+    width: auto;
+    flex-direction: row;
+  }
+  .btn-acoes {
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: auto;
+}
+  
+}
+
+#arq{
+  background: linear-gradient(90deg,#221F1F, #AF0C19, #221F1F);
+  background-repeat: no-repeat;
+  color: #d7d7d7;
+}
+
+.formbtn {
+  font-family: 'Bebas Neue';
+  background-color: #AF0C19;
+  color:#d7d7d7;
+  margin: 5px;
+  transition: ease-in-out 0.32s;
+}
+.formbtn:hover {
+  background-color: #666262;
+  color: #AF0C19;
+  transition: ease-in-out 0.32s;
+}
+.fade-modal{
+  position:fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 5;
+  pointer-events: all;
+}
+
+.hide{
+  opacity: 0;
+  top:0;
+  pointer-events: none;
+}
