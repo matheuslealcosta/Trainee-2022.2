@@ -28,7 +28,7 @@ h2{
     margin-left: 1rem;
 }
 
-input{
+.input-modal-create{
     margin-top: 10px;
     background-color: #d7d7d7;
     color: #000000;
@@ -51,14 +51,30 @@ button1 {
     margin-left: 45%;
 }
 
-form{
+.btn-adicionar {
+    width: 100%;
+    margin-bottom: 20px;
+    padding-right: 20px;
+    text-align: right;
+  }
+  
+  .btn-adicionar button {
+    width: 170px;
+    height: 32px;
+    border: none;
+    border-radius: 5px;
+    background-color: #AF0C19;
+  }
+  
+
+.modal-create{
     display: flex;
     width: 100%;
     flex-direction: column;
     padding: .6rem 1.2rem;
 }
 
-form [type="submit"]{
+form.modal-create [type="submit"]{
     color: #fff;
     display: block;
     background-color: #E21221;
@@ -69,7 +85,7 @@ form [type="submit"]{
     border: none;
 }
 
-form [type="submit"]:hover{
+form.modal-create [type="submit"]:hover{
     opacity: 1;
     transition: 0.4s;
   

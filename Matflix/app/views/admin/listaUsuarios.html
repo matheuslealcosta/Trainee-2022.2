@@ -29,7 +29,9 @@
        <div class="page-content">
 
         
-            <button1 id="open-modal">Criar Usuário</button1>
+        <div class="btn-adicionar">
+            <button  class="add botao " type="button" id="open-modal">Adicionar Usuário</button>
+        </div>
         <div id="fade" class="hide"></div>
         <div id="modal" class="hide">
 
@@ -40,19 +42,19 @@
         </div>
         <div class="modal-body"></div>
 
-        <form>
-            <input type="text" name="nome" placeholder="Digite o nome de Usuário" autofocus>
-            <input type="text" name="nome" placeholder="Digite seu nome completo" autofocus>
-            <input type="text" name="E-mail" placeholder="Digite seu E-mail" autofocus>
-            <input type="password" name="senha" placeholder="Digite sua Senha">
-            <input type="submit" value="Cadastrar">
+        <form class="modal-create">
+            <input type="text" class="input-modal-create" name="nome" placeholder="Digite o nome de Usuário" autofocus>
+            <input type="text" class="input-modal-create" name="nome" placeholder="Digite seu nome completo" autofocus>
+            <input type="text" class="input-modal-create" name="E-mail" placeholder="Digite seu E-mail" autofocus>
+            <input type="password" class="input-modal-create" name="senha" placeholder="Digite sua Senha">
+            <input type="submit" class="input-modal-create" value="Cadastrar">
         </form>
         </div>
 
         <!-- Modal Editar Usuário-->
 
         <div class="fader hide" id="fade_edit"></div>
-        <div class="modal-user hide d-flex mx-auto overflow-hidden justify-content-center h-100 main" id="modalEdit">
+        <div class="modal-user hide d-flex mx-auto overflow-hidden justify-content-center main" id="modalEdit">
                 <img src="../../../public/assets/MatflixLogoText.png" class="img-fluid mx-auto d-block" alt="" id="logo">
                 <h2 class="mb-4" id="title">Edição de usuário</h2>
                 <form action="POST">
