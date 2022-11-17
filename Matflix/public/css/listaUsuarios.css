@@ -10,33 +10,138 @@ body, .page-container {
     max-width: 100%;
     max-height: 100%;
     background-color: #221F1F;
+    color: #fff;
+    padding: 1rem;
 }
 
 h1 {
     padding: 60px 0;
     text-align: center;
+    margin-bottom: 1rem;
 }
 
 h1:hover {
     cursor: default;
 }
 
-
-/* BOTÃO DE ADICIONAR USUÁRIO */
-.btn-adicionar {
-    width: 100%;
-    margin-bottom: 20px;
-    padding-right: 20px;
-    text-align: right;
+h2{
+    margin-left: 1rem;
 }
 
-.btn-adicionar button {
-    width: 170px;
-    height: 32px;
+input{
+    margin-top: 10px;
+    background-color: #d7d7d7;
+    color: #000000;
     border: none;
-    border-radius: 5px;
-    background-color: #AF0C19;
+    height: 45px;
+    outline: none;
+    border-radius: 6px;
+    padding-left: 10px;
 }
+
+button1 {
+    padding: .6rem 1.2rem;
+    background-color: #E21221;
+    color:#fff;
+    border: none;
+    border-radius: .25rem;
+    cursor: pointer;
+    opacity: .9;
+    font-size: 1rem;
+    margin-left: 45%;
+}
+
+form{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: .6rem 1.2rem;
+}
+
+form [type="submit"]{
+    color: #fff;
+    display: block;
+    background-color: #E21221;
+    font-size: 14px;
+    opacity: .9;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+}
+
+form [type="submit"]:hover{
+    opacity: 1;
+    transition: 0.4s;
+  
+}
+
+.input::placeholder{
+    color: #d7d7d7;
+    font-size: 14px;
+
+}
+
+#open-modal{
+    background-color: #E21221;
+}
+
+button:hover{
+    opacity: 1;
+}
+
+#fade, #modal{
+    transition: .5s;
+    opacity: 1;
+    pointer-events: all;
+}
+
+#fade{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 5;
+}
+
+#modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #221F1F;
+    z-index: 10;
+    width: 500px;
+    max-width: 90%;
+    padding: 1.2rem;
+    border-radius: .5rem;
+}
+
+.modal-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    border-bottom: 1rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+.modal-body{
+    margin-bottom: 1rem;
+}
+
+#modal.hide,
+#fade.hide{
+    opacity: 0;
+    pointer-events: none;
+}
+
+#modal.hide{
+    top: 0;
+}
+
 
 /* TABELA DA LISTA DE USUÁRIO */
 table thead {
@@ -117,7 +222,7 @@ table tr:hover {
         flex-direction: column;
         height: auto;
     }
-    
+
 }
 
 @media (min-width: 480px) {
@@ -142,3 +247,33 @@ table tr:hover {
         justify-content: space-evenly;
     }
 }
+
+@media (max-width: 1050px) {
+    button1 {
+        margin-left: 42.5%;
+    }
+}
+
+@media (max-width: 820px) {
+    button1 {
+        margin-left: 41.5%;
+    }
+}
+
+@media (max-width: 540px) {
+    button1 {
+        margin-left: 35%;
+    }
+}
+
+@media (max-width: 420px) {
+    button1 {
+        margin-left: 30%;
+    }
+    }
+
+@media (max-width: 281px) {
+    button1 {
+        margin-left: 20%;
+    }
+    }
