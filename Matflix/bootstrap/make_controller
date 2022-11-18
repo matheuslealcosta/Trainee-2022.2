@@ -1,0 +1,40 @@
+<?php
+
+// Para rodar este comando basta rodar php bootstrap\make_controller NomeDoController. Caso queira um controller mais completo, rode --resource
+
+if(count($argv) >= 3) {
+    $controller_name = $argv[2];
+    $controller_path = __DIR__."\..\app\Controllers\\" . $controller_name . ".php";
+    if(!file_exists($controller_path) || !is_file($controller_path)) {
+        if(count($argv) == 3) {
+            $path_to_default_controller = __DIR__ . "\..\app\Controllers\default_controller\DefaultController.php";
+        } else if($argv[3] == "--resource") {
+            $path_to_default_controller = __DIR__ . "\..\app\Controllers\default_controller\DefaultResourceController.php";
+        } else {
+            die("Comando invalido");
+        }
+        //$file = __DIR__."\..\app\Controllers\default_controller\DefaultController.php";
+        $file = $path_to_default_controller;
+        $default_controller = file_get_contents($file);
+        $customized_controller = str_replace(
+            [
+                "controller_name",
+            ],
+            [
+                $controller_name,
+            ],
+            $default_controller
+        );
+        $fileOpen = fopen($controller_path, "w");
+        file_put_contents($controller_path, $customized_controller);
+    } else {
+        echo "O controller $controller_name já foi criado" . PHP_EOL;
+    }
+} else {
+ echo "Digita o comando direito, comédia." . PHP_EOL;
+}
+
+echo "Cascata:
+        Github: https://github.com/Jo1oPedro,
+        LinkedIn:  https://www.linkedin.com/in/jo%C3%A3o-pedro-ferreira-pedreira-b6228619b/,
+        Code Voa";

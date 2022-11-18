@@ -1,0 +1,20 @@
+<?php
+
+try {
+    if(count($argv) > 1) {
+        match ($argv[1]) {
+            "down_all_migrations" => include_once (__DIR__."\bootstrap\down_all_migrations"),
+            "run_migrations" => include_once (__DIR__."\bootstrap\\run_all_migrations"),
+            /*"make" =>
+                (!isset($argv[2])) ? throw new Exception("Comando Invalido") :
+                match ($argv[2]) {
+                    "controller" => include_once (__DIR__."\bootstrap\make_controller"),
+                },*/
+            "make:controller" => include_once(__DIR__."\bootstrap\make_controller"),
+            "make:migration" => include_once(__DIR__."\bootstrap\make_migration"),
+            "serv" => include_once (__DIR__."\bootstrap\serv"),
+        };
+    }
+} catch (Exception $exception) {
+    echo $exception->getMessage();
+}

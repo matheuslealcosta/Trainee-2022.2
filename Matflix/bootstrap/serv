@@ -1,0 +1,9 @@
+<?php
+
+if(count($argv) == 2) {
+    exec("php -S 127.0.0.1:8000");
+} else if( (count($argv) == 3) && (str_contains($argv[2], "--port=")) ) {
+    exec("php -S 127.0.0.1:" . substr($argv[2], strpos($argv[2], '=')+1));
+} else {
+    echo "Comando invalido";
+}

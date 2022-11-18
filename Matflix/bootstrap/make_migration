@@ -1,0 +1,54 @@
+<?php
+
+// rodar comando app/bootstrap/create_migration nome_da_migration --m para criar com a model junto
+
+if(count($argv) == 3 || count($argv) == 4) {
+    $migration_name = $argv[2];
+    $migration_path = __DIR__."\..\database\migrations\\" . str_replace(".", "", microtime(true)) . "_" . $migration_name . "_table.php";
+    if(!file_exists($migration_path) || !is_file($migration_path)) {
+        $file = __DIR__."\..\database\default_migration\DefaultMigration.php";
+        $default_migration = file_get_contents($file);
+        $customized_migration = str_replace(
+            [
+                "table_name",
+                "tableName",
+            ],
+            [
+                $migration_name."table",
+                $migration_name,
+            ],
+            $default_migration
+        );
+        $fileOpen = fopen($migration_path, "w");
+        file_put_contents($migration_path, $customized_migration);
+
+        if(key_exists(3, $argv) && $argv[3] == "--m") {
+            $model_name = ucfirst(substr($migration_name, 0 , -1));
+            $model_path = __DIR__."\..\app\Models\\$model_name.php";
+            if(!file_exists($model_path) || !is_file($model_path)) {
+                $file = __DIR__."\..\app\Models\default_model\DefaultModel.php";
+                $default_model = file_get_contents($file);
+                $customized_model = str_replace(
+                    "table_name_uc_first",
+                    $model_name,
+                    $default_model
+                );
+                $fileOpen = fopen($model_path, "w");
+                file_put_contents($model_path, $customized_model);
+            } else {
+                echo "A model $model_name já existe" . PHP_EOL;
+            }
+        } else {
+            echo "Model não foi criada junto da migration" . PHP_EOL;
+        }
+    } else {
+        echo "A migration já $migration_name já foi criada";
+    }
+} else {
+    echo "Digite o comando direito, comédia." . PHP_EOL;
+}
+
+echo "Cascata:
+        Github: https://github.com/Jo1oPedro,
+        LinkedIn:  https://www.linkedin.com/in/jo%C3%A3o-pedro-ferreira-pedreira-b6228619b/,
+        Code Voa";
