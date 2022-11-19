@@ -11,7 +11,7 @@ $capsule = new Capsule();
 $config = [
     "driver" => "mysql",
     "host" => "127.0.0.1",
-    "database" => "", // coloca o nome do banco aqui
+    "database" => "matflix", // coloca o nome do banco aqui
     "username" => "root",
     "password" => "",
 
