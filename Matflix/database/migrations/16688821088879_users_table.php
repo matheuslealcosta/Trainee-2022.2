@@ -7,16 +7,13 @@ use Illuminate\Database\Schema\Blueprint;
 
 class userstable
 {
-
     public static function up()
     {
         Capsule::schema()->create("users", function (Blueprint $table) {
-            $table->increments("id");
+            $table->increments("id")->primary();
             $table->string("name");
             $table->string("email")->unique();
             $table->string("password");
-            $table->enum("sexo", ["M", "F", "NB"])->nullable();
-            $table->date("data_nascimento")->nullable();
             $table->timestamps();
         });
     }
@@ -24,5 +21,4 @@ class userstable
     public static function down() {
         Capsule::schema()->drop("users");
     }
-
 }
