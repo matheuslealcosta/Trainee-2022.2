@@ -14,7 +14,7 @@ class userstable
             $table->string("name");
             $table->string("email")->unique();
             $table->string("password");
-            $table->timestamps();
+            // $table->timestamps();
         });
     }
 

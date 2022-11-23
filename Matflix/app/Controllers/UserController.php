@@ -35,4 +35,10 @@ class UserController extends Controller
         App::get('database')->insert('users', compact('name', 'email', 'password'));
         return redirect('lista-usuarios');
     }
+
+    public function delete(){
+        $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
+        App::get('database')->delete('users', $id);
+        return redirect('lista-usuarios');
+    }
 }
