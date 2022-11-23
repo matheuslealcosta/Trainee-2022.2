@@ -19,20 +19,20 @@
                 <div class="form-group mb-3">
                     <label for="usuario" class="col-sm-auto col-form-label">Nome do usuário:</label>
                     
-                    <input type="text" name="" id="titulo" class="form-control">
+                    <input type="text" name="name" id="titulo" class="form-control">
                    
                 </div>
 
                 <div class="form-group mb-3">
                     <label for="email" class="col-sm-auto col-form-label">E-mail:</label>
                     
-                    <input type="text" name="" id="email" class="form-control">
+                    <input type="text" name="email" id="email" class="form-control">
                 </div>
 
                 <div class="form-group mb-3">
                     <label for="senha" class="col-sm-auto col-form-label">Senha:</label>
                     
-                    <input type="password"  value="" name="myPassword" class="form-control"/>
+                    <input type="password"  value="" name="password" class="form-control"/>
                 </div>
                 <div class="col-sm-6">
                     <input type="submit" value="Criar" class="btn btn-lg formbtn form-control"></input>

@@ -42,11 +42,10 @@
         </div>
         <div class="modal-body"></div>
 
-        <form class="modal-create">
-            <input type="text" class="input-modal-create" name="nome" placeholder="Digite o nome de Usuário" autofocus>
-            <input type="text" class="input-modal-create" name="nome" placeholder="Digite seu nome completo" autofocus>
-            <input type="text" class="input-modal-create" name="E-mail" placeholder="Digite seu E-mail" autofocus>
-            <input type="password" class="input-modal-create" name="senha" placeholder="Digite sua Senha">
+        <form class="modal-create" method="POST" action="lista-usuarios/create">
+            <input type="text" class="input-modal-create" name="name" placeholder="Digite o nome de Usuário" autofocus>
+            <input type="text" class="input-modal-create" name="email" placeholder="Digite seu E-mail" autofocus>
+            <input type="password" class="input-modal-create" name="password" placeholder="Digite sua Senha">
             <input type="submit" class="input-modal-create" value="Cadastrar">
         </form>
         </div>
@@ -57,24 +56,24 @@
         <div class="modal-user hide d-flex mx-auto overflow-hidden justify-content-center main" id="modalEdit">
                 <img src="../../../public/assets/MatflixLogoText.png" class="img-fluid mx-auto d-block" alt="" id="logo">
                 <h2 class="mb-4" id="title">Edição de usuário</h2>
-                <form action="POST">
+                <form method="POST">
                      <div class="form-group mb-3">
                          <label for="novousuario" class="col-sm-auto col-form-label">Novo nome do usuário:</label>
                          
-                         <input type="text" name="" id="titulo" class="form-control">
+                         <input type="text" name="name" id="titulo" class="form-control">
                         
                      </div>
      
                      <div class="form-group mb-3">
                          <label for="novoemail" class="col-sm-auto col-form-label">Novo e-mail:</label>
                          
-                         <input type="text" name="" id="email" class="form-control">
+                         <input type="text" name="email" id="email" class="form-control">
                      </div>
      
                      <div class="form-group mb-3">
                          <label for="novasenha" class="col-sm-auto col-form-label">Nova senha:</label>
                          
-                         <input type="password"  value="" name="myPassword" class="form-control"/>
+                         <input type="password"  value="" name="password" class="form-control"/>
                      </div>
                      <div class="form-group row">
                         <div class="col-sm-6">
@@ -104,10 +103,11 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th scope="row" class="number">1</th>
-                    <td>Murilo Lopes da Silva</td>
-                    <td class="email">murilo.lopes@gmail.com</td>
+            <?php foreach($users as $user):?>
+                <tr>  
+                    <th scope="row" class="number"><?= $user->id; ?></th>
+                    <td><?= $user->name; ?></td>
+                    <td class="email"><?= $user->email; ?></td>
                     <td>
                         <div class="btn-acoes">
                             <button type="button">
@@ -122,96 +122,7 @@
                         </div>
                     </td>
                 </tr>
-                <tr>
-                    <th scope="row" class="number">2</th>
-                    <td>Vitória Jesus</td>
-                    <td class="email">vitoria.jesus@gmail.com</td>
-                    <td>
-                        <div class="btn-acoes">
-                            <button type="button">
-                                <i class="fa fa-eye" aria-hidden="true"></i>
-                            </button>
-                            <button type="button">
-                                <i class="fa fa-trash-o" aria-hidden="true"></i>
-                            </button>
-                            <button type="button">
-                                <i class="fa fa-pencil-square-o" aria-hidden="true" data-modal="modalEdit"></i>
-                            </button>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row" class="number">3</th>
-                    <td>Eloah Lima</td>
-                    <td class="email">eloah.lima@gmail.com</td>
-                    <td>
-                        <div class="btn-acoes">
-                            <button type="button">
-                                <i class="fa fa-eye" aria-hidden="true"></i>
-                            </button>
-                            <button type="button">
-                                <i class="fa fa-trash-o" aria-hidden="true"></i>
-                            </button>
-                            <button type="button">
-                                <i class="fa fa-pencil-square-o" aria-hidden="true" data-modal="modalEdit"></i>
-                            </button>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row" class="number">4</th>
-                    <td>Sophie Teixeira</td>
-                    <td class="email">sophie.teixeira@outlook.com</td>
-                    <td>
-                        <div class="btn-acoes">
-                            <button type="button">
-                                <i class="fa fa-eye" aria-hidden="true"></i>
-                            </button>
-                            <button type="button">
-                                <i class="fa fa-trash-o" aria-hidden="true"></i>
-                            </button>
-                            <button type="button">
-                                <i class="fa fa-pencil-square-o" aria-hidden="true" data-modal="modalEdit"></i>
-                            </button>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row" class="number">5</th>
-                    <td>João Farias</td>
-                    <td class="email">joao.farias@gmail.com</td>
-                    <td>
-                        <div class="btn-acoes">
-                            <button type="button">
-                                <i class="fa fa-eye" aria-hidden="true"></i>
-                            </button>
-                            <button type="button">
-                                <i class="fa fa-trash-o" aria-hidden="true"></i>
-                            </button>
-                            <button type="button">
-                                <i class="fa fa-pencil-square-o" aria-hidden="true" data-modal="modalEdit"></i>
-                            </button>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row" class="number">6</th>
-                    <td>Ana Julia Porto</td>
-                    <td class="email">julia.porto@outlook.com</td>
-                    <td>
-                        <div class="btn-acoes">
-                            <button type="button">
-                                <i class="fa fa-eye" aria-hidden="true"></i>
-                            </button>
-                            <button type="button">
-                                <i class="fa fa-trash-o" aria-hidden="true"></i>
-                            </button>
-                            <button type="button">
-                                <i class="fa fa-pencil-square-o" aria-hidden="true" data-modal="modalEdit"></i>
-                            </button>
-                        </div>
-                    </td>
-                </tr>
+            <?php endforeach;?>
             </tbody>
           </table>
         <!--fim da tabela de usuários-->

@@ -40,10 +40,11 @@
                 </tr>
             </thead>
             <tbody>
+                <?php foreach($posts as $post):?>
                 <tr>
-                    <th scope="row" class="number">1</th>
-                    <td>Terceira temporada de The Witcher anunciada.</td>
-                    <td>27/10/2022</td>
+                    <th scope="row" class="number"><?=$post->id;?></th>
+                    <td><?=$post->title;?></td>
+                    <td><?=$post->created_at;?></td>
                     <td>
                         <div class="btn-acoes ">
                             <i class="fa fa-eye  botao " aria-hidden="true" data-modal="" > </i>
@@ -52,96 +53,7 @@
                         </div>
                     </td>
                 </tr>
-                <tr>
-                    <th scope="row" class="number">2</th>
-                    <td>Game of Thrones: séries derivadas ainda vão demorar para estrear na HBO</td>
-                    <td>01/11/2022</td>
-                    <td>
-                        <div class="btn-acoes">
-                            <button type="button">
-                                <i class="fa fa-eye  botao" aria-hidden="true" data-modal=""></i>
-                            </button>
-                            <button type="button">
-                                <i class="fa fa-trash-o  botao" aria-hidden="true" data-modal=""></i>
-                            </button>
-                            <button type="button">
-                                <i class="fa fa-pencil-square-o botao " aria-hidden="true" data-modal="editarPost"></i>
-                            </button>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row" class="number">3</th>
-                    <td>Quarteto Fantástico: Doutor Destino não será vilão do filme</td>
-                    <td>01/11/2022</td>
-                    <td>
-                        <div class="btn-acoes">
-                            <button type="button">
-                                <i class="fa fa-eye  botao" aria-hidden="true" data-modal=""></i>
-                            </button>
-                            <button type="button">
-                                <i class="fa fa-trash-o  botao" aria-hidden="true" data-modal=""></i>
-                            </button>
-                            <button type="button">
-                                <i class="fa fa-pencil-square-o botao " aria-hidden="true" data-modal="editarPost"></i>
-                            </button>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row" class="number">4</th>
-                    <td>Marvel: Visão pode ganhar série própria no Disney+</td>
-                    <td>01/11/2022</td>
-                    <td>
-                        <div class="btn-acoes">
-                            <button type="button">
-                                <i class="fa fa-eye  botao" aria-hidden="true" data-modal=""></i>
-                            </button>
-                            <button type="button">
-                                <i class="fa fa-trash-o  botao" aria-hidden="true" data-modal=""></i>
-                            </button>
-                            <button type="button">
-                                <i class="fa fa-pencil-square-o botao " aria-hidden="true" data-modal="editarPost"></i>
-                            </button>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row" class="number">5</th>
-                    <td>Dahmer: Ryan Murphy rebate acusações sobre ignorar famílias das vítimas</td>
-                    <td>01/11/2022</td>
-                    <td>
-                        <div class="btn-acoes">
-                            <button type="button">
-                                <i class="fa fa-eye  botao" aria-hidden="true" data-modal=""></i>
-                            </button>
-                            <button type="button">
-                                <i class="fa fa-trash-o  botao" aria-hidden="true" data-modal=""></i>
-                            </button>
-                            <button type="button">
-                                <i class="fa fa-pencil-square-o  botao" aria-hidden="true" data-modal="editarPost"></i>
-                            </button>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row" class="number">6</th>
-                    <td>Pantera Negra 2: elenco recebeu e-mails da Marvel para evitar spoilers</td>
-                    <td>01/11/2022</td>
-                    <td>
-                        <div class="btn-acoes">
-                            <button type="button">
-                                <i class="fa fa-eye botao " aria-hidden="true" data-modal=""></i>
-                            </button>
-                            <button type="button">
-                                <i class="fa fa-trash-o  botao" aria-hidden="true" data-modal=""></i>
-                            </button>
-                            <button type="button">
-                                <i class="fa fa-pencil-square-o  botao" aria-hidden="true" data-modal="editarPost"></i>
-                            </button>
-                        </div>
-                    </td>
-                </tr>
+                <?php endforeach;?>
             </tbody>
           </table>
         <!--fim da tabela de posts-->
@@ -159,20 +71,20 @@
          <div class="form-group">
              <label for="titulo" class="col-sm-auto col-form-label">Título da Postagem:</label>
              
-             <input type="text" name="" id="titulo" class="form-control" placeholder="TITULO">
+             <input type="text" name="title" id="titulo" class="form-control" placeholder="TITULO">
             
          </div>
 
          <div class="form-group">
              <label for="prim_para" class="col-sm-auto col-form-label">Primeiro Parágrafo:</label>
              
-             <textarea name="" id="prim_para" cols="3" rows="5" class="form-control" placeholder="PARAGRAFO"></textarea>
+             <textarea name="content" id="prim_para" cols="3" rows="5" class="form-control" placeholder="PARAGRAFO"></textarea>
          </div>
 
          <div class="form-group">
              <label class="col-sm-auto col-form-label me-5" for="arq">Mídia inclusa:</label>
              
-             <input type="file" class="custom-file-input form-control" id="arq">
+             <input type="file" name="image" class="custom-file-input form-control" id="arq">
 
          </div>  
          <div class="col-sm-6">
@@ -189,21 +101,21 @@
          <div class="form-group row mb-3">
              <label for="titulo" class="col-sm-auto col-form-label">Título da Postagem:</label>
              <div class="col-sm-7">
-                 <input type="text" name="" id="titulo" class="form-control">
+                 <input type="text" name="title" id="titulo" class="form-control">
              </div>
          </div>
 
          <div class="form-group row mb-3">
              <label for="prim_para" class="col-sm-auto col-form-label">Primeiro Parágrafo:</label>
              <div class="col-sm-7">
-                 <textarea name="" id="prim_para" cols="3" rows="5" class="form-control"></textarea>
+                 <textarea name="content" id="prim_para" cols="3" rows="5" class="form-control"></textarea>
              </div>
          </div>
 
          <div class="input-group mb-3 row">
              <label class="col-sm-auto col-form-label me-5" for="arq">Enviar mídia:</label>
              <div class="col-sm-7">
-                 <input type="file" class="custom-file-input form-control" id="arq">
+                 <input type="file" name="image" class="custom-file-input form-control" id="arq">
              </div>
          </div>  
          <div class="col-sm-6">

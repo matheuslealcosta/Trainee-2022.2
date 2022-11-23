@@ -13,7 +13,7 @@ class poststable
             $table->increments("id")->primary();
             $table->string("title");
             $table->string("content");
-            $table->integer("author");
+            // $table->integer("author");
             $table->string("image");
             //sintaxe que simplifica a criação de chave estrangeira em uma só linha
             $table->foreignId("user_id")->constrained("users");
