@@ -49,6 +49,7 @@
             <input type="submit" class="input-modal-create" value="Cadastrar">
         </form>
         </div>
+        <!---->
 
         <!-- Modal Editar Usuário-->
 
@@ -90,7 +91,41 @@
                     </div>
                 </form>
             </div>
+    </div> 
+    <!---->
+
+    <!----MODAL EXCLUIR---->
+    <div class="d-flex mx-auto overflow-hidden container justify-content-center hide main">
+           <img src="../../../public/assets/MatflixLogoText.png" class="img-fluid mx-auto d-block" alt="" id="logo">
+           <h2 id="title">Deleção de Usuario</h2>
+           <p class="lead">Tem certeza que deseja excluir o usuário?</p>
+            <div class="row d-flex justify-content-center">
+                <button class="btn btn-lg formbtn col-md-4" >Sim</button>
+                <button class="btn btn-lg formbtn col-md-4">Cancelar</button>
+            </div>
+        </div>
     </div>
+    <!---->
+    <!----MODAL VISUALIZAR--->
+    <div class="d-flex mx-auto overflow-hidden justify-content-center hide main form-modal" >
+           <img src="../../../public/assets/MatflixLogoText.png" class="img-fluid mx-auto d-block" alt="" id="logo">
+           <h2 class="mb-4" id="title">Visualizar Usuário</h2>
+           <form action="POST" class="row gy-3 gx-3 align-items-center mt-2">
+                <div class="form-group mb-3">
+                    <label for="usuario" class="col-sm-auto col-form-label">Nome do usuário:</label>
+                    
+                    <p class=" form showusuario show">JOAO25042123</p>
+                   
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="email" class="col-sm-auto col-form-label">E-mail:</label>
+                    
+                    <p class=" form showemail show">joao25042123@gmail.com</p>
+                <div>
+                    <button class="btn btn-lg formbtn form-control align-self-center col-sm-6">Voltar</button>
+                </div>
+           </form>
         </div>
         <!--início da tabela de usuários-->
         <table class="table table-hover">
