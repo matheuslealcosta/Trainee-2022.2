@@ -27,7 +27,8 @@ class UserController extends Controller
     public function store(){
         $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS);
         $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
-        $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+        $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_SPECIAL_CHARS);
+        $password = password_hash($password, PASSWORD_DEFAULT);
         $user = new User();
         $user->name =$name;
         $user->email = $email;
