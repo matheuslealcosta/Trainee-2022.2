@@ -5,7 +5,16 @@
     font-family: 'Bebas Neue', cursive;
     color: #d7d7d7;
 }
-
+.fade-modal{
+    position:fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+    pointer-events: all;
+  }
 body, .page-container {
     max-width: 100%;
     max-height: 100%;
@@ -105,7 +114,7 @@ button:hover{
     opacity: 1;
 }
 
-#fade, #modal{
+#fade, #modalAdd, #modalEdit, #modalShow, #modalDelete{
     transition: .5s;
     opacity: 1;
     pointer-events: all;
@@ -120,8 +129,18 @@ button:hover{
     background-color: rgba(0,0,0,0.6);
     z-index: 5;
 }
+.fade-modal{
+    position:fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+    pointer-events: all;
+  }
 
-#modal{
+#modalAdd{
     position: fixed;
     top: 50%;
     left: 50%;
@@ -132,6 +151,9 @@ button:hover{
     max-width: 90%;
     padding: 1.2rem;
     border-radius: .5rem;
+}
+#modalEdit, #modalShow, #modalDelete{
+    top: 20%;
 }
 
 .modal-header{
@@ -148,13 +170,13 @@ button:hover{
     margin-bottom: 1rem;
 }
 
-#modal.hide,
+#modalAdd.hide,#modalEdit.hide, #modalShow.hide, #modalDelete.hide,
 #fade.hide{
     opacity: 0;
     pointer-events: none;
 }
 
-#modal.hide{
+#modalAdd.hide,#modalEdit.hide, #modalShow.hide, #modalDelete.hide{
     top: 0;
 }
 

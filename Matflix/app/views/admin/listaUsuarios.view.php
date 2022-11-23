@@ -30,10 +30,10 @@
 
         
         <div class="btn-adicionar">
-            <button  class="add botao " type="button" id="open-modal">Adicionar Usuário</button>
+            <button  class="add botao " type="button" data-modal="modalAdd" >Adicionar Usuário</button>
         </div>
-        <div id="fade" class="hide"></div>
-        <div id="modal" class="hide">
+        <div class="fade-modal hide" id="fadeModal"></div>
+        <div id="modalAdd" class="hide fech">
 
         <!--Modal Criar Usuário-->
         <div class="modal-header">
@@ -53,8 +53,8 @@
 
         <!-- Modal Editar Usuário-->
 
-        <div class="fader hide" id="fade_edit"></div>
-        <div class="modal-user hide d-flex mx-auto overflow-hidden justify-content-center main" id="modalEdit">
+
+        <div class="modal-user hide d-flex mx-auto  justify-content-center main fech" id="modalEdit">
                 <img src="../../../public/assets/MatflixLogoText.png" class="img-fluid mx-auto d-block" alt="" id="logo">
                 <h2 class="mb-4" id="title">Edição de usuário</h2>
                 <form method="POST">
@@ -92,10 +92,9 @@
                 </form>
             </div>
     </div> 
-    <!---->
-
-    <!----MODAL EXCLUIR---->
-    <div class="d-flex mx-auto overflow-hidden container justify-content-center hide main">
+    <tr>
+        <!----MODAL EXCLUIR---->
+    <div class="modal-user hide d-flex mx-auto overflow-hidden justify-content-center main fech"id="modalDelete">
            <img src="../../../public/assets/MatflixLogoText.png" class="img-fluid mx-auto d-block" alt="" id="logo">
            <h2 id="title">Deleção de Usuario</h2>
            <p class="lead">Tem certeza que deseja excluir o usuário?</p>
@@ -104,10 +103,10 @@
                 <button class="btn btn-lg formbtn col-md-4">Cancelar</button>
             </div>
         </div>
-    </div>
+    
     <!---->
     <!----MODAL VISUALIZAR--->
-    <div class="d-flex mx-auto overflow-hidden justify-content-center hide main form-modal" >
+    <div class="modal-user hide d-flex mx-auto overflow-hidden justify-content-center main fech"id="modalShow" >
            <img src="../../../public/assets/MatflixLogoText.png" class="img-fluid mx-auto d-block" alt="" id="logo">
            <h2 class="mb-4" id="title">Visualizar Usuário</h2>
            <form action="POST" class="row gy-3 gx-3 align-items-center mt-2">
@@ -127,6 +126,11 @@
                 </div>
            </form>
         </div>
+                <!----->
+                
+    <!---->
+    </div>
+    
         <!--início da tabela de usuários-->
         <table class="table table-hover">
             <thead>
@@ -146,13 +150,13 @@
                     <td>
                         <div class="btn-acoes">
                             <button type="button">
-                                <i class="fa fa-eye" aria-hidden="true"></i>
+                                <i class="fa fa-eye botao" aria-hidden="true"data-modal="modalShow"></i>
                             </button>
                             <button type="button">
-                                <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                <i class="fa fa-trash-o botao" aria-hidden="true" data-modal="modalDelete"></i>
                             </button>
                             <button type="button">
-                                <i class="fa fa-pencil-square-o" aria-hidden="true" data-modal="modalEdit"></i>
+                                <i class="fa fa-pencil-square-o botao" aria-hidden="true" data-modal="modalEdit"></i>
                             </button>
                         </div>
                     </td>
@@ -167,7 +171,7 @@
    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-    <script src="..\..\..\public\js\modal_create_user.js" defer></script>
-    <script src="../../../public/js/modal_edit_user.js"></script>
+
+    <script src="../../../public/js/listausuarios.js"></script>
 </body>
 </html>
