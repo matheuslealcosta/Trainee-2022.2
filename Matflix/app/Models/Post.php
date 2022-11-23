@@ -8,9 +8,10 @@ class Post Extends Model
 {
 
     protected $fillable = [
-        'body',
-        'user_id',
-        'image_path',
+        'title',
+        'content',
+        'author',
+        'image'   
     ];
 
     public function user()

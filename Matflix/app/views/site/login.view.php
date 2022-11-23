@@ -13,7 +13,7 @@
                 <img src="..\..\..\public\img\MatflixLogoText.png">
             </div>
 
-            <form>
+            <form action="" method="POST">
                 <input type="text" name="nome" placeholder="Nome de Usuário" autofocus>
                 <input type="password" name="senha" placeholder="Sua Senha">
                 <input type="submit" value="Entrar">
