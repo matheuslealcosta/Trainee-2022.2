@@ -37,7 +37,7 @@ class UserController extends Controller
     }
 
     public function delete(){
-        $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
+        $id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT);
         App::get('database')->delete('users', $id);
         return redirect('lista-usuarios');
     }
