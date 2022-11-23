@@ -44,11 +44,11 @@
                 <tr>
                     <th scope="row" class="number"><?=$post->id;?></th>
                     <td><?=$post->title;?></td>
-                    <td><?=$post->created_at;?></td>
+                    <td><?=$post->created;?></td>
                     <td>
                         <div class="btn-acoes ">
-                            <i class="fa fa-eye  botao " aria-hidden="true" data-modal="" > </i>
-                            <i class="fa fa-trash-o  botao" aria-hidden="true" data-modal=""></i>
+                            <i class="fa fa-eye  botao " aria-hidden="true" data-modal="visualisarPost" > </i>
+                            <i class="fa fa-trash-o  botao" aria-hidden="true" data-modal="excluirPost"></i>
                             <i class="fa fa-pencil-square-o botao " aria-hidden="true" data-modal="editarPost"></i>
                         </div>
                     </td>
@@ -63,6 +63,7 @@
 </div>
 <div class="container-modal">
 
+<!-- modal de esdição de post-->
 <div class="fade-modal hide" id="fadeModal"></div>
 <div class="container hide modal" id="editarPost">
     <img src="../../../public/assets/MatflixLogoText.png" class="img-fluid mx-auto d-block" alt="Logo da Matflix" id="logo">
@@ -78,7 +79,7 @@
          <div class="form-group">
              <label for="prim_para" class="col-sm-auto col-form-label">Primeiro Parágrafo:</label>
              
-             <textarea name="content" id="prim_para" cols="3" rows="5" class="form-control" placeholder="PARAGRAFO"></textarea>
+             <textarea name="content" id="prim_para" name="content" cols="3" rows="5" class="form-control" placeholder="PARAGRAFO"></textarea>
          </div>
 
          <div class="form-group">
@@ -94,10 +95,13 @@
             <button class="btn btn-lg formbtn form-control align-self-center col-sm-6 cancc cancelar" id="Cancel" >Cancelar</button>         </div>
     </form>
 </div>
+<!--*******************-->
+
+   <!-- modal de criação de post-->
    <div class="container hide modal" id="modalnewpost">
     <img src="../../../public/assets/MatflixLogoText.png" class="img-fluid mx-auto d-block" alt="" id="logo">
     <h2 class="mb-4" id="title">Criação de Post</h2>
-    <form  class="row gy-3 gx-3 align-items-center mt-2">
+    <form  class="row gy-3 gx-3 align-items-center mt-2" action="lista-posts/create" method="POST">
          <div class="form-group row mb-3">
              <label for="titulo" class="col-sm-auto col-form-label">Título da Postagem:</label>
              <div class="col-sm-7">
@@ -131,6 +135,16 @@
          </div>
     </form>
  </div>
+ <!--*******************-->
+
+ <!-- modal de visualização de post-->
+ 
+ <!--*******************-->
+
+ 
+ <!-- modal de excluir de post-->
+ 
+ <!--*******************-->
 </div>
 
 </div>

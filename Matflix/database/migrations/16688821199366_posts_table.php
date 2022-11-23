@@ -17,6 +17,7 @@ class poststable
             $table->string("image");
             //sintaxe que simplifica a criação de chave estrangeira em uma só linha
             $table->foreignId("user_id")->constrained("users");
+            $table->date("created");
             $table->timestamps();
         });
     }

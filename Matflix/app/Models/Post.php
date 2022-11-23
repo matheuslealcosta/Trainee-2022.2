@@ -11,7 +11,8 @@ class Post Extends Model
         'title',
         'content',
         'author',
-        'image'   
+        'image',
+        'created'  
     ];
 
     public function user()

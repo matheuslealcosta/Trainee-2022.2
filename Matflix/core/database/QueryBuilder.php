@@ -2,6 +2,7 @@
 
 namespace App\Core\Database;
 
+use DateTime;
 use PDO, Exception;
 
 class QueryBuilder
@@ -20,6 +21,7 @@ class QueryBuilder
             implode(', ', array_keys($query)),
             ':' . implode(', :', array_keys($query))
         );
+
         $statement = $this->pdo->prepare($insertion);
     
         $statement->execute($query);
