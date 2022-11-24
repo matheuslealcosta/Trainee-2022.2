@@ -47,16 +47,14 @@
                     <td><?=$post->created;?></td>
                     <td>
                         <div class="btn-acoes ">
-                            <i class="fa fa-eye  botao " aria-hidden="true" data-modal="visualisarPost" > </i>
-                            <i class="fa fa-trash-o  botao" aria-hidden="true" data-modal="excluirPost"></i>
-                            <i class="fa fa-pencil-square-o botao " aria-hidden="true" data-modal="editarPost"></i>
+                            <i class="fa fa-eye  botao " aria-hidden="true" data-modal="visualisarPost-<?=$post->id;?>" > </i>
+                            <i class="fa fa-trash-o  botao" aria-hidden="true" data-modal="excluirPost-<?=$post->id;?>"></i>
+                            <i class="fa fa-pencil-square-o botao " aria-hidden="true" data-modal="editarPost-<?=$post->id;?>"></i>
                         </div>
                     </td>
                 </tr>
-                <?php endforeach;?>
-            </tbody>
-          </table>
-        <!--fim da tabela de posts-->
+                
+            
         
    
    </div>
@@ -65,7 +63,7 @@
 
 <!-- modal de edição de post-->
 <div class="fade-modal hide" id="fadeModal"></div>
-<div class="container hide modal" id="editarPost">
+<div class="container hide modal main" id="editarPost-<?=$post->id;?>">
     <img src="../../../public/assets/MatflixLogoText.png" class="img-fluid mx-auto d-block" alt="Logo da Matflix" id="logo">
     <h2 class="mb-4" id="title">Edição de Post</h2>
     <form action="" class="row gy-3 gx-3 align-items-center mt-2">
@@ -98,10 +96,10 @@
 <!--*******************-->
 
    <!-- modal de criação de post-->
-   <div class="container hide modal" id="modalnewpost">
+   <div class="container hide modal main" id="modalnewpost">
     <img src="../../../public/assets/MatflixLogoText.png" class="img-fluid mx-auto d-block" alt="" id="logo">
     <h2 class="mb-4" id="title">Criação de Post</h2>
-    <form  class="row gy-3 gx-3 align-items-center mt-2" action="lista-posts/create" method="POST">
+    <form  class="row gy-3 gx-3 align-items-center mt-2" enctype="multipart/form-data" action="lista-posts/create" method="POST">
          <div class="form-group row mb-3">
              <label for="titulo" class="col-sm-auto col-form-label">Título da Postagem:</label>
              <div class="col-sm-7">
@@ -138,14 +136,14 @@
  <!--*******************-->
 
  <!-- modal de visualização de post-->
- <div class="container modal hide" id="visualisarPost">
-            <h1 id="title"><img src="../../../public/assets/mat2.png" alt="" class="img-fluid rounded" id="logo-min"> TÍTULO DA POSTAGEM.</h1>
+ <div class="container modal hide main" id="visualisarPost-<?=$post->id;?>">
+            <h1 id="title"><img src="../../../public/assets/mat2.png" alt="" class="img-fluid rounded" id="logo-min"><?php echo $post->title?></h1>
            
-            <h4 class="text-muted" id="data">Data da postagem </h4>
+            <h4 class="text-muted" id="data"><?php echo $post->created?></h4>
             <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat reprehenderit ullam, repudiandae totam possimus voluptas minima ad consectetur earum sed adipisci iusto modi dignissimos suscipit architecto laborum, numquam, error doloribus.</p>
            
             <figure>
-                <img src="../../../public/assets/MatflixLogoText.png" alt="" class="figure-img rounded mx-auto d-block" width="50%">
+                <img src="<?php echo $post->image?>" alt="" class="figure-img rounded mx-auto d-block" width="50%">
                 <figcaption class="figure-caption text-center">Figura 1 - Descrição da imagem</figcaption>
             </figure>
         
@@ -168,20 +166,28 @@
 
  
  <!-- modal de excluir de post-->
- <div class="d-flex mx-auto overflow-hidden container justify-content-center h-100 main hide modal" id="excluirPost">
+ <div class="d-flex mx-auto overflow-hidden container justify-content-center h-100 main hide modal" id="excluirPost-<?=$post->id;?>">
            <img src="../../../public/assets/MatflixLogoText.png" class="img-fluid mx-auto d-block" alt="" id="logo">
            <h2 id="title">Deleção de Post.</h2>
            <p class="lead">Deseja deletar a postagem?</p>
            <div class="row">
-                <div class="d-grid gap-2 col-md-4">
-                    <button type="button" class="btn btn-lg btn-cm formbtn">Sim</button>
-                </div>
-                <div class="d-grid gap-2 col-md-4">
-                    <button type="button" class="btn btn-lg btn-cm formbtn fechar">Cancelar</button>
-                </div>
+                <form action="lista-posts/delete" method="POST">
+                    <input type="hidden" name="id" value="<?php echo $post->id; ?>">
+                    <div class="d-grid gap-2 col-md-4">
+                        <button type="button" class="btn btn-lg btn-cm formbtn">Sim</button>
+                    </div>
+                </form>
+                    <div class="d-grid gap-2 col-md-4">
+                        <button type="button" class="btn btn-lg btn-cm formbtn fechar">Cancelar</button>
+                    </div>
             </div>
         </div>
  <!--*******************-->
+
+ <?php endforeach;?>
+ </tbody>
+</table>
+<!--fim da tabela de posts-->
 </div>
 
 </div>
