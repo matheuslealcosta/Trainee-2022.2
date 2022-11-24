@@ -15,6 +15,7 @@ $router->get('dashboard', 'UserController@');
 // $router->get('lista-usuarios', 'UserController@');
 $router->get('lista-posts', 'PostController@index');
 $router->post('lista-posts/create', 'PostController@store');
+$router->post('lista-posts/delete', 'PostController@delete');
 
 
 

@@ -48,6 +48,13 @@ class PostController extends Controller
         return redirect('lista-posts');
     }
 
+    public function delete()
+    {
+        $id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT);
+        App::get('database')->delete('posts', $id);
+        return redirect('lista-posts');
+    }
+
     
 
 }

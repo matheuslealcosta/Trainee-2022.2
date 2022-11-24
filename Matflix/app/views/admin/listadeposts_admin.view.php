@@ -63,7 +63,7 @@
 </div>
 <div class="container-modal">
 
-<!-- modal de esdição de post-->
+<!-- modal de edição de post-->
 <div class="fade-modal hide" id="fadeModal"></div>
 <div class="container hide modal" id="editarPost">
     <img src="../../../public/assets/MatflixLogoText.png" class="img-fluid mx-auto d-block" alt="Logo da Matflix" id="logo">
@@ -92,7 +92,7 @@
              <input type="submit" value="Editar" class="botao btn btn-lg formbtn form-control"></input>
          </div>
          <div class="col-sm-6">
-            <button class="btn btn-lg formbtn form-control align-self-center col-sm-6 cancc cancelar" id="Cancel" >Cancelar</button>         </div>
+            <button class="btn btn-lg formbtn form-control align-self-center col-sm-6 cancc fechar" id="Cancel" >Cancelar</button>         </div>
     </form>
 </div>
 <!--*******************-->
@@ -131,19 +131,56 @@
          </div>
 
          <div>
-             <button class="btn btn-lg formbtn form-control align-self-center col-sm-6 cancc cancelar" id="Cancel" >Cancelar</button>
+             <button class="btn btn-lg formbtn form-control align-self-center col-sm-6 cancc fechar" id="Cancel" >Cancelar</button>
          </div>
     </form>
  </div>
  <!--*******************-->
 
  <!-- modal de visualização de post-->
- 
+ <div class="container modal hide" id="visualisarPost">
+            <h1 id="title"><img src="../../../public/assets/mat2.png" alt="" class="img-fluid rounded" id="logo-min"> TÍTULO DA POSTAGEM.</h1>
+           
+            <h4 class="text-muted" id="data">Data da postagem </h4>
+            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat reprehenderit ullam, repudiandae totam possimus voluptas minima ad consectetur earum sed adipisci iusto modi dignissimos suscipit architecto laborum, numquam, error doloribus.</p>
+           
+            <figure>
+                <img src="../../../public/assets/MatflixLogoText.png" alt="" class="figure-img rounded mx-auto d-block" width="50%">
+                <figcaption class="figure-caption text-center">Figura 1 - Descrição da imagem</figcaption>
+            </figure>
+        
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae ipsa perferendis cupiditate quia odit illum praesentium, possimus porro recusandae aperiam aut voluptate numquam, sint tempora consequuntur delectus. Vero, deserunt quisquam.</p>
+           
+            <div class="row">
+                <div class="d-grid gap-2 col-md-4">
+                    <button type="button" class="btn btn-lg btn-cm formbtn">Editar</button>
+                </div>
+                <div class="d-grid gap-2 col-md-4">
+                    <button type="button" class="btn btn-lg btn-cm formbtn">Excluir</button>
+                </div>
+                <div class="d-grid gap-2 col-md-4">
+                    <button type="button" class="btn btn-lg btn-cm formbtn fechar">Voltar</button>
+                </div>
+            </div>
+            
+        </div>
  <!--*******************-->
 
  
  <!-- modal de excluir de post-->
- 
+ <div class="d-flex mx-auto overflow-hidden container justify-content-center h-100 main hide modal" id="excluirPost">
+           <img src="../../../public/assets/MatflixLogoText.png" class="img-fluid mx-auto d-block" alt="" id="logo">
+           <h2 id="title">Deleção de Post.</h2>
+           <p class="lead">Deseja deletar a postagem?</p>
+           <div class="row">
+                <div class="d-grid gap-2 col-md-4">
+                    <button type="button" class="btn btn-lg btn-cm formbtn">Sim</button>
+                </div>
+                <div class="d-grid gap-2 col-md-4">
+                    <button type="button" class="btn btn-lg btn-cm formbtn fechar">Cancelar</button>
+                </div>
+            </div>
+        </div>
  <!--*******************-->
 </div>
 

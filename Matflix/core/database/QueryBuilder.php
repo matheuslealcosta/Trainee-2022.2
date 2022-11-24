@@ -27,4 +27,14 @@ class QueryBuilder
         $statement->execute($query);
     }
 
+    public function delete($table, $id){
+        $delete = sprintf(
+            'DELETE FROM %s WHERE id = :id',
+            $table
+        );
+        $statement = $this->pdo->prepare($delete);
+        $statement->bindValue(':id', $id);
+        $statement->execute();
+    }
+
 }
