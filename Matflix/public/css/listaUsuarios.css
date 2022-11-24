@@ -272,6 +272,7 @@ table tr:hover {
     background-color: rgb(0, 0, 0,0.6);
     pointer-events: all;
     z-index: 1;
+    transition: 0.3s;
 }
 
 

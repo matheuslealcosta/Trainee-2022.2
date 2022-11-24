@@ -86,7 +86,7 @@
                     <!-- Modal Editar Usuário-->
 
 
-                <div class="modal-user hide d-flex mx-auto  justify-content-center main fech" id="modalEdit-<?=$user->id?>">
+                <div class="modal-user hide d-flex mx-auto justify-content-center main fech" id="modalEdit-<?=$user->id?>">
                         <img src="../../../public/assets/MatflixLogoText.png" class="img-fluid mx-auto d-block" alt="" id="logo">
                         <h2 class="mb-4" id="title">Edição de usuário</h2>
                         <form method="POST">
@@ -129,7 +129,7 @@
             <div class="modal-user hide d-flex mx-auto overflow-hidden justify-content-center main fech" id="modalDelete-<?=$user->id?>">
                 <img src="../../../public/assets/MatflixLogoText.png" class="img-fluid mx-auto d-block" alt="" id="logo">
                 <h2 id="title">Deleção de Usuario</h2>
-                <p class="lead">Tem certeza que deseja excluir o usuário?</p>
+                <p class="lead text-center">Tem certeza que deseja excluir o usuário?</p>
                     <div class="row d-flex justify-content-center">
                         <form action="lista-usuarios/delete" method="POST">
                             <input type="hidden" value="<?=$user->id?>" name="id">
@@ -156,6 +156,8 @@
                             <label for="email" class="col-sm-auto col-form-label">E-mail:</label>
                             
                             <p class=" form showemail show"><?=$user->email?></p>
+                        </div>
+
                         <div>
                             <button class="btn btn-lg formbtn form-control align-self-center col-sm-6 fechar">Voltar</button>
                         </div>
