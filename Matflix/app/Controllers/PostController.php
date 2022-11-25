@@ -36,7 +36,7 @@ class PostController extends Controller
     {
         $title = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_SPECIAL_CHARS);
         $content = $_POST['content'];
-        $image = filter_input(INPUT_POST, 'image', FILTER_SANITIZE_SPECIAL_CHARS);
+        $image = $_FILES['image'];
         $created = date("Y-m-d", null);
         $post = new Post();
         $post->title =$title;
@@ -50,10 +50,13 @@ class PostController extends Controller
 
     public function delete()
     {
-        $id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT);
+        $id = $_POST['id'];
+
         App::get('database')->delete('posts', $id);
         return redirect('lista-posts');
     }
+
+    
 
     
 

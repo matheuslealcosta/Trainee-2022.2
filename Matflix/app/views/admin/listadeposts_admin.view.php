@@ -29,73 +29,11 @@
         <div class="btn-adicionar">
             <button  class="add botao " type="button" data-modal="modalnewpost" id="botaoAbrir">Adicionar Postagem  +</button>
         </div>
-        <!--início da tabela de posts-->
-        <table class="table table-hover">
-            <thead>
-                <tr>
-                    <th scope="col" class="number">#</th>
-                    <th scope="col">Postagem</th>
-                    <th scope="col">Data da Postagem</th>
-                    <th scope="col" class="title-acao">Ações</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php foreach($posts as $post):?>
-                <tr>
-                    <th scope="row" class="number"><?=$post->id;?></th>
-                    <td><?=$post->title;?></td>
-                    <td><?=$post->created;?></td>
-                    <td>
-                        <div class="btn-acoes ">
-                            <i class="fa fa-eye  botao " aria-hidden="true" data-modal="visualisarPost-<?=$post->id;?>" > </i>
-                            <i class="fa fa-trash-o  botao" aria-hidden="true" data-modal="excluirPost-<?=$post->id;?>"></i>
-                            <i class="fa fa-pencil-square-o botao " aria-hidden="true" data-modal="editarPost-<?=$post->id;?>"></i>
-                        </div>
-                    </td>
-                </tr>
-                
-            
-        
-   
-   </div>
-</div>
-<div class="container-modal">
 
-<!-- modal de edição de post-->
-<div class="fade-modal hide" id="fadeModal"></div>
-<div class="container hide modal main" id="editarPost-<?=$post->id;?>">
-    <img src="../../../public/assets/MatflixLogoText.png" class="img-fluid mx-auto d-block" alt="Logo da Matflix" id="logo">
-    <h2 class="mb-4" id="title">Edição de Post</h2>
-    <form action="" class="row gy-3 gx-3 align-items-center mt-2">
-         <div class="form-group">
-             <label for="titulo" class="col-sm-auto col-form-label">Título da Postagem:</label>
-             
-             <input type="text" name="title" id="titulo" class="form-control" placeholder="TITULO">
-            
-         </div>
+    <div class="container-modal">
 
-         <div class="form-group">
-             <label for="prim_para" class="col-sm-auto col-form-label">Primeiro Parágrafo:</label>
-             
-             <textarea name="content" id="prim_para" name="content" cols="3" rows="5" class="form-control" placeholder="PARAGRAFO"></textarea>
-         </div>
-
-         <div class="form-group">
-             <label class="col-sm-auto col-form-label me-5" for="arq">Mídia inclusa:</label>
-             
-             <input type="file" name="image" class="custom-file-input form-control" id="arq">
-
-         </div>  
-         <div class="col-sm-6">
-             <input type="submit" value="Editar" class="botao btn btn-lg formbtn form-control"></input>
-         </div>
-         <div class="col-sm-6">
-            <button class="btn btn-lg formbtn form-control align-self-center col-sm-6 cancc fechar" id="Cancel" >Cancelar</button>         </div>
-    </form>
-</div>
-<!--*******************-->
-
-   <!-- modal de criação de post-->
+    <!-- modal de criação de post-->
+    <div class="fade-modal hide" id="fadeModal"></div>
    <div class="container hide modal main" id="modalnewpost">
     <img src="../../../public/assets/MatflixLogoText.png" class="img-fluid mx-auto d-block" alt="" id="logo">
     <h2 class="mb-4" id="title">Criação de Post</h2>
@@ -129,11 +67,72 @@
          </div>
 
          <div>
-             <button class="btn btn-lg formbtn form-control align-self-center col-sm-6 cancc fechar" id="Cancel" >Cancelar</button>
+             <button type="button" class="btn btn-lg formbtn form-control align-self-center col-sm-6 cancc fechar" id="Cancel" >Cancelar</button>
          </div>
     </form>
  </div>
  <!--*******************-->
+
+        <!--início da tabela de posts-->
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col" class="number">#</th>
+                    <th scope="col">Postagem</th>
+                    <th scope="col">Data da Postagem</th>
+                    <th scope="col" class="title-acao">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach($posts as $post):?>
+                <tr>
+                    <th scope="row" class="number"><?=$post->id;?></th>
+                    <td><?=$post->title;?></td>
+                    <td><?=$post->created;?></td>
+                    <td>
+                        <div class="btn-acoes ">
+                            <i class="fa fa-eye  botao " aria-hidden="true" data-modal="visualisarPost-<?=$post->id;?>" > </i>
+                            <i class="fa fa-trash-o  botao" aria-hidden="true" data-modal="excluirPost-<?=$post->id;?>"></i>
+                            <i class="fa fa-pencil-square-o botao " aria-hidden="true" data-modal="editarPost-<?=$post->id;?>"></i>
+                        </div>
+                    </td>
+                </tr>
+                
+   </div>
+</div>
+
+<!-- modal de edição de post-->
+<div class="container hide modal main" id="editarPost-<?=$post->id;?>">
+    <img src="../../../public/assets/MatflixLogoText.png" class="img-fluid mx-auto d-block" alt="Logo da Matflix" id="logo">
+    <h2 class="mb-4" id="title">Edição de Post</h2>
+    <form action="" class="row gy-3 gx-3 align-items-center mt-2">
+         <div class="form-group">
+             <label for="titulo" class="col-sm-auto col-form-label">Título da Postagem:</label>
+             
+             <input type="text" name="title" id="titulo" class="form-control" placeholder="TITULO">
+            
+         </div>
+
+         <div class="form-group">
+             <label for="prim_para" class="col-sm-auto col-form-label">Primeiro Parágrafo:</label>
+             
+             <textarea name="content" id="prim_para" name="content" cols="3" rows="5" class="form-control" placeholder="PARAGRAFO"></textarea>
+         </div>
+
+         <div class="form-group">
+             <label class="col-sm-auto col-form-label me-5" for="arq">Mídia inclusa:</label>
+             
+             <input type="file" name="image" class="custom-file-input form-control" id="arq">
+
+         </div>  
+         <div class="col-sm-6">
+             <input type="submit" value="Editar" class="botao btn btn-lg formbtn form-control"></input>
+         </div>
+         <div class="col-sm-6">
+            <button class="btn btn-lg formbtn form-control align-self-center col-sm-6 cancc fechar" id="Cancel" >Cancelar</button>         </div>
+    </form>
+</div>
+<!--*******************-->
 
  <!-- modal de visualização de post-->
  <div class="container modal hide main" id="visualisarPost-<?=$post->id;?>">
@@ -172,14 +171,14 @@
            <p class="lead">Deseja deletar a postagem?</p>
            <div class="row">
                 <form action="lista-posts/delete" method="POST">
-                    <input type="hidden" name="id" value="<?php echo $post->id; ?>">
+                    <input type="hidden" name="id" value="<?=$post->id?>">
                     <div class="d-grid gap-2 col-md-4">
-                        <button type="button" class="btn btn-lg btn-cm formbtn">Sim</button>
+                        <button type="submit" class="btn btn-lg btn-cm formbtn">Sim</button>
                     </div>
-                </form>
                     <div class="d-grid gap-2 col-md-4">
                         <button type="button" class="btn btn-lg btn-cm formbtn fechar">Cancelar</button>
                     </div>
+                </form>
             </div>
         </div>
  <!--*******************-->
