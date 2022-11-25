@@ -120,17 +120,20 @@
              <textarea name="content" id="content" cols="3" rows="5" class="form-control" placeholder="PARAGRAFO"><?php echo $post->content?></textarea>
          </div>
 
+         <label class="col-sm-auto col-form-label me-5" for="arq">Mídia inclusa:</label>
          <div class="form-group">
-             <label class="col-sm-auto col-form-label me-5" for="arq">Mídia inclusa:</label>
              
-             <input type="file" name="image" class="custom-file-input form-control" id="arq">
+             <input type="file" name="image" class="custom-file-input form-control" id="arq" />
 
          </div>  
-         <div class="col-sm-6">
-             <input type="submit" value="Editar" class="botao btn btn-lg formbtn form-control"></input>
+         <div class="row">
+             <div class="col-sm-6">
+                 <input type="submit" value="Editar" class="botao btn btn-lg formbtn form-control"></input>
+             </div>
+             <div class="col-sm-6">
+                <button type="button" class="btn btn-lg formbtn form-control align-self-center col-sm-6 cancc fechar" id="Cancel" >Cancelar</button>         
+            </div>
          </div>
-         <div class="col-sm-6">
-            <button type="button" class="btn btn-lg formbtn form-control align-self-center col-sm-6 cancc fechar" id="Cancel" >Cancelar</button>         </div>
     </form>
 </div>
 <!--*******************-->

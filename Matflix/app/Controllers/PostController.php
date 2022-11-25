@@ -64,7 +64,11 @@ class PostController extends Controller
         $id = $_POST['id'];
         $title = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_SPECIAL_CHARS);
         $content = $_POST['content'];
-        $image = filter_input(INPUT_POST, 'image', FILTER_SANITIZE_SPECIAL_CHARS);
+        $arquivo = $_POST['image'];
+
+        $pasta = '../../../public/img/';
+
+        $image =  $pasta . $arquivo;
 
         App::get('database')->update('posts', compact('id', 'title', 'content', 'image'));
         return redirect('lista-posts');
