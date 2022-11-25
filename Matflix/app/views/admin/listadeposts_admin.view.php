@@ -105,18 +105,19 @@
 <div class="container hide modal main" id="editarPost-<?=$post->id;?>">
     <img src="../../../public/assets/MatflixLogoText.png" class="img-fluid mx-auto d-block" alt="Logo da Matflix" id="logo">
     <h2 class="mb-4" id="title">Edição de Post</h2>
-    <form action="" class="row gy-3 gx-3 align-items-center mt-2">
+    <form action="lista-posts/update" method="POST" class="row gy-3 gx-3 align-items-center mt-2">
          <div class="form-group">
+            <input type="hidden" name="id" value="<?php echo $post->id ?>">
              <label for="titulo" class="col-sm-auto col-form-label">Título da Postagem:</label>
              
-             <input type="text" name="title" id="titulo" class="form-control" placeholder="TITULO">
+             <input type="text" name="title" id="titulo" class="form-control" value="<?php echo $post->title?>" placeholder="TITULO">
             
          </div>
 
          <div class="form-group">
              <label for="prim_para" class="col-sm-auto col-form-label">Primeiro Parágrafo:</label>
              
-             <textarea name="content" id="prim_para" name="content" cols="3" rows="5" class="form-control" placeholder="PARAGRAFO"></textarea>
+             <textarea name="content" id="content" cols="3" rows="5" class="form-control" placeholder="PARAGRAFO"><?php echo $post->content?></textarea>
          </div>
 
          <div class="form-group">
@@ -129,7 +130,7 @@
              <input type="submit" value="Editar" class="botao btn btn-lg formbtn form-control"></input>
          </div>
          <div class="col-sm-6">
-            <button class="btn btn-lg formbtn form-control align-self-center col-sm-6 cancc fechar" id="Cancel" >Cancelar</button>         </div>
+            <button type="button" class="btn btn-lg formbtn form-control align-self-center col-sm-6 cancc fechar" id="Cancel" >Cancelar</button>         </div>
     </form>
 </div>
 <!--*******************-->

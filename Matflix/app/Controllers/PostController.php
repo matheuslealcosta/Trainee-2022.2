@@ -51,13 +51,19 @@ class PostController extends Controller
     public function delete()
     {
         $id = $_POST['id'];
-
         App::get('database')->delete('posts', $id);
         return redirect('lista-posts');
     }
 
-    
+    public function update()
+    {
+        $id = $_POST['id'];
+        $title = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_SPECIAL_CHARS);
+        $content = $_POST['content'];
+        $image = filter_input(INPUT_POST, 'image', FILTER_SANITIZE_SPECIAL_CHARS);
 
-    
+        App::get('database')->update('posts', compact('id', 'title', 'content', 'image'));
+        return redirect('lista-posts');
+    }  
 
 }
