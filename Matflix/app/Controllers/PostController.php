@@ -36,7 +36,11 @@ class PostController extends Controller
     {
         $title = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_SPECIAL_CHARS);
         $content = $_POST['content'];
-        $image = $_FILES['image'];
+
+        $arquivo = $_FILES['image'];
+        $pasta = '../../../public/img/';
+
+        $image =  $pasta . $arquivo['name'];
         $created = date("Y-m-d", null);
         $post = new Post();
         $post->title =$title;

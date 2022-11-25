@@ -140,22 +140,15 @@
             <h1 id="title"><img src="../../../public/assets/mat2.png" alt="" class="img-fluid rounded" id="logo-min"><?php echo $post->title?></h1>
            
             <h4 class="text-muted" id="data"><?php echo $post->created?></h4>
-            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat reprehenderit ullam, repudiandae totam possimus voluptas minima ad consectetur earum sed adipisci iusto modi dignissimos suscipit architecto laborum, numquam, error doloribus.</p>
            
             <figure>
                 <img src="<?php echo $post->image?>" alt="" class="figure-img rounded mx-auto d-block" width="50%">
                 <figcaption class="figure-caption text-center">Figura 1 - Descrição da imagem</figcaption>
             </figure>
         
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae ipsa perferendis cupiditate quia odit illum praesentium, possimus porro recusandae aperiam aut voluptate numquam, sint tempora consequuntur delectus. Vero, deserunt quisquam.</p>
+            <p><?php echo $post->content ?></p>
            
-            <div class="row">
-                <div class="d-grid gap-2 col-md-4">
-                    <button type="button" class="btn btn-lg btn-cm formbtn">Editar</button>
-                </div>
-                <div class="d-grid gap-2 col-md-4">
-                    <button type="button" class="btn btn-lg btn-cm formbtn">Excluir</button>
-                </div>
+            <div class="row d-flex justify-content-center">
                 <div class="d-grid gap-2 col-md-4">
                     <button type="button" class="btn btn-lg btn-cm formbtn fechar">Voltar</button>
                 </div>
