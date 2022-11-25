@@ -145,7 +145,7 @@
             <h4 class="text-muted" id="data"><?php echo $post->created?></h4>
            
             <figure>
-                <img src="<?php echo $post->image?>" alt="" class="figure-img rounded mx-auto d-block" width="50%">
+                <img src="<?php echo $post->image?>" alt="Imagem referente ao post <?php $post->title ?>" class="figure-img rounded mx-auto d-block" width="50%">
                 <figcaption class="figure-caption text-center">Figura 1 - Descrição da imagem</figcaption>
             </figure>
         

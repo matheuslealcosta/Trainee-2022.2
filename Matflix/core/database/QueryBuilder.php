@@ -41,7 +41,6 @@ class QueryBuilder
 
     public function update($table,$query)
     {
-        //UPDATE `posts` SET `title` = 'sadsd MUDADO novamente', `content` = 'asdasd kakakakak', `created_at` = NULL, `updated_at` = NULL WHERE `posts`.`id` = 15;
         $update = sprintf(
             'UPDATE %s SET title = :title, content = :content, image = :image WHERE id = :id',
             $table

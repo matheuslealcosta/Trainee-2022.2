@@ -8,12 +8,6 @@
     <link rel="stylesheet" href="../../../public/css/landing_page.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   </head>
-
-  
-  
-  
-  
-  
   <body>
     <div class="logo">
       <img src="../../../public/img/MatflixLogoText.png" alt="MatFlix" class="logo">
