@@ -89,8 +89,9 @@
                 <div class="modal-user hide d-flex mx-auto justify-content-center main fech" id="modalEdit-<?=$user->id?>">
                         <img src="../../../public/assets/MatflixLogoText.png" class="img-fluid mx-auto d-block" alt="" id="logo">
                         <h2 class="mb-4" id="title">Edição de usuário</h2>
-                        <form method="POST">
+                        <form method="POST" action="lista-usuarios/edit">
                             <div class="form-group mb-3">
+                            <input type="hidden" value="<?=$user->id?>" name="id">
                                 <label for="novousuario" class="col-sm-auto col-form-label">Novo nome do usuário:</label>
                                 
                                 <input type="text" name="name" id="titulo" class="form-control" placeholder="<?=$user->name?>">

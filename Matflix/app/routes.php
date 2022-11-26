@@ -17,6 +17,7 @@ $router->get('lista-posts', 'PostController@index');
 $router->post('lista-posts/create', 'PostController@store');
 $router->post('lista-usuarios/delete', 'UserController@delete');
 $router->post('lista-usuarios/create', 'UserController@store');
+$router->post('lista-usuarios/edit', 'UserController@editar');
 
 
 

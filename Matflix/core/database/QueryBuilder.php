@@ -37,4 +37,11 @@ class QueryBuilder
         $statement->execute();
     }
 
+    public function update($table, $id, $query,$name){
+        $update = sprintf(
+            'UPDATE %s SET 'name'= $name, 'password', 'email' WHERE id = :id',
+
+        )
+    }
+
 }

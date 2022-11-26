@@ -42,4 +42,15 @@ class UserController extends Controller
         App::get('database')->delete('users', $id);
         return redirect('lista-usuarios');
     }
+
+    public function editar(){
+        $id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT);
+        $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS);
+        $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+        $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_SPECIAL_CHARS);
+        $password = password_hash($password, PASSWORD_DEFAULT);
+        App::get('database')->update('users', $id);
+
+        return redirect('lista-usuarios');
+    }
 }
