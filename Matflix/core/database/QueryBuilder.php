@@ -37,11 +37,18 @@ class QueryBuilder
         $statement->execute();
     }
 
-    public function update($table, $id, $query,$name){
+    public function update($table, $query){
         $update = sprintf(
-            'UPDATE %s SET 'name'= $name, 'password', 'email' WHERE id = :id',
-
-        )
+            'UPDATE %s SET name = :name,email = :email, password = :password WHERE id = :id',
+            $table
+        );
+        $statement = $this->pdo->prepare($update);
+        $statement->bindValue(':id', $query['id']);
+        $statement->bindValue(':name', $query['name']);
+        $statement->bindValue(':email', $query['email']);
+        $statement->bindValue(':password', $query['password']);
+        
+        $statement->execute();
     }
 
 }

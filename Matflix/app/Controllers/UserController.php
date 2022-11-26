@@ -49,7 +49,8 @@ class UserController extends Controller
         $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
         $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_SPECIAL_CHARS);
         $password = password_hash($password, PASSWORD_DEFAULT);
-        App::get('database')->update('users', $id);
+
+        App::get('database')->update('users', compact('name', 'email', 'password','id'));
 
         return redirect('lista-usuarios');
     }
