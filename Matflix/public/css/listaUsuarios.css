@@ -291,6 +291,18 @@ table tr:hover {
     right: 0;
 }
 
+.paginacao{
+    background-color: #AF0C19;
+    color: #000000;
+    transition: 0.5s;
+}
+
+
+.paginacao:hover{
+    color: white;
+    background-color: black;
+    transition: 0.5s;
+}
 
 @media (min-width: 480px) {
     .btn-adicionar {

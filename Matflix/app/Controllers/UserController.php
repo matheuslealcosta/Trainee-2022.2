@@ -20,8 +20,23 @@ class UserController extends Controller
 
 
     public function index(){
-        $users = User::all();
-        return view('admin/listaUsuarios', compact('users'));
+
+        $page =1;
+
+        if(isset($_GET['pagina']) && !empty($_GET['pagina'])){
+            $page = intval($_GET['pagina']);
+            if($page < 0) redirect('lista-usuarios');
+        }
+
+        $total_pages = ceil(User::count()/10);
+    
+        // if($page>1)
+        //     $users = User::skip($limit*($page-1))->take($limit)->get();
+        // else
+        //     $users = User::limit(10)->get();
+
+        $users = User::forPage($page,10)->get();
+        return view('admin/listaUsuarios', compact('users','page' ,'total_pages'));
     }
 
     public function store(){

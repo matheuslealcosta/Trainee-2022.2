@@ -42,7 +42,9 @@ class QueryBuilder
             'UPDATE %s SET name = :name,email = :email, password = :password WHERE id = :id',
             $table
         );
+        
         $statement = $this->pdo->prepare($update);
+
         $statement->bindValue(':id', $query['id']);
         $statement->bindValue(':name', $query['name']);
         $statement->bindValue(':email', $query['email']);
