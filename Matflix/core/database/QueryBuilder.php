@@ -21,10 +21,14 @@ class QueryBuilder
             implode(', ', array_keys($query)),
             ':' . implode(', :', array_keys($query))
         );
-
-        $statement = $this->pdo->prepare($insertion);
-    
-        $statement->execute($query);
+        
+        try{
+            $statement = $this->pdo->prepare($insertion);
+            $statement->execute($query);
+        }catch(Exception $exception){
+            die($exception->getMessage());
+        };
+        
     }
     
     public function delete($table, $id){
@@ -32,25 +36,34 @@ class QueryBuilder
             'DELETE FROM %s WHERE id = :id',
             $table
         );
-        $statement = $this->pdo->prepare($delete);
-        $statement->bindValue(':id', $id);
-        $statement->execute();
+        try{
+            $statement = $this->pdo->prepare($delete);
+            $statement->bindValue(':id', $id);
+            $statement->execute();
+        }catch(Exception $e){
+            die($e->getMessage());
+        }
     }
 
     public function update($table, $query){
+
         $update = sprintf(
             'UPDATE %s SET name = :name,email = :email, password = :password WHERE id = :id',
             $table
         );
-        
-        $statement = $this->pdo->prepare($update);
 
-        $statement->bindValue(':id', $query['id']);
-        $statement->bindValue(':name', $query['name']);
-        $statement->bindValue(':email', $query['email']);
-        $statement->bindValue(':password', $query['password']);
+        try{
+            $statement = $this->pdo->prepare($update);
+
+            $statement->bindValue(':id', $query['id']);
+            $statement->bindValue(':name', $query['name']);
+            $statement->bindValue(':email', $query['email']);
+            $statement->bindValue(':password', $query['password']);
         
-        $statement->execute();
+            $statement->execute();
+        }catch(Exception $e){
+            die($e->getMessage());
+        }
     }
 
 }
