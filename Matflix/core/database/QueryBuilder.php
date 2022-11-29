@@ -51,6 +51,21 @@ class QueryBuilder
         $statement->bindValue(':image', $query['image'], PDO::PARAM_STR);
         $statement->bindValue(':id', $query['id'], PDO::PARAM_STR);
 
+        
         $statement->execute();
+    }
+
+    public function postIndividual($id)
+    {
+        $postind = 'SELECT * FROM posts WHERE id = :id';
+
+        $statement = $this->pdo->prepare($postind);
+        $statement->bindValue(':id', $id, PDO::PARAM_STR);
+
+        $statement->execute();
+
+        $post = $statement->fetch();
+
+       return $post;
     }
 }

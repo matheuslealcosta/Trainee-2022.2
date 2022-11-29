@@ -29,7 +29,7 @@ class PostController extends Controller
             $post->created = $dateFormat->format("d/m/Y");
         }
 
-        return view('admin/listadeposts_admin', compact("posts"));
+        return view('site/lista_de_posts', compact("posts"));
     }
 
     public function store()
@@ -49,14 +49,14 @@ class PostController extends Controller
         $post->created = $created;
         
         App::get('database')->insert('posts', compact('title', 'content', 'image', 'created'));
-        return redirect('lista-posts');
+        return redirect('lista-posts-admin');
     }
 
     public function delete()
     {
         $id = $_POST['id'];
         App::get('database')->delete('posts', $id);
-        return redirect('lista-posts');
+        return redirect('lista-posts-admin');
     }
 
     public function update()
@@ -71,7 +71,20 @@ class PostController extends Controller
         $image =  $pasta . $arquivo;
 
         App::get('database')->update('posts', compact('id', 'title', 'content', 'image'));
-        return redirect('lista-posts');
+        return redirect('lista-posts-admin');
     }  
+
+    public function show()
+    {
+        $id = $_POST['id'];
+
+
+        $post = App::get('database')->postIndividual($id);
+
+        $dateFormat = new DateTime($post['created']);
+        $post['created'] = $dateFormat->format("d/m/Y");
+        
+        return view('site/individual_visu', compact("post"));
+    }
 
 }

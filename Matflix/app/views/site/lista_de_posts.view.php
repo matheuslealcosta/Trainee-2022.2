@@ -22,130 +22,21 @@
 
 <div class="items itens">
 
+  <?php foreach($posts as $post): ?>
   <div class="card carta1 page 1" >
-    <img src="../../../public/img/bettercallsaul3.jpg" class="card-img-top" alt="Better Call Saul image" data-filter="Série">
+    <img src="<?php echo $post->image ?>" class="card-img-top" alt="Better Call Saul image" data-filter="Série">
     <div class="card-body corpodocard">
-      <h5 class="card-title cardtitulo2">Better Call Saul</h5>
-      <p class="card-text cardtexto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultricies id nunc et placerat. Suspendisse commodo pharetra interdum. </p>
-      <a href="#" class="btn btn-primary botao1">Veja mais</a>
+      <h5 class="card-title cardtitulo2"><?php echo $post->title ?></h5>
+      <form action="post-individual" method="POST">
+        <input type="hidden" name="id" value="<?php echo $post->id ?>">
+        <input type="submit" class="btn btn-primary botao1" />
+      </form>
     </div>
     
   </div>
 
-  <div class="card carta1 page1" >
-    <img src="../../../public/img/sandman3.jpg" class="card-img-top" alt="Sandman image" data-filter="Série">
-    <div class="card-body corpodocard">
-      <h5 class="card-title cardtitulo2">Sandman</h5>
-      <p class="card-text cardtexto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultricies id nunc et placerat. Suspendisse commodo pharetra interdum. </p>
-      <a href="#" class="btn btn-primary botao1">Veja mais</a>
-    </div>
-    
-  </div>
 
-  <div class="card carta1 page1" >
-    <img src="../../../public/img/breakingbad.jpg" class="card-img-top" alt="Breaking bad image" data-filter="Série">
-    <div class="card-body corpodocard">
-      <h5 class="card-title cardtitulo2">Breaking bad</h5>
-      <p class="card-text cardtexto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultricies id nunc et placerat. Suspendisse commodo pharetra interdum. </p>
-      <a href="#" class="btn btn-primary botao1">Veja mais</a>
-    </div>
-    
-  </div>
-
-  <div class="card carta1 page1" >
-    <img src="../../../public/img/vinlandsaga3.jpg" class="card-img-top" alt="Vinland Saga image" data-filter="Série">
-    <div class="card-body corpodocard">
-      <h5 class="card-title cardtitulo2">Vinland Saga</h5>
-      <p class="card-text cardtexto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultricies id nunc et placerat. Suspendisse commodo pharetra interdum. </p>
-      <a href="#" class="btn btn-primary botao1">Veja mais</a>
-    </div>
-    
-  </div>
-
-  <div class="card carta1 page1" >
-    <img src="../../../public/img/strangerthings3.jpg" class="card-img-top" alt="Stranger things image" data-filter="Série">
-    <div class="card-body corpodocard">
-      <h5 class="card-title cardtitulo2">Stranger things</h5>
-      <p class="card-text cardtexto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultricies id nunc et placerat. Suspendisse commodo pharetra interdum. </p>
-      <a href="#" class="btn btn-primary botao1">Veja mais</a>
-    </div>
-    
-  </div>
-
-  <div class="card carta1 page1" >
-    <img src="../../../public/img/Ozark.jpg" class="card-img-top" alt="Ozark image" data-filter="Série">
-    <div class="card-body corpodocard">
-      <h5 class="card-title cardtitulo2">Ozark</h5>
-      <p class="card-text cardtexto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultricies id nunc et placerat. Suspendisse commodo pharetra interdum. </p>
-      <a href="#" class="btn btn-primary botao1">Veja mais</a>
-    </div>
-    
-  </div>
-
-  <div class="card carta1 page1" >
-    <img src="../../../public/img/sandman3.jpg" class="card-img-top" alt="Sandman image" data-filter="Série">
-    <div class="card-body corpodocard">
-      <h5 class="card-title cardtitulo2">Sandman</h5>
-      <p class="card-text cardtexto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultricies id nunc et placerat. Suspendisse commodo pharetra interdum. </p>
-      <a href="#" class="btn btn-primary botao1">Veja mais</a>
-    </div>
-    
-  </div>
-
-  <div class="card carta1 page1" >
-    <img src="../../../public/img/strangerthings3.jpg" class="card-img-top" alt="Stranger things image" data-filter="Série">
-    <div class="card-body corpodocard">
-      <h5 class="card-title cardtitulo2">Stranger Things</h5>
-      <p class="card-text cardtexto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultricies id nunc et placerat. Suspendisse commodo pharetra interdum. </p>
-      <a href="#" class="btn btn-primary botao1">Veja mais</a>
-    </div>
-    
-  </div>
-
-  <div class="card carta1 page1" >
-    <img src="../../../public/img/sandman3.jpg" class="card-img-top" alt="Sand man image" data-filter="Série">
-    <div class="card-body corpodocard">
-      <h5 class="card-title cardtitulo2">Sandman</h5>
-      <p class="card-text cardtexto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultricies id nunc et placerat. Suspendisse commodo pharetra interdum. </p>
-      <a href="#" class="btn btn-primary botao1">Veja mais</a>
-    </div>
-    
-  </div>
-
-  <div class="card carta1 page1" >
-    <img src="../../../public/img/vinlandsaga3.jpg" class="card-img-top" alt="Vinland Saga image" data-filter="Série">
-    <div class="card-body corpodocard">
-      <h5 class="card-title cardtitulo2">Vinland Saga</h5>
-      <p class="card-text cardtexto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultricies id nunc et placerat. Suspendisse commodo pharetra interdum. </p>
-      <a href="#" class="btn btn-primary botao1">Veja mais</a>
-    </div>
-    
-  </div>
-
-  <div class="card carta1 page1" >
-    <img src="../../../public/img/bettercallsaul3.jpg" class="card-img-top" alt="Better Call Saul image" data-filter="Série">
-    <div class="card-body corpodocard">
-      <h5 class="card-title cardtitulo2">Better Call Saul</h5>
-      <p class="card-text cardtexto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultricies id nunc et placerat. Suspendisse commodo pharetra interdum. </p>
-      <a href="#" class="btn btn-primary botao1">Veja mais</a>
-    </div>
-    
-  </div>
-
-  <div class="card carta1 page1" >
-    <img src="../../../public/img/breakingbad.jpg" class="card-img-top" alt="Breaking bad image" data-filter="Série">
-    <div class="card-body corpodocard">
-      <h5 class="card-title cardtitulo2">Breaking bad</h5>
-      <p class="card-text cardtexto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultricies id nunc et placerat. Suspendisse commodo pharetra interdum. </p>
-      <a href="#" class="btn btn-primary botao1">Veja mais</a>
-    </div>
-    
-  </div>
-  
-
-
-
-
+  <?php endforeach; ?>
 
 
 </div>
