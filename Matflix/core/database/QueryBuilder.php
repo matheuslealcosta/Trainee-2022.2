@@ -65,5 +65,14 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
+    public function verify( $table, $email, $password){
+        $verify = sprintf( "SELECT * FROM users WHERE email = '$email' and password = '$password', $table");
+        try{
+            $statement = $this->pdo->prepare($verify);
+            $statement->execute();
+    }catch(Exception $e){
+        die($e->getMessage());
+    }
 
+}
 }

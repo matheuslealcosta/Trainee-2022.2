@@ -85,4 +85,8 @@ class UserController extends Controller
         App::get('database')->insert('users', compact('name', 'email', 'password'));
         return redirect('login');
     }
+
+    public function verify(){
+        App::get('database')->verify($email, $password);
+    }
 }
