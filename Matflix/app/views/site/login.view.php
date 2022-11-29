@@ -21,7 +21,7 @@
                 <input type="password" name="senha" placeholder="Sua Senha">
                 <input type="submit" value="Entrar">
             </form>
-          <p>Ainda não tem uma conta?</p><a class="criar botao" data-modal="modalAdd" href="#">Criar Conta</a></p>
+          <p>Ainda não tem uma conta?</p><a class="criar botao criarconta" data-modal="modalAdd" href="#"> Criar Conta</a></p>
         </div>
     </section>
 

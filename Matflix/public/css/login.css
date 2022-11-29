@@ -144,7 +144,9 @@ h1 {
 h1:hover {
     cursor: default;
 }
-
+.criarconta{
+    text-decoration-line: underline;
+}
 h2{
     letter-spacing: 2px;
     box-sizing: border-box;
