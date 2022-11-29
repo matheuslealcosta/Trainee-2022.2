@@ -69,4 +69,20 @@ class UserController extends Controller
 
         return redirect('lista-usuarios');
     }
+    public function login(){
+
+        return  view('site/login');
+    }
+    public function newacc(){
+        $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS);
+        $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+        $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_SPECIAL_CHARS);
+        $password = password_hash($password, PASSWORD_DEFAULT);
+        $user = new User();
+        $user->name =$name;
+        $user->email = $email;
+        $user->password = $password;
+        App::get('database')->insert('users', compact('name', 'email', 'password'));
+        return redirect('login');
+    }
 }
