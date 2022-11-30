@@ -15,8 +15,8 @@
   <div class="logo">
     <img src="../../../public/img/MatflixLogoText.png" alt="MatFlix" class="logo">
   </div>
-  <form class="d-flex barrabranca" role="search">
-    <input class="form-control me-2" type="search" placeholder="Pesquise seus títulos favoritos" aria-label="Search">
+  <form action="lista-posts/search" method="POST" class="d-flex barrabranca" role="search">
+    <input class="form-control me-2" type="search" name="search" placeholder="Pesquise seus títulos favoritos" aria-label="Search">
     <button class="btn btn-outline-success btn-search botaosearch" type="submit">Pesquisar</button>
   </form>
 

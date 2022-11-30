@@ -87,4 +87,13 @@ class PostController extends Controller
         return view('site/individual_visu', compact("post"));
     }
 
+    public function showCategorias()
+    {
+        $search = filter_input(INPUT_POST, 'search', FILTER_SANITIZE_SPECIAL_CHARS);
+
+        $resultPesquisa = App::get('database')->pesquisaCategoria($search);
+
+        return view('site/lista_de_posts', compact('resultPesquisa'));
+    }
+
 }

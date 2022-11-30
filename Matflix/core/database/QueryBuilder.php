@@ -68,4 +68,20 @@ class QueryBuilder
 
        return $post;
     }
+
+    public function pesquisaCategoria($nome)
+    {
+        try {
+            $query = $this->pdo->prepare("SELECT * FROM posts WHERE title LIKE '%$nome%'");
+    
+            $query->execute();
+    
+            $categoria = $query->fetchAll(PDO::FETCH_ASSOC);
+    
+            return $categoria;
+        } 
+        catch(Exception $e) {
+            die($e->getMessage());
+        }
+    }
 }

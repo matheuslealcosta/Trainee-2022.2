@@ -10,6 +10,7 @@ use App\Core\Router;
 $router->get('lista-posts', 'PostController@index');
 $router->post('post-individual', 'PostController@show');
 $router->get('visualizar-post', 'PostController@');
+$router->post('lista-posts/search', 'PostController@showCategorias');
 $router->post('lista-usuarios/create', 'UserController@store');
 
 //-----------Rotas do Usuário(admin)-------------//
