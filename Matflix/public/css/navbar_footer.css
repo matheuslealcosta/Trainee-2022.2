@@ -3,6 +3,11 @@
 /* NAVBAR */
 .navbar-container {
     background-color: #221F1F;
+    max-width: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
 }
 
 .navbar-container img {
