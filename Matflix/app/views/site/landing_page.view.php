@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="../../../public/css/landing_page.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../public/css/navbar_footer.css">
   </head>
 
   
@@ -15,11 +16,13 @@
   
   
   <body>
+  <?php require('app/views/includes/navbar.php');?>
     <div class="logo">
       <img src="../../../public/img/MatflixLogoText.png" alt="MatFlix" class="logo">
     </div>
 
-      <div class="container"><div id="carouselExampleInterval" class="carousel slide carousel-here" data-bs-ride="carousel">
+      <div class="container">
+        <div id="carouselExampleInterval" class="carousel slide carousel-here" data-bs-ride="carousel">
           <div class="carousel-inner carrosseliner">
               
               <div class="carousel-item active" data-bs-interval="2000">
@@ -167,9 +170,10 @@
   <div class="logodiscord">
       <a href="https://discord.gg/GZx75HRk"><img src="../../../public/img/discordicon3.png" class="img-fluid"  img-responsive img-thumbnail></a>
   </div>
+
 </div>
 
-
+<?php require('app/views/includes/footer.php') ?>
 
 
 

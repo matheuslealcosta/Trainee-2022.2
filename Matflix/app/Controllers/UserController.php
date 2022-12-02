@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Core\Database\QueryBuilder as DatabaseQueryBuilder;
 use App\Models\User;
 use App\Core\App;
+use App\Core\Request;
 
 class UserController extends Controller
 {
@@ -18,9 +19,7 @@ class UserController extends Controller
         // }
     }
 
-
-    public function index(){
-
+    public function listUserAdm(){
         $page =1;
 
         if(isset($_GET['pagina']) && !empty($_GET['pagina'])){
@@ -29,14 +28,13 @@ class UserController extends Controller
         }
 
         $total_pages = ceil(User::count()/10);
-    
-        // if($page>1)
-        //     $users = User::skip($limit*($page-1))->take($limit)->get();
-        // else
-        //     $users = User::limit(10)->get();
 
         $users = User::forPage($page,10)->get();
         return view('admin/listaUsuarios', compact('users','page' ,'total_pages'));
+    }
+
+    public function dashboard(){
+        return view('admin/dashboard');
     }
 
     public function store(){
@@ -71,7 +69,7 @@ class UserController extends Controller
     }
     public function login(){
 
-        return  view('site/login');
+        return view('site/login');
     }
     public function newacc(){
         $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS);

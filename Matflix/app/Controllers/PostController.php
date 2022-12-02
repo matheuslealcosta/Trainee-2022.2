@@ -48,6 +48,24 @@ class PostController extends Controller
         return redirect('lista-posts');
     }
 
+    public function landingPage()
+    {
+   
+        return view('site/landing_page');
+    }
+
+    public function listPosts()
+    {
+        $posts = Post::all();
+
+        foreach($posts as $post)
+        {
+            $dateFormat = new DateTime($post->created);
+            $post->created = $dateFormat->format("d/m/Y");
+        }
+
+        return view('site/lista_de_posts', compact("posts"));
+    }
     
 
 }

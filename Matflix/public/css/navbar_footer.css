@@ -1,23 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    letter-spacing: 2px;
-    font-family: 'Bebas Neue', 'cursiva';
-}
 
-body {
-    width: 100%;
-    height: 100vh;
-    overflow-x: hidden;
-    background-color: #221F1F;
-}
-
-.page-container {
-    position: relative;
-    min-height: 100vh;
-    background-color: #000;
-}
 
 /* NAVBAR */
 .navbar-container {
@@ -64,10 +45,8 @@ body {
 /* FOOTER */
 footer {
     padding: 10px 0;
-    width: 100%;
     height: auto;
     text-align: center;
-    position: absolute;
     bottom: 0;
     background-color: #221F1F;
 }

@@ -5,14 +5,14 @@ use App\Core\Router;
 
 //-----------Rotas do Usuário(não admin)-------------//
 $router->get('cadastro', 'UserController@');
-$router->get('lista-usuarios', 'UserController@index');
-$router->get('landing-page', 'PostController@');
-$router->get('visualizar-post', 'PostController@');
+$router->get('landing-page', 'PostController@landingPage');
+$router->get('visualizar-posts', 'PostController@listPosts');
 $router->get('login', 'UserController@login');
 
 
 //-----------Rotas do Usuário(admin)-------------//
-$router->get('dashboard', 'UserController@');
+$router->get('dashboard', 'UserController@dashboard');
+$router->get('lista-usuarios', "UserController@listUserAdm");
 // $router->get('lista-usuarios', 'UserController@');
 $router->get('lista-posts', 'PostController@index');
 $router->post('lista-posts/create', 'PostController@store');

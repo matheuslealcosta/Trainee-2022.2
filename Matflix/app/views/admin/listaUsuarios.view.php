@@ -12,6 +12,7 @@
     <!--link do css-->
     <link rel="stylesheet" href="../../../public/css/listaUsuarios.css">
     <link rel="stylesheet" href="../../../public/css/edit_user_modal.css">
+    <link rel="stylesheet" href="../../../public/css/navbar_footer.css">
 
     <!--link do font awesome-->
     <script src="https://kit.fontawesome.com/b5c9f282d0.js" crossorigin="anonymous"></script>
@@ -23,7 +24,6 @@
 <body>
     <div>
    <div class="page-container">
-
        <h1>Lista de Usuários</h1>
 
        <div class="page-content">
@@ -173,13 +173,15 @@
             </tbody>
           </table>
         <!--fim da tabela de usuários-->
-
-       </div>
-   
+        <?php require('app/views/includes/pagination.php');?>
+       
+       </div>  
+       <?php require('app/views/includes/footer.php');?>
    </div>
-    <?php require('app/views/includes/pagination.php');?>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
     <script src="../../../public/js/listausuarios.js"></script>
+    
 </body>
 </html>

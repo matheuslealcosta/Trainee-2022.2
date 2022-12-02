@@ -35,7 +35,7 @@
                 <img class="card-img-top" src="../../../public/img/perfil.jpg" alt="Card image perfil">
                 <div class="card-body corpodocard">
                   <h5 class="card-title cardtitulo2">Usuários</h5>
-                  <a href="#" class="btn btn-primary botao1">Gerenciar</a>
+                  <a href="lista-usuarios" class="btn btn-primary botao1">Gerenciar</a>
                 </div>
               </div>
 
@@ -43,7 +43,7 @@
                 <img class="card-img-top" src="../../../public/img/strangerthings3.jpg" alt="Card image Lista de posts">
                 <div class="card-body corpodocard">
                   <h5 class="card-title cardtitulo2">Postagens</h5>
-                  <a href="#" class="btn btn-primary botao1">Gerenciar</a>
+                  <a href="lista-posts" class="btn btn-primary botao1">Gerenciar</a>
                 </div>
               </div>
 
@@ -54,11 +54,6 @@
                   <a href="#" class="btn btn-primary botao1">Gerenciar</a>
                 </div>
               </div>
-
-
-
-
-
 
         </div>
         
