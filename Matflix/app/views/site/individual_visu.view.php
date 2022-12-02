@@ -20,7 +20,7 @@
             </figure>
             <p><?php echo $post['content'] ?></p>
             <div class="d-grid gap-2 col-6 mx-auto">
-                <button type="button" class="btn btn-lg" id="back">Voltar</button>
+                <a href="lista-posts" class="btn btn-lg" id="back">Voltar</a>
             </div>
             
         </div>

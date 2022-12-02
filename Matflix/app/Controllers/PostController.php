@@ -41,6 +41,7 @@ class PostController extends Controller
         $pasta = '../../../public/img/';
 
         $image =  $pasta . $arquivo['name'];
+
         $created = date("Y-m-d", null);
         $post = new Post();
         $post->title =$title;
@@ -91,9 +92,9 @@ class PostController extends Controller
     {
         $search = filter_input(INPUT_POST, 'search', FILTER_SANITIZE_SPECIAL_CHARS);
 
-        $resultPesquisa = App::get('database')->pesquisaCategoria($search);
+        $posts = App::get('database')->pesquisaCategoria($search);
 
-        return view('site/lista_de_posts', compact('resultPesquisa'));
+        return view('site/lista_de_posts', compact('posts'));
     }
 
 }

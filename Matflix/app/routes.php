@@ -8,7 +8,7 @@ use App\Core\Router;
 //$router->get('lista-usuarios', 'UserController@index');
 //$router->get('landing-page', 'PostController@');
 $router->get('lista-posts', 'PostController@index');
-$router->post('post-individual', 'PostController@show');
+$router->post('lista-posts/post-individual', 'PostController@show');
 $router->get('visualizar-post', 'PostController@');
 $router->post('lista-posts/search', 'PostController@showCategorias');
 $router->post('lista-usuarios/create', 'UserController@store');
