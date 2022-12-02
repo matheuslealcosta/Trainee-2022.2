@@ -16,9 +16,9 @@
                 <img src="..\..\..\public\img\MatflixLogoText.png">
             </div>
 
-            <form action="" method="POST">
-                <input type="text" name="nome" placeholder="Nome de Usuário" autofocus>
-                <input type="password" name="senha" placeholder="Sua Senha">
+            <form action="login/verify" method="POST">
+                <input type="text" name="name" placeholder="Nome de Usuário" autofocus>
+                <input type="password" name="password" placeholder="Sua Senha">
                 <input type="submit" value="Entrar">
             </form>
           <p>Ainda não tem uma conta?</p><a class="criar botao criarconta" data-modal="modalAdd" href="#"> Criar Conta</a></p>

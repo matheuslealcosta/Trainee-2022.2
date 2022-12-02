@@ -20,6 +20,7 @@ $router->post('lista-usuarios/delete', 'UserController@delete');
 $router->post('lista-usuarios/create', 'UserController@store');
 $router->post('lista-usuarios/edit', 'UserController@editar');
 $router->post('login/create', 'UserController@newacc');
+$router->post('login/check', 'UserController@verify');
 
 
 

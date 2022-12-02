@@ -87,6 +87,20 @@ class UserController extends Controller
     }
 
     public function verify(){
-        App::get('database')->verify($email, $password);
+        $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS);
+        $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_SPECIAL_CHARS);
+        $password = password_hash($password, PASSWORD_DEFAULT);
+        App::get('database')->verify('users', $name, $password);
+        if ($name == $row['name'] && $password == $row['password']) {
+            $message = "Logado com sucesso";
+            echo "<script type='text/javascript'>alert('$message');</script>";
+            return redirect('landing-page');
     }
+        else{
+            $message = "Confira o usuário e senha digitados ";
+            echo "<script type='text/javascript'>alert('$message');</script>";
+            return redirect('login');
+    }
+
+}
 }
