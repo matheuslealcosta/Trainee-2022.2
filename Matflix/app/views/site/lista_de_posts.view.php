@@ -32,7 +32,7 @@
     <img src="<?php echo $post['image'] ?>" class="card-img-top" alt="Better Call Saul image" data-filter="Série">
     <div class="card-body corpodocard">
       <h5 class="card-title cardtitulo2"><?php echo $post['title']?></h5>
-      <form action="lista-posts/post-individual" method="POST">
+      <form action="/lista-posts/post-individual" method="POST">
         <input type="hidden" name="id" value="<?php echo $post['id'] ?>">
         <input type="submit" class="btn btn-primary botao1" />
       </form>
