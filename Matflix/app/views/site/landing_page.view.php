@@ -12,12 +12,6 @@
      <!--link do font awesome-->
      <script src="https://kit.fontawesome.com/b5c9f282d0.js" crossorigin="anonymous"></script>
   </head>
-
-  
-  
-  
-  
-  
   <body>
   <?php require('app/views/includes/navbar.php');?>
     <div class="logo">

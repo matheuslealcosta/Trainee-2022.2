@@ -20,137 +20,28 @@
   <div class="logo">
     <img src="../../../public/img/MatflixLogoText.png" alt="MatFlix" class="logo">
   </div>
-  <form class="d-flex barrabranca" role="search">
-    <input class="form-control me-2" type="search" placeholder="Pesquise seus títulos favoritos" aria-label="Search">
+  <form action="lista-posts/search" method="POST" class="d-flex barrabranca" role="search">
+    <input class="form-control me-2" type="search" name="search" placeholder="Pesquise seus títulos favoritos" aria-label="Search">
     <button class="btn btn-outline-success btn-search botaosearch" type="submit">Pesquisar</button>
   </form>
 
 <div class="items itens">
 
+  <?php foreach($posts as $post): ?>
   <div class="card carta1 page 1" >
-    <img src="../../../public/img/bettercallsaul3.jpg" class="card-img-top" alt="Better Call Saul image" data-filter="Série">
+    <img src="<?php echo $post['image'] ?>" class="card-img-top" alt="Better Call Saul image" data-filter="Série">
     <div class="card-body corpodocard">
-      <h5 class="card-title cardtitulo2">Better Call Saul</h5>
-      <p class="card-text cardtexto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultricies id nunc et placerat. Suspendisse commodo pharetra interdum. </p>
-      <a href="#" class="btn btn-primary botao1">Veja mais</a>
+      <h5 class="card-title cardtitulo2"><?php echo $post['title']?></h5>
+      <form action="lista-posts/post-individual" method="POST">
+        <input type="hidden" name="id" value="<?php echo $post['id'] ?>">
+        <input type="submit" class="btn btn-primary botao1" />
+      </form>
     </div>
     
   </div>
 
-  <div class="card carta1 page1" >
-    <img src="../../../public/img/sandman3.jpg" class="card-img-top" alt="Sandman image" data-filter="Série">
-    <div class="card-body corpodocard">
-      <h5 class="card-title cardtitulo2">Sandman</h5>
-      <p class="card-text cardtexto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultricies id nunc et placerat. Suspendisse commodo pharetra interdum. </p>
-      <a href="#" class="btn btn-primary botao1">Veja mais</a>
-    </div>
-    
-  </div>
 
-  <div class="card carta1 page1" >
-    <img src="../../../public/img/breakingbad.jpg" class="card-img-top" alt="Breaking bad image" data-filter="Série">
-    <div class="card-body corpodocard">
-      <h5 class="card-title cardtitulo2">Breaking bad</h5>
-      <p class="card-text cardtexto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultricies id nunc et placerat. Suspendisse commodo pharetra interdum. </p>
-      <a href="#" class="btn btn-primary botao1">Veja mais</a>
-    </div>
-    
-  </div>
-
-  <div class="card carta1 page1" >
-    <img src="../../../public/img/vinlandsaga3.jpg" class="card-img-top" alt="Vinland Saga image" data-filter="Série">
-    <div class="card-body corpodocard">
-      <h5 class="card-title cardtitulo2">Vinland Saga</h5>
-      <p class="card-text cardtexto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultricies id nunc et placerat. Suspendisse commodo pharetra interdum. </p>
-      <a href="#" class="btn btn-primary botao1">Veja mais</a>
-    </div>
-    
-  </div>
-
-  <div class="card carta1 page1" >
-    <img src="../../../public/img/strangerthings3.jpg" class="card-img-top" alt="Stranger things image" data-filter="Série">
-    <div class="card-body corpodocard">
-      <h5 class="card-title cardtitulo2">Stranger things</h5>
-      <p class="card-text cardtexto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultricies id nunc et placerat. Suspendisse commodo pharetra interdum. </p>
-      <a href="#" class="btn btn-primary botao1">Veja mais</a>
-    </div>
-    
-  </div>
-
-  <div class="card carta1 page1" >
-    <img src="../../../public/img/Ozark.jpg" class="card-img-top" alt="Ozark image" data-filter="Série">
-    <div class="card-body corpodocard">
-      <h5 class="card-title cardtitulo2">Ozark</h5>
-      <p class="card-text cardtexto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultricies id nunc et placerat. Suspendisse commodo pharetra interdum. </p>
-      <a href="#" class="btn btn-primary botao1">Veja mais</a>
-    </div>
-    
-  </div>
-
-  <div class="card carta1 page1" >
-    <img src="../../../public/img/sandman3.jpg" class="card-img-top" alt="Sandman image" data-filter="Série">
-    <div class="card-body corpodocard">
-      <h5 class="card-title cardtitulo2">Sandman</h5>
-      <p class="card-text cardtexto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultricies id nunc et placerat. Suspendisse commodo pharetra interdum. </p>
-      <a href="#" class="btn btn-primary botao1">Veja mais</a>
-    </div>
-    
-  </div>
-
-  <div class="card carta1 page1" >
-    <img src="../../../public/img/strangerthings3.jpg" class="card-img-top" alt="Stranger things image" data-filter="Série">
-    <div class="card-body corpodocard">
-      <h5 class="card-title cardtitulo2">Stranger Things</h5>
-      <p class="card-text cardtexto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultricies id nunc et placerat. Suspendisse commodo pharetra interdum. </p>
-      <a href="#" class="btn btn-primary botao1">Veja mais</a>
-    </div>
-    
-  </div>
-
-  <div class="card carta1 page1" >
-    <img src="../../../public/img/sandman3.jpg" class="card-img-top" alt="Sand man image" data-filter="Série">
-    <div class="card-body corpodocard">
-      <h5 class="card-title cardtitulo2">Sandman</h5>
-      <p class="card-text cardtexto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultricies id nunc et placerat. Suspendisse commodo pharetra interdum. </p>
-      <a href="#" class="btn btn-primary botao1">Veja mais</a>
-    </div>
-    
-  </div>
-
-  <div class="card carta1 page1" >
-    <img src="../../../public/img/vinlandsaga3.jpg" class="card-img-top" alt="Vinland Saga image" data-filter="Série">
-    <div class="card-body corpodocard">
-      <h5 class="card-title cardtitulo2">Vinland Saga</h5>
-      <p class="card-text cardtexto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultricies id nunc et placerat. Suspendisse commodo pharetra interdum. </p>
-      <a href="#" class="btn btn-primary botao1">Veja mais</a>
-    </div>
-    
-  </div>
-
-  <div class="card carta1 page1" >
-    <img src="../../../public/img/bettercallsaul3.jpg" class="card-img-top" alt="Better Call Saul image" data-filter="Série">
-    <div class="card-body corpodocard">
-      <h5 class="card-title cardtitulo2">Better Call Saul</h5>
-      <p class="card-text cardtexto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultricies id nunc et placerat. Suspendisse commodo pharetra interdum. </p>
-      <a href="#" class="btn btn-primary botao1">Veja mais</a>
-    </div>
-    
-  </div>
-
-  <div class="card carta1 page1" >
-    <img src="../../../public/img/breakingbad.jpg" class="card-img-top" alt="Breaking bad image" data-filter="Série">
-    <div class="card-body corpodocard">
-      <h5 class="card-title cardtitulo2">Breaking bad</h5>
-      <p class="card-text cardtexto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultricies id nunc et placerat. Suspendisse commodo pharetra interdum. </p>
-      <a href="#" class="btn btn-primary botao1">Veja mais</a>
-    </div>
-    
-  </div>
-  
-
-
-
-
+  <?php endforeach; ?>
 
 
 </div>
@@ -158,20 +49,10 @@
  <!-- Carrousel Animações Fim-->
 <!--paginação-->
 
-<nav aria-label="Pagenavigationexample" >
-  <ul class="pagination justify-content-center barradepag">
-    <li class="page-item ">
-      <a class="page-link linkdapagina previouss" href="#" tabindex="-1">Previous</a>
-    </li>
-    <li class="page-item page1"><a class="page-link linkdapagina" href="lista_de_posts.html">1</a></li>
-    <li class="page-item page2"><a class="page-link linkdapagina" href="lista_de_posts2.html">2</a></li>
-    <li class="page-item page3"><a class="page-link linkdapagina" href="lista_de_posts2.html">3</a></li>
-    <li class="page-item page4"><a class="page-link linkdapagina" href="lista_de_posts2.html">4</a></li>
-    <li class="page-item page5"><a class="page-link linkdapagina" href="lista_de_posts2.html">5</a></li>
-      <a class="page-link  linkdapagina nextt" href="#">Next</a>
-    </li>
-  </ul>
-</nav>
+<?php 
+if(isset($page))
+  require('app/views/includes/pagination.php');
+?>
 <?php require('app/views/includes/footer.php');?>
 
 

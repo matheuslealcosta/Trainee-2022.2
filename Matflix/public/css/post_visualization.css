@@ -19,7 +19,7 @@ body{
     transition: 0.1s;
 }
 
-#main{
+.main{
     background-color: #221F1F;
     color: #d7d7d7;
     border-radius: 5px;

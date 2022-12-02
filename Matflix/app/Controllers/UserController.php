@@ -30,6 +30,7 @@ class UserController extends Controller
         $total_pages = ceil(User::count()/10);
 
         $users = User::forPage($page,10)->get();
+        
         return view('admin/listaUsuarios', compact('users','page' ,'total_pages'));
     }
 
@@ -63,7 +64,7 @@ class UserController extends Controller
         $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_SPECIAL_CHARS);
         $password = password_hash($password, PASSWORD_DEFAULT);
 
-        App::get('database')->update('users', compact('name', 'email', 'password','id'));
+        App::get('database')->updateUsers('users', compact('name', 'email', 'password','id'));
 
         return redirect('lista-usuarios');
     }

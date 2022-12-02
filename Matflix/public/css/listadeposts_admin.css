@@ -228,7 +228,7 @@ p{
   }
 }
 
-#modalnewpost,#editarPost{
+.main {
   
   left: auto;
   background-color: #221F1F;
@@ -241,7 +241,7 @@ p{
 }
 
 @media (max-width: 768px) {
-  #modalnewpost,#editarPost{
+  #modalnewpost,#editarPost,#visualizarPost,#excluirPost{
     width: auto;
     flex-direction: row;
   }
@@ -286,4 +286,35 @@ p{
   opacity: 0;
   top:0;
   pointer-events: none;
+}
+
+
+/*************************************/
+
+.main{
+  background-color: #221F1F;
+  color: #d7d7d7;
+  border-radius: 5px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 25px;
+  flex-direction: column;
+  width: 500px;
+}
+
+@media only screen and (max-width: 600px) {
+  .main{
+      margin-top: 0;
+      margin-bottom: 0;
+      width: 100vw;
+  }
+
+  input[type="text"] {
+      line-height: 1.2;
+  }
+
+  input[type="submit"], button[type="button"] {
+      font-size: 1.1rem;
+      line-height: 1.5rem;
+  }
 }
