@@ -30,12 +30,11 @@ margin-bottom: 1%;
 
 .carousel-control-prev, .carousel-control-next{
   display: block;
-  padding-top: 500px;
+  padding-top: 300px;
   width: 95px;
   height: 100px;
   align-content: center;
 }
-
 
 /*cardsultimosposts */
 

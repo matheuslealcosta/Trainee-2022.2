@@ -30,7 +30,7 @@
     <!--fim segunda linha do footer-->                
 
     <!--inicio terceira linha do footer-->
-    <div class="row" style="font-size: .7rem;">
+    <div class="row mt-2" style="font-size: .7rem;">
         <div class="col mx-auto">
             <p class="copy">Desenvolvido por Code Júnior &copy; 2022</p>
         </div>

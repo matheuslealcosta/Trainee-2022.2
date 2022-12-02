@@ -8,10 +8,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="../../../public/css/lista_posts.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../public/css/navbar_footer.css">
+    <!--link do font awesome-->
+    <script src="https://kit.fontawesome.com/b5c9f282d0.js" crossorigin="anonymous"></script>
+
+
 
 </head>
 <body>
-
+<?php require('app/views/includes/navbar.php');?>
   <div class="logo">
     <img src="../../../public/img/MatflixLogoText.png" alt="MatFlix" class="logo">
   </div>
@@ -167,6 +172,7 @@
     </li>
   </ul>
 </nav>
+<?php require('app/views/includes/footer.php');?>
 
 
 

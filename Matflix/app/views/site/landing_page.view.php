@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="../../../public/css/landing_page.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../../public/css/navbar_footer.css">
+
+     <!--link do font awesome-->
+     <script src="https://kit.fontawesome.com/b5c9f282d0.js" crossorigin="anonymous"></script>
   </head>
 
   
@@ -71,7 +74,7 @@
 
                 </div>
                 
-                </div class="botoes">
+                <div class="botoes">
                   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                   <span class="visually-hidden prev">Previous</span>
@@ -80,6 +83,7 @@
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
                   <span class="visually-hidden next">Next</span>
                   </button>
+                </div>
 </div>
 </div>
       
