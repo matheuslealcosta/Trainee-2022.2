@@ -68,6 +68,10 @@ class UserController extends Controller
 
         return view('site/login');
     }
+    public function dashboard(){
+
+        return view('admin/dashboard');
+    }
 
     public function newacc(){
         $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS);
@@ -91,7 +95,7 @@ class UserController extends Controller
         if ($verificado) {
             $message = "Logado com sucesso";
             echo "<script type='text/javascript'>alert('$message');</script>";
-            return redirect('landing-page');
+            return redirect('dashboard');
         }
         else{
             $message = "Confira o usuário e senha digitados ";

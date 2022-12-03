@@ -12,7 +12,7 @@ $router->get('login', 'UserController@login');
 
 
 //-----------Rotas do Usuário(admin)-------------//
-$router->get('dashboard', 'UserController@');
+$router->get('dashboard', 'UserController@dashboard');
 // $router->get('lista-usuarios', 'UserController@');
 $router->get('lista-posts', 'PostController@index');
 $router->post('lista-posts/create', 'PostController@store');
