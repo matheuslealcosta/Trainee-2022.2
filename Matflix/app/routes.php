@@ -6,7 +6,7 @@ use App\Core\Router;
 //-----------Rotas do Usuário(não admin)-------------//
 $router->get('cadastro', 'UserController@');
 $router->get('lista-usuarios', 'UserController@index');
-$router->get('landing-page', 'PostController@');
+$router->get('landing-page', 'PostController@index');
 $router->get('visualizar-post', 'PostController@');
 $router->get('login', 'UserController@login');
 

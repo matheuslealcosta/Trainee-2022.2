@@ -43,7 +43,7 @@ class UserController extends Controller
         $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS);
         $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
         $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_SPECIAL_CHARS);
-        $password = password_hash($password, PASSWORD_DEFAULT);
+        // $password = password_hash($password, PASSWORD_DEFAULT);
         $user = new User();
         $user->name =$name;
         $user->email = $email;
@@ -71,13 +71,14 @@ class UserController extends Controller
     }
     public function login(){
 
-        return  view('site/login');
+        return view('site/login');
     }
+
     public function newacc(){
         $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS);
         $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
         $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_SPECIAL_CHARS);
-        $password = password_hash($password, PASSWORD_DEFAULT);
+        // $password = password_hash($password, PASSWORD_DEFAULT);
         $user = new User();
         $user->name =$name;
         $user->email = $email;
@@ -89,18 +90,20 @@ class UserController extends Controller
     public function verify(){
         $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS);
         $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_SPECIAL_CHARS);
-        $password = password_hash($password, PASSWORD_DEFAULT);
-        App::get('database')->verify('users', $name, $password);
-        if ($name == $row['name'] && $password == $row['password']) {
+
+        $email = App::get('database')->verify('users', $name, $password);
+        $_SESSION['logado'] = $email;
+        if (User::get()->where('email','=', $email)->first() != null) {
             $message = "Logado com sucesso";
             echo "<script type='text/javascript'>alert('$message');</script>";
             return redirect('landing-page');
-    }
+        }
         else{
             $message = "Confira o usuário e senha digitados ";
             echo "<script type='text/javascript'>alert('$message');</script>";
+            var_dump($email);
             return redirect('login');
-    }
+        }
 
-}
+    }
 }
