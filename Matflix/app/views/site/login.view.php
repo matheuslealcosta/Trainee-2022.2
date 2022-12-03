@@ -17,7 +17,7 @@
             </div>
 
             <form action="login/check" method="POST">
-                <input type="text" name="name" placeholder="Nome de Usuário" autofocus>
+                <input type="text" name="email" placeholder="E-mail do usuário" autofocus>
                 <input type="password" name="password" placeholder="Sua Senha">
                 <input type="submit" value="Entrar">
             </form>

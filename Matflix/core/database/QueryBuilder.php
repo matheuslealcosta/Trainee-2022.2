@@ -65,27 +65,22 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
-    public function verify($table, $name, $password){
-        $email ="";
+    public function verify($table, $email, $password){
+       
 
-        // $password = password_hash($password, PASSWORD_DEFAULT);
-
-        $verify = sprintf( "SELECT * FROM %s WHERE (name = :name) AND (password = :password)", $table);
+        $verify = sprintf( "SELECT * FROM %s WHERE (email = :email)", $table);
         
         try{
             $statement = $this->pdo->prepare($verify);
-            $statement->bindValue(':name', $name);
-            $statement->bindParam(':password', $password);
+            $statement->bindValue(':email', $email);
             $statement->execute();
             $result = $statement->fetch(PDO::FETCH_OBJ);
-            $email = $result->email;
-            return $email;
-            // $password_hash = $result->password;
-            // if(password_verify($password, $password_hash)){
-            //     return $email;
-            // }else{
-            //     return null;
-            // }
+            $password_hash = $result->password;
+            if(password_verify($password, $password_hash)){
+                return true;
+            }else{
+                return false;
+            }
         }catch(Exception $e){
             die($e->getMessage());
         }

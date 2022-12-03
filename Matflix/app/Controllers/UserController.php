@@ -29,11 +29,6 @@ class UserController extends Controller
         }
 
         $total_pages = ceil(User::count()/10);
-    
-        // if($page>1)
-        //     $users = User::skip($limit*($page-1))->take($limit)->get();
-        // else
-        //     $users = User::limit(10)->get();
 
         $users = User::forPage($page,10)->get();
         return view('admin/listaUsuarios', compact('users','page' ,'total_pages'));
@@ -43,7 +38,7 @@ class UserController extends Controller
         $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS);
         $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
         $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_SPECIAL_CHARS);
-        // $password = password_hash($password, PASSWORD_DEFAULT);
+        $password = password_hash($password, PASSWORD_DEFAULT);
         $user = new User();
         $user->name =$name;
         $user->email = $email;
@@ -78,7 +73,7 @@ class UserController extends Controller
         $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS);
         $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
         $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_SPECIAL_CHARS);
-        // $password = password_hash($password, PASSWORD_DEFAULT);
+        $password = password_hash($password, PASSWORD_DEFAULT);
         $user = new User();
         $user->name =$name;
         $user->email = $email;
@@ -88,12 +83,12 @@ class UserController extends Controller
     }
 
     public function verify(){
-        $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS);
+        $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_SPECIAL_CHARS);
         $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_SPECIAL_CHARS);
 
-        $email = App::get('database')->verify('users', $name, $password);
-        $_SESSION['logado'] = $email;
-        if (User::get()->where('email','=', $email)->first() != null) {
+        $verificado = App::get('database')->verify('users', $email, $password);
+        
+        if ($verificado) {
             $message = "Logado com sucesso";
             echo "<script type='text/javascript'>alert('$message');</script>";
             return redirect('landing-page');
@@ -101,7 +96,7 @@ class UserController extends Controller
         else{
             $message = "Confira o usuário e senha digitados ";
             echo "<script type='text/javascript'>alert('$message');</script>";
-            var_dump($email);
+            
             return redirect('login');
         }
 
