@@ -21,16 +21,10 @@ class PostController extends Controller
 
     public function index()
     {
-        $page =1;
-
-        if(isset($_GET['pagina']) && !empty($_GET['pagina'])){
-            $page = intval($_GET['pagina']);
-            if($page < 0) redirect('lista-usuarios');
-        }
-
-        $total_pages = ceil(Post::count()/10);
-
-        $posts = Post::forPage($page,10)->get();
+        $paginate = $this->paginate(5);
+        $posts = $paginate['posts'];
+        $page = $paginate['page'];
+        $total_pages = $paginate['total_pages'];
 
         foreach($posts as $post)
         {
@@ -38,7 +32,7 @@ class PostController extends Controller
             $post->created = $dateFormat->format("d/m/Y");
         }
 
-        return view('site/lista_de_posts', compact("posts", "page", "total_pages"));
+        return view('admin/listadeposts_admin', compact("posts", "page", "total_pages"));
     }
 
     public function store()
@@ -64,11 +58,19 @@ class PostController extends Controller
 
     public function landingPage()
     {
-   
-        return view('site/landing_page');
+        $paginate = $this->paginate(5);
+        $posts = $paginate['posts'];
+        $page = $paginate['page'];
+        $total_pages = $paginate['total_pages'];
+        $min_arr = array(sizeof($posts));
+        for ($i=0; $i < sizeof($posts); $i++) { 
+            $min_arr[$i] = $posts[$i]->id;
+        }
+        $min = min($min_arr);
+        return view('site/landing_page', compact("posts", "page", "total_pages", "min"));
     }
 
-    public function paginate(){
+    public function paginate($limit){
         $page =1;
 
         if(isset($_GET['pagina']) && !empty($_GET['pagina'])){
@@ -76,16 +78,16 @@ class PostController extends Controller
             if($page < 0) redirect('lista-usuarios');
         }
 
-        $total_pages = ceil(Post::count()/10);
+        $total_pages = ceil(Post::count()/$limit);
 
-        $posts = Post::forPage($page,10)->get();
+        $posts = Post::forPage($page,$limit-1)->get();
         return compact('posts', 'page', 'total_pages');
     }
 
     public function listPosts()
     {
        
-        $paginate = $this->paginate();
+        $paginate = $this->paginate(5);
         $posts = $paginate['posts'];
         $page = $paginate['page'];
         $total_pages = $paginate['total_pages'];

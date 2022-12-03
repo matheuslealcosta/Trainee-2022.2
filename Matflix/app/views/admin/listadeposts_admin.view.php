@@ -12,6 +12,7 @@
     <!--link do css-->
     <link rel="stylesheet" href="../../../public/css/listadeposts_admin.css">
     <link rel="icon" type="image/x-icon" href="../../../public/assets/m3dPNG.png">
+    <link rel="stylesheet" href="../../../public/css/navbar_footer.css">
     <!--link do font awesome-->
     <script src="https://kit.fontawesome.com/b5c9f282d0.js" crossorigin="anonymous"></script>
     
@@ -99,8 +100,10 @@
                 </tr>
                 
    </div>
-</div>
+ 
 
+</div>
+   
 <!-- modal de edição de post-->
 <div class="container hide modal main" id="editarPost-<?=$post->id;?>">
     <img src="../../../public/assets/MatflixLogoText.png" class="img-fluid mx-auto d-block" alt="Logo da Matflix" id="logo">
@@ -184,10 +187,12 @@
  </tbody>
 </table>
 <!--fim da tabela de posts-->
-</div>
 
 </div>
+<?php require('app/views/includes/pagination.php');?>
+</div>
 
+<?php require('app/views/includes/footer.php');?>
    <script src ="../../../public/js/listadeposts_admin.js" ></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>

@@ -21,52 +21,20 @@
       <div class="container">
         <div id="carouselExampleInterval" class="carousel slide carousel-here" data-bs-ride="carousel">
           <div class="carousel-inner carrosseliner">
-              
-              <div class="carousel-item active" data-bs-interval="2000">
-                  <img src="../../../public/img/bettercallsaul3.jpg" class="d-block w-100" alt="Imagem da série Better Call Saul">
+          <?php foreach ($posts as $post):?>
+              <div class="carousel-item <?= $post->id  == $min ? "active" : ""?>" data-bs-interval="2000">
+                  <img src="<?=$post->image?>" class="d-block w-100" alt="Imagem da série Better Call Saul">
                   <div class="carousel-caption d-md-block">
-                    <a href="#" class="btn btn-secondary">Conheça</a>
+                    <form method="POST" action="/lista-posts/post-individual">
+                      <input type="hidden" name="id" value="<?= $post->id ?>">
+                      <input type="hidden" name="page" value="/landing-page">
+                      <input type="submit" class="btn btn-secondary" value="Conheça">
+                    </form>
                   </div>
                 </div>
-                
-                <div class="carousel-item" data-bs-interval="2000">
-                    <img src="../../../public/img/breakingbad.jpg" class="d-block w-100" alt="Imagem da série Breaking Bad">
-                    <div class="carousel-caption d-md-block">
-                      <a href="#" class="btn btn-secondary">Conheça</a>
-                    </div>
-                  </div>
+                <?php endforeach;?>
 
-                  <div class="carousel-item" data-bs-interval="2000">
-                    <img src="../../../public/img/ozark.jpg" class="d-block w-100" alt="Imagem da série Ozark">
-                    <div class="carousel-caption d-md-block">
-                      <a href="#" class="btn btn-secondary">Conheça</a>
-                    </div>
-                  </div>
-
-                  <div class="carousel-item" data-bs-interval="2000">
-                    <img src="../../../public/img/vinlandsaga3.jpg" class="d-block w-100" alt="Imagem da série Vinland Saga">
-                    <div class="carousel-caption d-md-block">
-                      <a href="#" class="btn btn-secondary">Conheça</a>
-                    </div>
-                  </div>
-
-                  <div class="carousel-item" data-bs-interval="2000">
-                    <img src="../../../public/img/sandman3.jpg" class="d-block w-100" alt="Imagem da série Sandman">
-                    <div class="carousel-caption d-md-block">
-                      <a href="#" class="btn btn-secondary">Conheça</a>
-                    </div>
-                  </div>
-
-                  <div class="carousel-item" data-bs-interval="2000">
-                    <img src="../../../public/img/thegrayman.jpg" class="d-block w-100" alt="Imagem da série The gray man">
-                    <div class="carousel-caption d-md-block">
-                      <a href="#" class="btn btn-secondary">Conheça</a>
-                    </div>
-                  </div>
-
-
-
-                </div>
+           </div>
                 
                 <div class="botoes">
                   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
@@ -77,7 +45,7 @@
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
                   <span class="visually-hidden next">Next</span>
                   </button>
-                </div>
+          </div>
 </div>
 </div>
       
@@ -95,50 +63,20 @@
 
 
 <div class="cartas">
+    <?php foreach($posts as $post):?>
     <div class="card carta1">
-        <img src="../../../public/img/bettercallsaul3.jpg" class="card-img-top" alt="Better Call Saul image">
+        <img src="<?= $post->image ?>" class="card-img-top" alt="Better Call Saul image">
         <div class="card-body card-corpo">
-          <h5 class="card-title titulo-card">Better Call Saul</h5>
-          <p class="card-text card-texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultricies id nunc et placerat. Suspendisse commodo pharetra interdum. </p>
-          <a href="#" class="btn btn-primary">Veja mais</a>
+          <h5 class="card-title titulo-card"><?=$post->title?></h5>
+          <p class="card-text card-texto"><?= $post->content?></p>
+           <form method="POST" action="/lista-posts/post-individual">
+                      <input type="hidden" name="id" value="<?= $post->id ?>">
+                      <input type="hidden" name="page" value="/landing-page">
+                      <input type="submit" class="btn btn-primary" value="Veja Mais">
+            </form>
         </div>
       </div>
-
-      <div class="card carta1">
-        <img src="../../../public/img/breakingbad.jpg" class="card-img-top" alt="Breaking Bad image">
-        <div class="card-body card-corpo">
-          <h5 class="card-title titulo-card">Breaking Bad</h5>
-          <p class="card-text card-texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultricies id nunc et placerat. Suspendisse commodo pharetra interdum. </p>
-          <a href="#" class="btn btn-primary">Veja mais</a>
-        </div>
-      </div>
-
-      <div class="card carta1">
-        <img src="../../../public/img/strangerthings3.jpg" class="card-img-top" alt="Stranger things image">
-        <div class="card-body card-corpo">
-          <h5 class="card-title titulo-card">Stranger things</h5>
-          <p class="card-text card-texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultricies id nunc et placerat. Suspendisse commodo pharetra interdum. </p>
-          <a href="#" class="btn btn-primary">Veja mais</a>
-        </div>
-      </div>
-
-      <div class="card carta1">
-        <img src="../../../public/img/sandman3.jpg" class="card-img-top" alt="Sandman image">
-        <div class="card-body card-corpo">
-          <h5 class="card-title titulo-card">Sandman</h5>
-          <p class="card-text card-texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultricies id nunc et placerat. Suspendisse commodo pharetra interdum. </p>
-          <a href="#" class="btn btn-primary">Veja mais</a>
-        </div>
-      </div>
-
-      <div class="card carta1">
-        <img src="../../../public/img/vinlandsaga3.jpg" class="card-img-top" alt="Vinland Saga image">
-        <div class="card-body card-corpo">
-          <h5 class="card-title titulo-card">Vinland Saga</h5>
-          <p class="card-text card-texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultricies id nunc et placerat. Suspendisse commodo pharetra interdum. </p>
-          <a href="#" class="btn btn-primary">Veja mais</a>
-        </div>
-      </div>
+      <?php endforeach;?>
 
 
 </div>
@@ -179,12 +117,49 @@
 
 
 
-
-
-
-
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>
 </html>
+
+
+<!--<div class="carousel-item active" data-bs-interval="2000">
+                  <img src="../../../public/img/bettercallsaul3.jpg" class="d-block w-100" alt="Imagem da série Better Call Saul">
+                  <div class="carousel-caption d-md-block">
+                    <a href="#" class="btn btn-secondary">Conheça</a>
+                  </div>
+                </div>
+                
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="../../../public/img/breakingbad.jpg" class="d-block w-100" alt="Imagem da série Breaking Bad">
+                    <div class="carousel-caption d-md-block">
+                      <a href="#" class="btn btn-secondary">Conheça</a>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <img src="../../../public/img/ozark.jpg" class="d-block w-100" alt="Imagem da série Ozark">
+                    <div class="carousel-caption d-md-block">
+                      <a href="#" class="btn btn-secondary">Conheça</a>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <img src="../../../public/img/vinlandsaga3.jpg" class="d-block w-100" alt="Imagem da série Vinland Saga">
+                    <div class="carousel-caption d-md-block">
+                      <a href="#" class="btn btn-secondary">Conheça</a>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <img src="../../../public/img/sandman3.jpg" class="d-block w-100" alt="Imagem da série Sandman">
+                    <div class="carousel-caption d-md-block">
+                      <a href="#" class="btn btn-secondary">Conheça</a>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <img src="../../../public/img/thegrayman.jpg" class="d-block w-100" alt="Imagem da série The gray man">
+                    <div class="carousel-caption d-md-block">
+                      <a href="#" class="btn btn-secondary">Conheça</a>
+                    </div>
+                  </div>-!>

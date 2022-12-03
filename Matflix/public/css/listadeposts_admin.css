@@ -9,7 +9,8 @@
 body, .page-container {
   max-width: 100%;
   max-height: 100%;
-  background-color: #221F1F;
+  background-color: #000;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -301,6 +302,28 @@ p{
   flex-direction: column;
   width: 500px;
 }
+
+.linkdapagina{
+  background-color: #E21221;
+  color: #d7d7d7;
+  border-color: black;
+  font-family: 'Bebas Neue', cursive;
+  scale: 100%;
+}
+
+.ativo{
+  background-color: white;
+  color: black;
+  border-color: black;
+  font-family: 'Bebas Neue', cursive;
+  scale: 100%;
+}
+
+.linkdapagina:hover{
+  background-color: #d7d7d7;
+  color: black;
+}
+
 
 @media only screen and (max-width: 600px) {
   .main{
