@@ -70,22 +70,28 @@ class PostController extends Controller
 
     public function landingPage()
     {
-        $paginate = $this->paginate(5);
-        $posts = $paginate['posts'];
-        $page = $paginate['page'];
-        $total_pages = $paginate['total_pages'];
+        $page =1;
+
+        if(isset($_GET['pagina']) && !empty($_GET['pagina'])){
+            $page = intval($_GET['pagina']);
+            if($page < 0) redirect('lista-usuarios');
+        }
+
+        $total_pages = ceil(Post::count()/5); 
+
+        $posts = Post::orderBy('created', 'desc')->forPage($page,5)->get();
+
         $min_arr = array(sizeof($posts));
         for ($i=0; $i < sizeof($posts); $i++) { 
             $min_arr[$i] = $posts[$i]->id;
         }
+    
         $min = min($min_arr);
         return view('site/landing_page', compact("posts", "page", "total_pages", "min"));
     }
 
     public function paginate($limit, $count = 0){
         $page =1;
-
-        
 
         if(isset($_GET['pagina']) && !empty($_GET['pagina'])){
             $page = intval($_GET['pagina']);
@@ -169,7 +175,9 @@ class PostController extends Controller
         
         $count = count($posts);
         $paginate = $this->paginate(10,$count);
-        return view('site/lista_de_posts', compact('posts'));
+        $page = $paginate['page'];
+        $total_pages = $paginate['total_pages'];
+        return view('site/lista_de_posts', compact('posts', 'page', 'total_pages'));
     }
 
 }
