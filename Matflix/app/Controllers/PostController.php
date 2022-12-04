@@ -82,15 +82,17 @@ class PostController extends Controller
         return view('site/landing_page', compact("posts", "page", "total_pages", "min"));
     }
 
-    public function paginate($limit){
+    public function paginate($limit, $count = 0){
         $page =1;
+
+        
 
         if(isset($_GET['pagina']) && !empty($_GET['pagina'])){
             $page = intval($_GET['pagina']);
             if($page < 0) redirect('lista-usuarios');
         }
 
-        $total_pages = ceil(Post::count()/$limit);
+        $count!=0 ? $total_pages = ceil($count/$limit) : $total_pages = ceil(Post::count()/$limit); 
 
         $posts = Post::forPage($page,$limit-1)->get();
         return compact('posts', 'page', 'total_pages');
@@ -165,6 +167,8 @@ class PostController extends Controller
 
         $posts = App::get('database')->pesquisaCategoria($search);
         
+        $count = count($posts);
+        $paginate = $this->paginate(10,$count);
         return view('site/lista_de_posts', compact('posts'));
     }
 
