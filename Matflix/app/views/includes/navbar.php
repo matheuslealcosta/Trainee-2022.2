@@ -2,7 +2,8 @@
 <?php
     $navitem = [
         'Home' => 'landing-page',
-        'Posts' => 'lista-posts'
+        'Posts' => 'lista-posts',
+        'Login' => 'login'
     ];
 ?>
 <nav class="navbar navbar-expand-lg navbar-container navbar-dark">

@@ -80,14 +80,16 @@ class PostController extends Controller
         $total_pages = ceil(Post::count()/5); 
 
         $posts = Post::orderBy('created', 'desc')->forPage($page,5)->get();
+        $post_carousel = Post::all();
 
-        $min_arr = array(sizeof($posts));
-        for ($i=0; $i < sizeof($posts); $i++) { 
-            $min_arr[$i] = $posts[$i]->id;
+        $min_arr = array(sizeof($post_carousel));
+        
+        for ($i=0; $i < sizeof($post_carousel); $i++) { 
+            $min_arr[$i] = $post_carousel[$i]->id;
         }
     
         $min = min($min_arr);
-        return view('site/landing_page', compact("posts", "page", "total_pages", "min"));
+        return view('site/landing_page', compact("posts",'post_carousel', "page", "total_pages", "min"));
     }
 
     public function paginate($limit, $count = 0){

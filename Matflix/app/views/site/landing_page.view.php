@@ -21,7 +21,7 @@
       <div class="container">
         <div id="carouselExampleInterval" class="carousel slide carousel-here" data-bs-ride="carousel">
           <div class="carousel-inner carrosseliner">
-          <?php foreach ($posts as $post):?>
+          <?php foreach ($post_carousel as $post):?>
               <div class="carousel-item <?= $post->id  == $min ? "active" : ""?>" data-bs-interval="2000">
                   <img src="<?=$post->image?>" class="d-block w-100" alt="Imagem da série Better Call Saul">
                   <div class="carousel-caption d-md-block">
@@ -78,9 +78,8 @@
       </div>
       <?php endforeach;?>
 
-
 </div>
-
+<?php require('app/views/includes/pagination.php');?>
 <!-- Texto+logo spotify abaixo do carrousel   -->
 <div class="line1"><hr>
 </div>
@@ -117,7 +116,7 @@
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>
 </html>
 

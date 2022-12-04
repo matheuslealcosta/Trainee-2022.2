@@ -205,3 +205,11 @@ body {
     }
 
   }
+
+.ativo{
+    background-color: white;
+    color: black;
+    border-color: black;
+    font-family: 'Bebas Neue', cursive;
+    scale: 100%;
+}
