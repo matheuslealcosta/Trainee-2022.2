@@ -12,7 +12,7 @@
 
   <body>
 
-    <div class="wrapper d-flex">
+    <div class="wrapper d-flex ">
         <div class="sidebar">
             <li><img src="../../../public/img/logo.png" alt="logo matflix"></li>
 

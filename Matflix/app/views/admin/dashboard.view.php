@@ -9,23 +9,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../../public/css/dashboard.css">
+    <link rel="stylesheet" href="../../../public/css/sidebar.css">
+    <script src="https://kit.fontawesome.com/b5c9f282d0.js" crossorigin="anonymous"></script>
     <title>Dashboard</title>
 </head>
 <body>
-    <section class="home-section">
-        <nav>
-
-            <div class="sidebar-button">
-                <i class="bx bx-menu more"></i>
-            </div>
-
-            <div class="profile-details">
-                <img src="../../../public/img/profile.png" alt="">
-                <span class="admin_name">Admin</span>
-                <i class="bx bx-chevron-down"></i>
-            </div>
-    </section>
-        </nav>
+    <?php require('app/views/includes/navbar_admin.php');?>
+    <?php require('app/views/includes/sidebar.php');?>
         <div class="logo">
             <img src="../../../public/img/MatflixLogoText.png" alt="MatFlix" class="logo">
           </div>

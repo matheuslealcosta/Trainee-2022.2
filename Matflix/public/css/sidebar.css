@@ -4,11 +4,9 @@
 	box-sizing: border-box;
 	list-style: none;
 	text-decoration: none;
-  font-family: 'Bebas Neue', cursive;
+  	font-family: 'Bebas Neue', cursive;
 }
-body{
-	background: #221F1F;
-}
+
 .wrapper{
 	position: relative;
 }

@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="../../../public/css/listaUsuarios.css">
     <link rel="stylesheet" href="../../../public/css/edit_user_modal.css">
     <link rel="stylesheet" href="../../../public/css/navbar_footer.css">
+    <link rel="stylesheet" href="../../../public/css/sidebar.css">
+    <link rel="stylesheet" href="../../../public/css/navbar_admin.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <!--link do font awesome-->
     <script src="https://kit.fontawesome.com/b5c9f282d0.js" crossorigin="anonymous"></script>
@@ -25,8 +28,10 @@
     <?php if(isset($error)){
                     echo "<script>alert('$error')</script>";
                         }?>
-    <div>
+    <?php require('app/views/includes/navbar_admin.php');?>
+    <?php require('app/views/includes/sidebar.php');?>
    <div class="page-container">
+ 
        <h1>Lista de Usuários</h1>
 
        <div class="page-content">

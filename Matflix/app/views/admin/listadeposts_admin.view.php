@@ -13,6 +13,10 @@
     <link rel="stylesheet" href="../../../public/css/listadeposts_admin.css">
     <link rel="icon" type="image/x-icon" href="../../../public/assets/m3dPNG.png">
     <link rel="stylesheet" href="../../../public/css/navbar_footer.css">
+    <link rel="stylesheet" href="../../../public/css/sidebar.css">
+    <link rel="stylesheet" href="../../../public/css/navbar_admin.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
     <!--link do font awesome-->
     <script src="https://kit.fontawesome.com/b5c9f282d0.js" crossorigin="anonymous"></script>
     
@@ -24,6 +28,9 @@
     <?php if(isset($error)){
                     echo "<script>alert('$error')</script>";
                         }?>
+    <?php require('app/views/includes/navbar_admin.php');?>
+    <?php require('app/views/includes/sidebar.php');?>
+    
    <div class="page-container">
 
     <h1><img src="../../../public/assets/mat2.png" alt="" class="img-fluid rounded m-2" id="logo-min">Lista de Posts</h1>
