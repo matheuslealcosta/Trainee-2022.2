@@ -22,6 +22,9 @@
 
 </head>
 <body>
+    <?php if(isset($error)){
+                    echo "<script>alert('$error')</script>";
+                        }?>
     <div>
    <div class="page-container">
        <h1>Lista de Usuários</h1>
@@ -42,11 +45,12 @@
         </div>
         <div class="modal-body"></div>
 
-        <form class="modal-create" method="POST" action="lista-usuarios/create">
+        <form class="modal-create" method="POST" action="/lista-usuarios/create">
             <input type="text" class="input-modal-create" name="name" placeholder="Digite o nome de Usuário" autofocus>
             <input type="text" class="input-modal-create" name="email" placeholder="Digite seu E-mail" autofocus>
             <input type="password" class="input-modal-create" name="password" placeholder="Digite sua Senha">
             <input type="submit" class="input-modal-create" value="Cadastrar">
+            
         </form>
         </div>
         <!---->
@@ -89,7 +93,7 @@
                 <div class="modal-user hide d-flex mx-auto justify-content-center main fech" id="modalEdit-<?=$user->id?>">
                         <img src="../../../public/assets/MatflixLogoText.png" class="img-fluid mx-auto d-block" alt="" id="logo">
                         <h2 class="mb-4" id="title">Edição de usuário</h2>
-                        <form method="POST" action="lista-usuarios/edit">
+                        <form method="POST" action="/lista-usuarios/edit">
                             <div class="form-group mb-3">
                             <input type="hidden" value="<?=$user->id?>" name="id">
                                 <label for="novousuario" class="col-sm-auto col-form-label">Novo nome do usuário:</label>
@@ -132,7 +136,7 @@
                 <h2 id="title">Deleção de Usuario</h2>
                 <p class="lead text-center">Tem certeza que deseja excluir o usuário?</p>
                     <div class="row d-flex justify-content-center">
-                        <form action="lista-usuarios/delete" method="POST">
+                        <form action="/lista-usuarios/delete" method="POST">
                             <input type="hidden" value="<?=$user->id?>" name="id">
                             <button type="submit" class="btn btn-lg formbtn col-md-4" >Sim</button>
                             <button type="button" class="btn btn-lg formbtn col-md-4 fechar">Cancelar</button>

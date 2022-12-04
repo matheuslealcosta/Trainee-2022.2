@@ -21,7 +21,7 @@ class PostController extends Controller
 
     public function index()
     {
-        $paginate = $this->paginate(5);
+        $paginate = $this->paginate(10);
         $posts = $paginate['posts'];
         $page = $paginate['page'];
         $total_pages = $paginate['total_pages'];
@@ -41,6 +41,18 @@ class PostController extends Controller
         $content = $_POST['content'];
 
         $arquivo = $_FILES['image'];
+
+        if((empty($title)) || (empty($content))|| (empty($arquivo))){
+            $error = "Preencha todos os campos!";
+
+            $paginate = $this->paginate(10);
+            $posts = $paginate['posts'];
+            $page = $paginate['page'];
+            $total_pages = $paginate['total_pages'];
+
+            return view('admin/listadeposts_admin', compact("posts", "page", "total_pages", "error"));
+        }
+
         $pasta = '../../../public/img/';
 
         $image =  $pasta . $arquivo['name'];
@@ -51,7 +63,7 @@ class PostController extends Controller
         $post->content = $content;
         $post->image = $image;
         $post->created = $created;
-        
+
         App::get('database')->insert('posts', compact('title', 'content', 'image', 'created'));
         return redirect('lista-posts-admin');
     }
@@ -114,6 +126,17 @@ class PostController extends Controller
         $title = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_SPECIAL_CHARS);
         $content = $_POST['content'];
         $arquivo = $_POST['image'];
+
+        if((empty($title)) || (empty($content))|| (empty($arquivo))){
+            $error = "Preencha todos os campos!";
+
+            $paginate = $this->paginate(10);
+            $posts = $paginate['posts'];
+            $page = $paginate['page'];
+            $total_pages = $paginate['total_pages'];
+
+            return view('admin/listadeposts_admin', compact("posts", "page", "total_pages", "error"));
+        }
 
         $pasta = '../../../public/img/';
 

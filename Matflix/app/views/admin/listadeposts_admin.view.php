@@ -21,6 +21,9 @@
 
 </head>
 <body>
+    <?php if(isset($error)){
+                    echo "<script>alert('$error')</script>";
+                        }?>
    <div class="page-container">
 
     <h1><img src="../../../public/assets/mat2.png" alt="" class="img-fluid rounded m-2" id="logo-min">Lista de Posts</h1>
@@ -38,7 +41,7 @@
    <div class="container hide modal main" id="modalnewpost">
     <img src="../../../public/assets/MatflixLogoText.png" class="img-fluid mx-auto d-block" alt="" id="logo">
     <h2 class="mb-4" id="title">Criação de Post</h2>
-    <form  class="row gy-3 gx-3 align-items-center mt-2" enctype="multipart/form-data" action="lista-posts-admin/create" method="POST">
+    <form  class="row gy-3 gx-3 align-items-center mt-2" enctype="multipart/form-data" action="/lista-posts-admin/create" method="POST">
          <div class="form-group row mb-3">
              <label for="titulo" class="col-sm-auto col-form-label">Título da Postagem:</label>
              <div class="col-sm-7">
@@ -108,7 +111,7 @@
 <div class="container hide modal main" id="editarPost-<?=$post->id;?>">
     <img src="../../../public/assets/MatflixLogoText.png" class="img-fluid mx-auto d-block" alt="Logo da Matflix" id="logo">
     <h2 class="mb-4" id="title">Edição de Post</h2>
-    <form action="lista-posts-admin/update" method="POST" class="row gy-3 gx-3 align-items-center mt-2">
+    <form action="/lista-posts-admin/update" method="POST" class="row gy-3 gx-3 align-items-center mt-2">
          <div class="form-group">
             <input type="hidden" name="id" value="<?php echo $post->id ?>">
              <label for="titulo" class="col-sm-auto col-form-label">Título da Postagem:</label>
@@ -170,7 +173,7 @@
            <h2 id="title">Deleção de Post.</h2>
            <p class="lead">Deseja deletar a postagem?</p>
            <div class="row">
-                <form action="lista-posts-admin/delete" method="POST">
+                <form action="/lista-posts-admin/delete" method="POST">
                     <input type="hidden" name="id" value="<?=$post->id?>">
                     <div class="d-grid gap-2 col-md-4">
                         <button type="submit" class="btn btn-lg btn-cm formbtn">Sim</button>

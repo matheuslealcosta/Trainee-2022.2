@@ -19,7 +19,7 @@ class UserController extends Controller
         // }
     }
 
-    public function listUserAdm(){
+    public function paginate($limit){
         $page =1;
 
         if(isset($_GET['pagina']) && !empty($_GET['pagina'])){
@@ -27,10 +27,18 @@ class UserController extends Controller
             if($page < 0) redirect('lista-usuarios');
         }
 
-        $total_pages = ceil(User::count()/10);
+        $total_pages = ceil(User::count()/$limit);
 
-        $users = User::forPage($page,10)->get();
-        
+        $users = User::forPage($page,$limit)->get();
+        return compact('users','page','total_pages');
+    }
+
+    public function listUserAdm(){
+        $paginate = $this->paginate(10);
+        $users = $paginate['users'];
+        $page = $paginate['page'];
+        $total_pages = $paginate['total_pages'];
+
         return view('admin/listaUsuarios', compact('users','page' ,'total_pages'));
     }
 
@@ -42,7 +50,20 @@ class UserController extends Controller
         $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS);
         $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
         $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_SPECIAL_CHARS);
+
+        if(empty($name) || empty($email) || empty($password) ){
+            $error = "Preencha todos os campos";
+
+            $paginate = $this->paginate(10);
+            $users = $paginate['users'];
+            $page = $paginate['page'];
+            $total_pages = $paginate['total_pages'];
+            
+            return view('admin/listaUsuarios', compact('error','users','page' ,'total_pages'));
+        }
+
         $password = password_hash($password, PASSWORD_DEFAULT);
+       
         $user = new User();
         $user->name =$name;
         $user->email = $email;
@@ -62,6 +83,18 @@ class UserController extends Controller
         $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS);
         $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
         $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_SPECIAL_CHARS);
+
+        if(empty($name) || empty($email) || empty($password) ){
+            $error = "Preencha todos os campos!";
+
+            $paginate = $this->paginate(10);
+            $users = $paginate['users'];
+            $page = $paginate['page'];
+            $total_pages = $paginate['total_pages'];
+            
+            return view('admin/listaUsuarios', compact('error','users','page' ,'total_pages'));
+        }
+
         $password = password_hash($password, PASSWORD_DEFAULT);
 
         App::get('database')->updateUsers('users', compact('name', 'email', 'password','id'));
