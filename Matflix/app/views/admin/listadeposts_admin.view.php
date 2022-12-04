@@ -25,7 +25,8 @@
 
 </head>
 <body>
-    <?php if(isset($error)){
+    <?php 
+    if(isset($error)){
                     echo "<script>alert('$error')</script>";
                         }?>
     <?php require('app/views/includes/navbar_admin.php');?>
@@ -175,7 +176,7 @@
 
  
  <!-- modal de excluir de post-->
- <div class="d-flex mx-auto overflow-hidden container justify-content-center h-100 main hide modal" id="excluirPost-<?=$post->id;?>">
+ <div class="d-flex mx-auto overflow-hidden container justify-content-center main hide modal" id="excluirPost-<?=$post->id;?>">
            <img src="../../../public/assets/MatflixLogoText.png" class="img-fluid mx-auto d-block" alt="" id="logo">
            <h2 id="title">Deleção de Post.</h2>
            <p class="lead">Deseja deletar a postagem?</p>

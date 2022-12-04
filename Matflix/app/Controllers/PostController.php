@@ -50,7 +50,7 @@ class PostController extends Controller
             $page = $paginate['page'];
             $total_pages = $paginate['total_pages'];
 
-            return view('admin/listadeposts_admin', compact("posts", "page", "total_pages", "error"));
+            return view('/admin/listadeposts_admin',compact("posts", "page", "total_pages", "error"));
         }
 
         $pasta = '../../../public/img/';
