@@ -16,7 +16,7 @@
             <h4 class="text-muted"><?php echo $post['created'] ?></h4>
             <!--<p class="lead"><//?php echo $post['content'] ?></p>-->
             <figure>
-                <img src="<?php echo $post['image'] ?>" alt="" class="figure-img rounded mx-auto d-block" width="50%">
+                <img src="../../../<?php echo $post['image'] ?>" alt="" class="figure-img rounded mx-auto d-block" width="50%">
             </figure>
             <p><?php echo $post['content'] ?></p>
             <div class="d-grid gap-2 col-6 mx-auto">
