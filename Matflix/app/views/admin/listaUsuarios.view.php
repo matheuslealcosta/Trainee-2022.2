@@ -26,7 +26,8 @@
 </head>
 <body>
     <?php if(isset($error)){
-                    echo "<script>alert('$error')</script>";
+                    echo "<script>alert('$error')
+                    window.location.href='/lista-usuarios'</script>";
                         }?>
     <?php require('app/views/includes/navbar_admin.php');?>
     <?php require('app/views/includes/sidebar.php');?>

@@ -27,7 +27,8 @@
 <body>
     <?php 
     if(isset($error)){
-                    echo "<script>alert('$error')</script>";
+                    echo "<script>alert('$error')
+                    window.location.href='/lista-posts-admin'</script>";
                         }?>
     <?php require('app/views/includes/navbar_admin.php');?>
     <?php require('app/views/includes/sidebar.php');?>
@@ -119,7 +120,7 @@
 <div class="container hide modal main" id="editarPost-<?=$post->id;?>">
     <img src="../../../public/assets/MatflixLogoText.png" class="img-fluid mx-auto d-block" alt="Logo da Matflix" id="logo">
     <h2 class="mb-4" id="title">Edição de Post</h2>
-    <form action="/lista-posts-admin/update" method="POST" class="row gy-3 gx-3 align-items-center mt-2">
+    <form action="/lista-posts-admin/update" method="POST" enctype="multipart/form-data" class="row gy-3 gx-3 align-items-center mt-2">
          <div class="form-group">
             <input type="hidden" name="id" value="<?php echo $post->id ?>">
              <label for="titulo" class="col-sm-auto col-form-label">Título da Postagem:</label>

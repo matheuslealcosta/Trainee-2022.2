@@ -42,7 +42,7 @@ class PostController extends Controller
 
         $arquivo = $_FILES['image'];
 
-        if((empty($title)) || (empty($content))|| (empty($arquivo))){
+        if((empty($title)) || (empty($content))|| ($arquivo['size'] == 0)){
             $error = "Preencha todos os campos!";
 
             $paginate = $this->paginate(10);
@@ -53,9 +53,11 @@ class PostController extends Controller
             return view('/admin/listadeposts_admin',compact("posts", "page", "total_pages", "error"));
         }
 
-        $pasta = '../../../public/img/';
+        $pasta = 'public/img/';
 
         $image =  $pasta . $arquivo['name'];
+        $image_temp = $arquivo['tmp_name'];
+        move_uploaded_file($image_temp, $image);
 
         $created = date("Y-m-d", null);
         $post = new Post();
@@ -92,7 +94,7 @@ class PostController extends Controller
         return view('site/landing_page', compact("posts",'post_carousel', "page", "total_pages", "min"));
     }
 
-    public function paginate($limit, $count = 0){
+    private function paginate($limit, $count = 0){
         $page =1;
 
         if(isset($_GET['pagina']) && !empty($_GET['pagina'])){
@@ -102,7 +104,7 @@ class PostController extends Controller
 
         $count!=0 ? $total_pages = ceil($count/$limit) : $total_pages = ceil(Post::count()/$limit); 
 
-        $posts = Post::forPage($page,$limit-1)->get();
+        $posts = Post::forPage($page,$limit)->get();
         return compact('posts', 'page', 'total_pages');
     }
 
@@ -135,9 +137,9 @@ class PostController extends Controller
         $id = $_POST['id'];
         $title = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_SPECIAL_CHARS);
         $content = $_POST['content'];
-        $arquivo = $_POST['image'];
+        $arquivo = $_FILES['image'];
 
-        if((empty($title)) || (empty($content))|| (empty($arquivo))){
+        if((empty($title)) || (empty($content))|| ($arquivo['size'] == 0)){
             $error = "Preencha todos os campos!";
 
             $paginate = $this->paginate(10);
@@ -148,9 +150,11 @@ class PostController extends Controller
             return view('admin/listadeposts_admin', compact("posts", "page", "total_pages", "error"));
         }
 
-        $pasta = '../../../public/img/';
+        $pasta = 'public/img/';
 
-        $image =  $pasta . $arquivo;
+        $image =  $pasta . $arquivo['name'];
+        $image_temp = $arquivo['tmp_name'];
+        move_uploaded_file($image_temp, $image);
 
         App::get('database')->updatePosts('posts', compact('id', 'title', 'content', 'image'));
         return redirect('lista-posts-admin');
