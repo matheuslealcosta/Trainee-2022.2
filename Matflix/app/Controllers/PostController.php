@@ -79,7 +79,6 @@ class PostController extends Controller
     {
         $id = $_POST['id'];
 
-
         $post = App::get('database')->postIndividual($id);
 
         $dateFormat = new DateTime($post['created']);

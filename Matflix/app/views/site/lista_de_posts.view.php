@@ -15,9 +15,9 @@
   <div class="logo">
     <img src="../../../public/img/MatflixLogoText.png" alt="MatFlix" class="logo">
   </div>
-  <form action="lista-posts/search" method="POST" class="d-flex barrabranca" role="search">
+  <form action="/lista-posts/search" method="POST" class="d-flex barrabranca" role="search">
     <input class="form-control me-2" type="search" name="search" placeholder="Pesquise seus títulos favoritos" aria-label="Search">
-    <button class="btn btn-outline-success btn-search botaosearch" type="submit">Pesquisar</button>
+    <input type="submit" class="btn btn-outline-success btn-search botaosearch" value="Pesquisar" />
   </form>
 
 <div class="items itens">
@@ -27,9 +27,9 @@
     <img src="<?php echo $post['image'] ?>" class="card-img-top" alt="Better Call Saul image" data-filter="Série">
     <div class="card-body corpodocard">
       <h5 class="card-title cardtitulo2"><?php echo $post['title']?></h5>
-      <form action="lista-posts/post-individual" method="POST">
+      <form action="/lista-posts/post-individual" method="POST">
         <input type="hidden" name="id" value="<?php echo $post['id'] ?>">
-        <input type="submit" class="btn btn-primary botao1" />
+        <input type="submit" class="btn btn-primary botao1" value="Visualizar"/>
       </form>
     </div>
     
