@@ -30,7 +30,7 @@
 <!--Modal Criar Usuário-->
 <div class="modal-header">
     <h2>Criar uma conta</h2>
-    <button1 id="close-modal">X</button1>
+    <button id="close-modal">X</button1>
 </div>
 <div class="modal-body"></div>
 
