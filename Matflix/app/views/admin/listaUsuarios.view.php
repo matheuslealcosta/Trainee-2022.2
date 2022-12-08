@@ -33,7 +33,7 @@
     <?php require('app/views/includes/sidebar.php');?>
    <div class="page-container">
  
-       <h1>Lista de Usuários</h1>
+       <h1><img src="../../../public/assets/mat2.png" alt="" class="img-fluid rounded m-2" id="logo-min">Lista de Usuários</h1>
 
        <div class="page-content">
 

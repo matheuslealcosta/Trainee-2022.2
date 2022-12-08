@@ -20,7 +20,6 @@ body, .page-container {
     max-height: 100%;
     background-color: #000;
     color: #fff;
-    padding: 1rem;
     overflow-x: hidden;
 }
 
@@ -33,6 +32,15 @@ h1 {
 h1:hover {
     cursor: default;
 }
+
+#logo-min{
+    padding: 0;
+    margin-bottom: 10px;
+    width:50px;
+    transition-property: all; 
+    transition-duration: 0.3s; 
+    transition-timing-function: ease; 
+  }
 
 h2{
     margin-left: 1rem;
