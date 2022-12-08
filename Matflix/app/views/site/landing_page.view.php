@@ -22,8 +22,8 @@
         <div id="carouselExampleInterval" class="carousel slide carousel-here" data-bs-ride="carousel">
           <div class="carousel-inner carrosseliner">
           <?php foreach ($post_carousel as $post):?>
-              <div class="carousel-item <?= $post->id  == $min ? "active" : ""?>" data-bs-interval="2000">
-                  <img src="<?=$post->image?>" class="d-block w-100" alt="Imagem da série Better Call Saul">
+              <div class="carousel-item <?= $post->id  == $min ? "active" : ""?>" data-bs-interval="10000">
+                  <img src="<?=$post->image?>" class="img-caroussel" alt="Imagem da série Better Call Saul">
                   <div class="carousel-caption d-md-block">
                     <form method="POST" action="/lista-posts/post-individual">
                       <input type="hidden" name="id" value="<?= $post->id ?>">
@@ -52,8 +52,7 @@
       
       
 
-<div class="line1 primarr"><hr>
-</div>
+<div class="line1 primarr"></div>
 
 <!-- Texto+logo matflix abaixo do carrousel   -->
 
@@ -81,28 +80,27 @@
 </div>
 <?php require('app/views/includes/pagination.php');?>
 <!-- Texto+logo spotify abaixo do carrousel   -->
-<div class="line1"><hr>
-</div>
-<div class="juntspotify">
-  <div class="texto2spotify">
+<div class="line1"></div>
+
+<div class="junt-rede-social">
+  <div class="texto-rede-social">
       <h1>Escute a trilha sonora de seus filmes e séries preferidos:</h1>
   </div>
-  <div class="logospotify2">
+  <div class="logo-rede-social">
       <a href="https://open.spotify.com/playlist/60G6IQEwaQs4kkEmBmDSvp?si=d16b8416a1c94629"><img src="../../../public/img/spotify8.png" class="img-fluid"  img-responsive img-thumbnail></a>
   </div>
 </div>
 
 
-<div class="line1"><hr>
-</div>
+<div class="line1"></div>
 <!-- Texto+logo discord abaixo do carrousel   -->
-<div class="juntdiscord">
+<div class="junt-rede-social">
 
-  <div class="texto3discord">
+  <div class="texto-rede-social">
       <h1>Entre no nosso Discord e faça parte da comunidade:</h1>
   </div>
   
-  <div class="logodiscord">
+  <div class="logo-rede-social">
       <a href="https://discord.gg/GZx75HRk"><img src="../../../public/img/discordicon3.png" class="img-fluid"  img-responsive img-thumbnail></a>
   </div>
 
