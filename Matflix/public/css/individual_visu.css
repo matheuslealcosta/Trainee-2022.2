@@ -17,6 +17,7 @@ body{
 }
 
 #title {
+    text-transform: uppercase;
     color: #AF0C19;
     font-size: 55px;
     text-align: justify;
