@@ -1,8 +1,7 @@
 body{
     background-color: #000000;
     overflow: hidden;
-
-    
+    font-family: 'Bebas Neue', cursive;;    
 }
 
 .area-login{
@@ -81,7 +80,6 @@ a{
     margin-left: 10px;
     padding-top: 0;
 }
-
 
 @media(max-width: 768px) {
     .area-login {
@@ -174,7 +172,7 @@ h2{
     padding-left: 10px;
 }
 
-button1 {
+#close-modal {
     padding: .6rem 1.2rem;
     background-color: #E21221;
     color:#fff;
