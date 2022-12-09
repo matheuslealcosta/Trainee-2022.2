@@ -66,6 +66,26 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
+    public function verify($table, $email, $password){
+       
+        $verify = sprintf( "SELECT * FROM %s WHERE (email = :email)", $table);
+        
+        try{
+            $statement = $this->pdo->prepare($verify);
+            $statement->bindValue(':email', $email);
+            $statement->execute();
+            $result = $statement->fetch(PDO::FETCH_OBJ);
+            $password_hash = $result->password;
+            if(password_verify($password, $password_hash)){
+                return true;
+            }else{
+                return false;
+            }
+        }catch(Exception $e){
+            die($e->getMessage());
+        }
+
+    }
 
     public function updatePosts($table,$query)
     {
@@ -113,3 +133,4 @@ class QueryBuilder
         }
     }
 }
+

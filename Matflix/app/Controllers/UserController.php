@@ -42,9 +42,6 @@ class UserController extends Controller
         return view('admin/listaUsuarios', compact('users','page' ,'total_pages'));
     }
 
-    public function dashboard(){
-        return view('admin/dashboard');
-    }
 
     public function store(){
         $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS);
@@ -105,16 +102,30 @@ class UserController extends Controller
 
         return view('site/login');
     }
-    public function newacc(){
-        $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS);
-        $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+    public function dashboard(){
+
+        return view('admin/dashboard');
+    }
+
+    public function verify(){
+        $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_SPECIAL_CHARS);
         $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_SPECIAL_CHARS);
-        $password = password_hash($password, PASSWORD_DEFAULT);
-        $user = new User();
-        $user->name =$name;
-        $user->email = $email;
-        $user->password = $password;
-        App::get('database')->insert('users', compact('name', 'email', 'password'));
-        return redirect('login');
+
+        $verificado = App::get('database')->verify('users', $email, $password);
+        
+        if ($verificado) {
+            $message = "Logado com sucesso";
+            $user = User::where('email', $email)->first();
+            echo "<script type='text/javascript'>alert('$message');
+            window.location.href='/dashboard'</script>";
+            return view('admin/dashboard', compact('user'));
+        }
+        else{
+            $message = "Confira o usuário e senha digitados ";
+            echo "<script type='text/javascript'>alert('$message');</script>";
+            
+            return redirect('login');
+        }
+
     }
 }

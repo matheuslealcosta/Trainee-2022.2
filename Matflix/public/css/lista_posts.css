@@ -213,3 +213,9 @@ body {
     font-family: 'Bebas Neue', cursive;
     scale: 100%;
 }
+
+.ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

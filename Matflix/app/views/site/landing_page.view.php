@@ -66,7 +66,7 @@
     <div class="card carta1">
         <img src="<?= $post->image ?>" class="card-img-top" alt="Better Call Saul image">
         <div class="card-body card-corpo">
-          <h5 class="card-title titulo-card"><?=$post->title?></h5>
+          <h5 class="card-title titulo-card ellipsis"><?=$post->title?></h5>
           <p class="card-text card-texto"><?= $post->content?></p>
            <form method="POST" action="/lista-posts/post-individual">
                       <input type="hidden" name="id" value="<?= $post->id ?>">

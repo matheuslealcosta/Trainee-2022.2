@@ -29,9 +29,9 @@
 
   <?php foreach($posts as $post): ?>
   <div class="card carta1 page 1" >
-    <img src="<?php echo $post['image'] ?>" class="card-img-top" alt="Better Call Saul image" data-filter="Série">
+    <img src="../../../<?php echo $post['image'] ?>" class="card-img-top" alt="Better Call Saul image" data-filter="Série">
     <div class="card-body corpodocard">
-      <h5 class="card-title cardtitulo2"><?php echo $post['title']?></h5>
+      <h5 class="card-title cardtitulo2 ellipsis"><?php echo $post['title']?></h5>
       <form action="/lista-posts/post-individual" method="POST">
         <input type="hidden" name="id" value="<?php echo $post['id'] ?>">
         <input type="hidden" name="page" value="/lista-posts">

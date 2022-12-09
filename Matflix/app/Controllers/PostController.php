@@ -21,7 +21,7 @@ class PostController extends Controller
 
     public function index()
     {
-        $paginate = $this->paginate(10);
+        $paginate = $this->paginate(10,0,'lista-posts-admin');
         $posts = $paginate['posts'];
         $page = $paginate['page'];
         $total_pages = $paginate['total_pages'];
@@ -45,7 +45,7 @@ class PostController extends Controller
         if((empty($title)) || (empty($content))|| ($arquivo['size'] == 0)){
             $error = "Preencha todos os campos!";
 
-            $paginate = $this->paginate(10);
+            $paginate = $this->paginate(10,0,'lista-posts-admin');
             $posts = $paginate['posts'];
             $page = $paginate['page'];
             $total_pages = $paginate['total_pages'];
@@ -76,7 +76,7 @@ class PostController extends Controller
 
         if(isset($_GET['pagina']) && !empty($_GET['pagina'])){
             $page = intval($_GET['pagina']);
-            if($page < 0) redirect('lista-usuarios');
+            if($page < 0) redirect('landing-page');
         }
 
         $total_pages = ceil(Post::count()/5); 
@@ -94,12 +94,12 @@ class PostController extends Controller
         return view('site/landing_page', compact("posts",'post_carousel', "page", "total_pages", "min"));
     }
 
-    private function paginate($limit, $count = 0){
+    private function paginate($limit, $count = 0,$redirect){
         $page =1;
 
         if(isset($_GET['pagina']) && !empty($_GET['pagina'])){
             $page = intval($_GET['pagina']);
-            if($page < 0) redirect('lista-usuarios');
+            if($page < 0) redirect($redirect);
         }
 
         $count!=0 ? $total_pages = ceil($count/$limit) : $total_pages = ceil(Post::count()/$limit); 
@@ -111,7 +111,7 @@ class PostController extends Controller
     public function listPosts()
     {
        
-        $paginate = $this->paginate(5);
+        $paginate = $this->paginate(5,0,'lista-posts');
         $posts = $paginate['posts'];
         $page = $paginate['page'];
         $total_pages = $paginate['total_pages'];
@@ -142,7 +142,7 @@ class PostController extends Controller
         if((empty($title)) || (empty($content))|| ($arquivo['size'] == 0)){
             $error = "Preencha todos os campos!";
 
-            $paginate = $this->paginate(10);
+            $paginate = $this->paginate(10,0,'lista-posts-admin');
             $posts = $paginate['posts'];
             $page = $paginate['page'];
             $total_pages = $paginate['total_pages'];
@@ -179,11 +179,11 @@ class PostController extends Controller
 
         $posts = App::get('database')->pesquisaCategoria($search);
         
-        $count = count($posts);
-        $paginate = $this->paginate(10,$count);
-        $page = $paginate['page'];
-        $total_pages = $paginate['total_pages'];
-        return view('site/lista_de_posts', compact('posts', 'page', 'total_pages'));
+        // $count = count($posts);
+        // $paginate = $this->paginate(5,$count,'lista-posts');
+        // $page = $paginate['page'];
+        // $total_pages = $paginate['total_pages'];
+        return view('/site/lista_de_posts', compact('posts'));
     }
 
 }
