@@ -84,7 +84,7 @@
 
 <div class="junt-rede-social">
   <div class="texto-rede-social">
-      <h1>Escute a trilha sonora de seus filmes e séries preferidos:</h1>
+      <h1>Escute a trilha sonora de seus filmes e séries preferidas:</h1>
   </div>
   <div class="logo-rede-social">
       <a href="https://open.spotify.com/playlist/60G6IQEwaQs4kkEmBmDSvp?si=d16b8416a1c94629"><img src="../../../public/img/spotify8.png" class="img-fluid"  img-responsive img-thumbnail></a>

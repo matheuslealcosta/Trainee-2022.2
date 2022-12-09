@@ -35,7 +35,7 @@
       <form action="/lista-posts/post-individual" method="POST">
         <input type="hidden" name="id" value="<?php echo $post['id'] ?>">
         <input type="hidden" name="page" value="/lista-posts">
-        <input type="submit" class="btn btn-primary botao1" />
+        <input type="submit" class="btn btn-primary botao1" value="Veja mais" />
       </form>
     </div>
     
