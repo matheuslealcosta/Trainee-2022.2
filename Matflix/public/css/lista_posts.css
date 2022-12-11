@@ -30,9 +30,9 @@ body {
     border-radius: 20px;
     border: 1px solid transparent;
     transition: .5s;
-    background-color: #E21221;
-    color: white;
-    border-color: #E21221;
+    background-color: #AF0C19;
+    color: #d7d7d7;
+    border-color: #AF0C19;
     font-family: 'Bebas Neue', cursive;
     text-transform: uppercase;
 }
@@ -70,14 +70,14 @@ body {
     border: 10px solid transparent;
     font-size: 20px;
     transition: 0.5s;
-    background-color: #E21221;
-    color: white;
-    border-color: #E21221;
+    background-color: #AF0C19;
+    color: #d7d7d7;
+    border-color: #AF0C19;
     font-family: 'Bebas Neue', cursive;
     text-transform: uppercase;
 }
 .botaosearch:hover{
-    color: #d7d7d7;
+    color: white;
     background-color: #E21221;
     border-color: #E21221;
     transform:scale3d(1.1, 1.1, 1)
@@ -106,7 +106,7 @@ body {
   }
   .botao1:hover{
     color: #d7d7d7;
-    background-color: transparent;
+    background-color: #E21221;
     border-color: #E21221;
 
 }

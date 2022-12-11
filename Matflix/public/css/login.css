@@ -56,8 +56,9 @@ body{
 }
 
 form [type="submit"]{
+    color: #d7d7d7;
     display: block;
-    background-color: #E21221;
+    background-color: #AF0C19;
     font-size: 14px;
     text-transform: uppercase;
     font-weight: bold;
@@ -65,8 +66,8 @@ form [type="submit"]{
 }
 
 form [type="submit"]:hover{
-    background-color: #641d22;
-    opacity: 0.5
+color: white;
+background-color: #E21221;
   
 }
 

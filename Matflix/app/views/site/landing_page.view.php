@@ -28,7 +28,7 @@
                     <form method="POST" action="/lista-posts/post-individual">
                       <input type="hidden" name="id" value="<?= $post->id ?>">
                       <input type="hidden" name="page" value="/landing-page">
-                      <input type="submit" class="btn btn-secondary" value="Conheça">
+                      <input type="submit" class="btn btn-secondary" value="Veja mais">
                     </form>
                   </div>
                 </div>
@@ -84,10 +84,10 @@
 
 <div class="junt-rede-social">
   <div class="texto-rede-social">
-      <h1>Escute a trilha sonora de seus filmes e séries preferidas:</h1>
+      <h1>Escute a trilha sonora de seus filmes e séries preferidos:</h1>
   </div>
   <div class="logo-rede-social">
-      <a href="https://open.spotify.com/playlist/60G6IQEwaQs4kkEmBmDSvp?si=d16b8416a1c94629"><img src="../../../public/img/spotify8.png" class="img-fluid"  img-responsive img-thumbnail></a>
+      <a href="https://open.spotify.com/playlist/60G6IQEwaQs4kkEmBmDSvp?si=d16b8416a1c94629"target="_blank"><img src="../../../public/img/spotify8.png" class="img-fluid"  img-responsive img-thumbnail></a>
   </div>
 </div>
 
@@ -101,7 +101,7 @@
   </div>
   
   <div class="logo-rede-social">
-      <a href="https://discord.gg/GZx75HRk"><img src="../../../public/img/discordicon3.png" class="img-fluid"  img-responsive img-thumbnail></a>
+      <a href="https://discord.gg/9tJEdxMv"target="_blank"><img src="../../../public/img/discordicon3.png" class="img-fluid"  img-responsive img-thumbnail></a>
   </div>
 
 </div>

@@ -22,7 +22,7 @@
                 <li><a href="#"><i class="fas fa-thin fa-circle-user"></i>PERFIL </a></li>
                 <li><a href="#"><i class="fas fa-solid fa-users"></i>USUÁRIOS </a></li>
                 <li><a href="#"><i class="fas fa-solid fa-film"></i>LISTA DE POSTS</a></li>
-                <li><a href="#"><i class="fas fa-light fa-chart-simple"></i>DASHBOARD</a></li>
+                <li><a href="#"><i class="fas fa-light fa-chart-bar"></i>DASHBOARD</a></li>
                 <li><a href="#"><i class="fas fa-thin fa-door-open"></i>SAIR</a></li>
 
 

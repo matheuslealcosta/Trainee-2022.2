@@ -17,6 +17,10 @@ h1 {
   padding: 60px 0;
   text-align: center;
 }
+.bx-menu:hover{
+  color: #E21221;
+
+}
 
 
 h1:hover {
@@ -39,6 +43,12 @@ h1:hover {
   border-radius: 5px;
   background-color: #AF0C19;
 }
+.btn-adicionar button:hover {
+color: white;
+background-color: #E21221;
+
+}
+
 
 /* TABELA DA LISTA DE POSTS */
 table thead {
@@ -206,6 +216,9 @@ p{
   font-weight: bold;
   transition: 0.1s;
 }
+figcaption{
+  display: none;
+}
 
 #title2:hover{
   color: #d7d7d7;
@@ -264,11 +277,15 @@ p{
   color:#d7d7d7;
   margin: 5px;
   transition: ease-in-out 0.32s;
+
+
 }
 .formbtn:hover {
-  background-color: #666262;
-  color: #AF0C19;
+
   transition: ease-in-out 0.32s;
+  color: white;
+  background-color: #E21221;
+  border-color: #E21221;
 }
 .fade-modal{
   position:fixed;

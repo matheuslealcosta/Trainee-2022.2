@@ -99,14 +99,14 @@ font-size: 20px;
 border-radius: 20px;
 border: 1px solid transparent;
 transition: .5s;
-background-color: #E21221;
-color: white;
+background-color: #AF0C19;
+color: #d7d7d7;
 font-family: 'Bebas Neue', cursive;
 text-transform: uppercase;
 }
 .btn-primary:hover{
-color: #d7d7d7;
-background-color: transparent;
+color: white;
+background-color: #E21221;
 border-color: #E21221;
 
 }
@@ -116,8 +116,8 @@ padding: 5px 30px;
 border-radius: 20px;
 border: 1px solid transparent;
 transition: .5s;
-background-color: #E21221;
-color: white;
+background-color: #AF0C19;
+color: #d7d7d7;
 font-family: 'Bebas Neue', cursive;
 text-transform: uppercase;
 }
@@ -138,8 +138,8 @@ text-transform: uppercase;
 
 .btn-secondary:hover {
 text-decoration: none;
-color: #d7d7d7;
-background-color: #221F1F;
+color: white;
+background-color: #E21221;
 border-color: #E21221;
 }
 

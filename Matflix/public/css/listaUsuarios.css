@@ -90,7 +90,14 @@ button1 {
     border-radius: 5px;
     background-color: #AF0C19;
   }
-  
+  .btn-adicionar button:hover {
+    color: white;
+    background-color: #E21221;
+    
+    }
+    .bx-menu:hover{
+        color: #AF0C19;
+    }
 
 .modal-create{
     display: flex;
