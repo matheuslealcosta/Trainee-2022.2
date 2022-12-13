@@ -68,8 +68,8 @@ body{
     transition: ease-in-out 0.32s;
 }
 #back:hover {
-    background-color: #666262;
-    color: #AF0C19;
+    background-color: #E21221;
+    color: white;
     transition: ease-in-out 0.32s;
 }
 

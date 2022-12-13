@@ -39,6 +39,11 @@ h1:hover {
   border-radius: 5px;
   background-color: #AF0C19;
 }
+.btn-adicionar button:hover{
+  background-color: #E21221;
+  color: white;
+  transform:scale3d(1.05, 1.05, 1);
+}
 
 /* TABELA DA LISTA DE POSTS */
 table thead {
@@ -265,9 +270,12 @@ p{
   margin: 5px;
   transition: ease-in-out 0.32s;
 }
+figcaption{
+  display: none;
+}
 .formbtn:hover {
-  background-color: #666262;
-  color: #AF0C19;
+  background-color: #E21221;
+  color:white;
   transition: ease-in-out 0.32s;
 }
 .fade-modal{

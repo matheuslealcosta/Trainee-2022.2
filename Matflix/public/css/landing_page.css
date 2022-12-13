@@ -105,9 +105,9 @@ font-family: 'Bebas Neue', cursive;
 text-transform: uppercase;
 }
 .btn-primary:hover{
-color: #d7d7d7;
-background-color: transparent;
-border-color: #E21221;
+color: #E21221;
+background-color: #d7d7d7;
+border-color: #d7d7d7;
 
 }
 .btn-secondary {
@@ -138,9 +138,9 @@ text-transform: uppercase;
 
 .btn-secondary:hover {
 text-decoration: none;
-color: #d7d7d7;
-background-color: #221F1F;
-border-color: #E21221;
+color: #E21221;
+background-color: #d7d7d7;
+border-color: #d7d7d7;
 }
 
 .logo{
