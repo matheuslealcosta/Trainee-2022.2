@@ -13,6 +13,18 @@ body, .page-container {
   overflow-x: hidden;
 }
 
+.pagination-teste {
+  display: flex;
+  flex-wrap: wrap;
+  scale: 85%;
+  gap: 2px;
+}
+
+.pagination-teste li a {
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
 h1 {
   padding: 60px 0;
   text-align: center;
@@ -254,7 +266,7 @@ figcaption{
 
 @media (max-width: 768px) {
   #modalnewpost,#editarPost,#visualizarPost,#excluirPost{
-    width: auto;
+    width: 100%;
     flex-direction: row;
   }
   .btn-acoes {
@@ -309,7 +321,7 @@ figcaption{
 
 
 .linkdapagina{
-  background-color: #E21221;
+  background-color: #AF0C19;
   color: #d7d7d7;
   border-color: black;
   font-family: 'Bebas Neue', cursive;
