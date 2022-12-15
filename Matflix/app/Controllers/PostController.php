@@ -111,7 +111,7 @@ class PostController extends Controller
     public function listPosts()
     {
        
-        $paginate = $this->paginate(5,0,'lista-posts');
+        $paginate = $this->paginate(8,0,'lista-posts');
         $posts = $paginate['posts'];
         $page = $paginate['page'];
         $total_pages = $paginate['total_pages'];
