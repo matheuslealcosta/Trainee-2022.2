@@ -58,8 +58,8 @@
              </div>
          </div>
 
-         <div class="form-group row mb-3">
-             <label for="prim_para" class="col-sm-auto col-form-label">Primeiro Parágrafo:</label>
+         <div class="form-group row mb-3">                              
+             <label for="prim_para" class="col-sm-auto col-form-label">Conteúdo  Postagem:</label>
              <div class="col-sm-7">
                  <textarea name="content" id="prim_para" cols="3" rows="5" class="form-control"></textarea>
              </div>
@@ -130,7 +130,7 @@
          </div>
 
          <div class="form-group">
-             <label for="prim_para" class="col-sm-auto col-form-label">Primeiro Parágrafo:</label>
+             <label for="prim_para" class="col-sm-auto col-form-label">Conteúdo  Postagem:</label>
              
              <textarea name="content" id="content" cols="3" rows="5" class="form-control" placeholder="PARAGRAFO"><?php echo $post->content?></textarea>
          </div>
