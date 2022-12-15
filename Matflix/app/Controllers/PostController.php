@@ -81,7 +81,7 @@ class PostController extends Controller
 
         $total_pages = ceil(Post::count()/5); 
 
-        $posts = Post::orderBy('created', 'desc')->forPage($page,5)->get();
+        $posts = Post::orderBy('id', 'desc')->forPage($page,5)->get();
         $post_carousel = Post::all();
 
         $min_arr = array(sizeof($post_carousel));
