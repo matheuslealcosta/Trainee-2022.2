@@ -42,7 +42,7 @@
                 <img class="card-img-top" src="../../../public/img/discord.jpeg" alt="Card image Comunidade">
                 <div class="card-body corpodocard">
                   <h5 class="card-title cardtitulo2">Comunidade</h5>
-                  <a href="https://discord.gg/9tJEdxMv" class="btn btn-primary botao1">Gerenciar</a>
+                  <a href="https://discord.gg/9tJEdxMv"target="_blank" class="btn btn-primary botao1">Gerenciar</a>
                 </div>
               </div>
 
