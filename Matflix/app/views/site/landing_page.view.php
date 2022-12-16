@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Matflix</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../../public/css/landing_page.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../../../public/assets/m3dPNG.png">
     <link rel="stylesheet" href="../../../public/css/navbar_footer.css">
+    <link rel="stylesheet" href="../../../public/css/landing_page.css">
 
      <!--link do font awesome-->
      <script src="https://kit.fontawesome.com/b5c9f282d0.js" crossorigin="anonymous"></script>
@@ -28,7 +29,7 @@
                     <form method="POST" action="/lista-posts/post-individual">
                       <input type="hidden" name="id" value="<?= $post->id ?>">
                       <input type="hidden" name="page" value="/landing-page">
-                      <input type="submit" class="btn btn-secondary" value="Conheça">
+                      <input type="submit" class="btn btn-secondary" value="Veja mais">
                     </form>
                   </div>
                 </div>
@@ -78,7 +79,7 @@
       <?php endforeach;?>
 
 </div>
-<?php require('app/views/includes/pagination.php');?>
+<?php //require('app/views/includes/pagination.php');?>
 <!-- Texto+logo spotify abaixo do carrousel   -->
 <div class="line1"></div>
 
@@ -87,7 +88,8 @@
       <h1>Escute a trilha sonora de seus filmes e séries preferidos:</h1>
   </div>
   <div class="logo-rede-social">
-  <a href="https://open.spotify.com/playlist/60G6IQEwaQs4kkEmBmDSvp?si=d16b8416a1c94629"target="_blank"><img src="../../../public/img/spotify8.png" class="img-fluid"  img-responsive img-thumbnail></a>  </div>
+      <a href="https://open.spotify.com/playlist/60G6IQEwaQs4kkEmBmDSvp?si=d16b8416a1c94629"target="_blank"><img src="../../../public/img/spotify8.png" class="img-fluid"  img-responsive img-thumbnail></a>
+  </div>
 </div>
 
 
@@ -100,7 +102,8 @@
   </div>
   
   <div class="logo-rede-social">
-  <a href="https://discord.gg/9tJEdxMv"target="_blank"><img src="../../../public/img/discordicon3.png" class="img-fluid"  img-responsive img-thumbnail></a>  </div>
+      <a href="https://discord.gg/9tJEdxMv"target="_blank"><img src="../../../public/img/discordicon3.png" class="img-fluid"  img-responsive img-thumbnail></a>
+  </div>
 
 </div>
 

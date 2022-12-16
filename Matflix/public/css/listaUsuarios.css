@@ -23,6 +23,18 @@ body, .page-container {
     overflow-x: hidden;
 }
 
+.pagination-teste {
+    display: flex;
+    flex-wrap: wrap;
+    scale: 85%;
+    gap: 2px;
+}
+
+.pagination-teste li a {
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
 h1 {
     padding: 60px 0;
     text-align: center;
@@ -90,15 +102,14 @@ button1 {
     border-radius: 5px;
     background-color: #AF0C19;
   }
-  .btn-adicionar button:hover{
-    background-color: #E21221;
+  .btn-adicionar button:hover {
     color: white;
-    transform:scale3d(1.05, 1.05, 1);
-  }
-  .bx-menu:hover{
-    color: #AF0C19;
-  }
-  
+    background-color: #E21221;
+    
+    }
+    .bx-menu:hover{
+        color: #AF0C19;
+    }
 
 .modal-create{
     display: flex;
@@ -316,7 +327,7 @@ table tr:hover {
 }
 
 .linkdapagina{
-    background-color: #E21221;
+    background-color: #AF0C19;
     color: #d7d7d7;
     border-color: black;
     font-family: 'Bebas Neue', cursive;

@@ -8,7 +8,7 @@
 ?>
 <nav class="navbar navbar-expand-lg navbar-container navbar-dark">
             <div class="container-fluid">
-            <a class="navbar-brand" href="landing-page">
+            <a class="navbar-brand" href="/landing-page">
                 <img src="../../../public/img/matflix_logo.jpg" alt="Logo da Matflix">
                 Matflix
             </a>

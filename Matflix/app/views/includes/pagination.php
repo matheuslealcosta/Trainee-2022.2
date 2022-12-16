@@ -1,5 +1,5 @@
 <nav aria-label="navigation users" class="mt-1">
-  <ul class="pagination justify-content-center">
+  <ul class="pagination pagination-teste justify-content-center">
 
     <li class="page-item <?= $page <=1 ? "disabled" : " " ?>">
       <a class="page-link linkdapagina" href="?pagina=<?= $page > 1 ? $page-1 :1  ?>" aria-label="anterior">

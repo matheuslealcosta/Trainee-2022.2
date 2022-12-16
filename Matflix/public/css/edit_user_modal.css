@@ -80,7 +80,7 @@ label {
 }
 .formbtn:hover {
     background-color: #E21221;
-    color:white;
+    color: white;
     transition: ease-in-out 0.32s;
 }
 

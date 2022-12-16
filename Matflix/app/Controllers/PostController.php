@@ -81,13 +81,28 @@ class PostController extends Controller
 
         $total_pages = ceil(Post::count()/5); 
 
-        $posts = Post::orderBy('created', 'desc')->forPage($page,5)->get();
+        $posts = Post::orderBy('id', 'desc')->forPage($page,5)->get();
         $post_carousel = Post::all();
 
         $min_arr = array(sizeof($post_carousel));
         
         for ($i=0; $i < sizeof($post_carousel); $i++) { 
             $min_arr[$i] = $post_carousel[$i]->id;
+        }
+
+        foreach ($posts as $post){
+
+            if (strlen($post->content) > 120) {
+
+                $conteudo = $post->content;
+                $conteudo = substr($conteudo , 0, 120);
+                $endPoint = strrpos($conteudo, ' ');
+
+              
+                $string = $endPoint? substr($conteudo, 0, $endPoint) : substr($conteudo, 0);
+                $string .= '...';
+                $post->content = $string;
+            }
         }
     
         $min = min($min_arr);
@@ -111,7 +126,7 @@ class PostController extends Controller
     public function listPosts()
     {
        
-        $paginate = $this->paginate(5,0,'lista-posts');
+        $paginate = $this->paginate(8,0,'lista-posts');
         $posts = $paginate['posts'];
         $page = $paginate['page'];
         $total_pages = $paginate['total_pages'];

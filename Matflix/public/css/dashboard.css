@@ -7,14 +7,15 @@ font-family: 'Bebas Neue', cursive;
 .cartao{
     margin-top: 5%;
     width: 20rem;
+    border-radius: 5px;
 }
 .botao1{
     border-radius: 20px;
     border: 1px solid transparent;
     transition: .5s;
-    background-color: #E21221;
-    color: white;
-    border-color: #E21221;
+    background-color: #AF0C19;
+    color: #d7d7d7;
+    border-color: #AF0C19;
     font-family: 'Bebas Neue', cursive;
     text-transform: uppercase;
 }
@@ -22,9 +23,9 @@ font-family: 'Bebas Neue', cursive;
     background-color: #221F1F;
 }
 .botao1:hover{
-    color: #E21221;
-    background-color: #d7d7d7;
-    border-color: #d7d7d7;
+    color: white;
+    background-color: #E21221;
+    border-color: #E21221;
 
 }
 .bx-menu:hover{
@@ -40,7 +41,7 @@ color: #AF0C19;
 }
 .corpodocard{
     font-size: 20px;
-    border-radius: 0;
+    border-radius: 0 0 5px 5px;
 }
 
 

@@ -8,6 +8,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../../../public/assets/m3dPNG.png">
     <link rel="stylesheet" href="../../../public/css/dashboard.css">
     <link rel="stylesheet" href="../../../public/css/sidebar.css">
     <script src="https://kit.fontawesome.com/b5c9f282d0.js" crossorigin="anonymous"></script>
@@ -41,7 +42,7 @@
                 <img class="card-img-top" src="../../../public/img/discord.jpeg" alt="Card image Comunidade">
                 <div class="card-body corpodocard">
                   <h5 class="card-title cardtitulo2">Comunidade</h5>
-                  <a href="#" class="btn btn-primary botao1">Gerenciar</a>
+                  <a href="https://discord.gg/9tJEdxMv"target="_blank" class="btn btn-primary botao1">Gerenciar</a>
                 </div>
               </div>
 
