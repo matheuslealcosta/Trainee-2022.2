@@ -175,9 +175,13 @@ border-color: #E21221;
   
 
 }
+@media (max-width: 539px){
 
-
-
+  .junt-rede-social{
+    scale: 70%;
+    
+  }
+}
 
 .logo-rede-social:hover{
   transform:scale3d(1.1, 1.1, 15)
