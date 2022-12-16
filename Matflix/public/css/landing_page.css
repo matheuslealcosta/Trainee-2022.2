@@ -8,7 +8,10 @@ body {
 background-color: #000;
 overflow-x: hidden;
 }
-
+.junt-rede-social{
+  flex-wrap: wrap;
+  justify-content: center;
+}
 .img-caroussel {
   width: 80%;
   height: 80%;
@@ -168,9 +171,14 @@ border-color: #E21221;
   justify-content: space-around;
 }
 .logo-rede-social{
-  margin-right: 0%;
+  justify-content: center;
+  
 
 }
+
+
+
+
 .logo-rede-social:hover{
   transform:scale3d(1.1, 1.1, 15)
 }
@@ -183,11 +191,7 @@ border-color: #E21221;
   font-size: 2rem;
 }
 
-.img-fluid {
-  margin: 15% auto;
-  max-width: 80%;
-  height: auto;
-}
+
 
 
 @media (max-width: 1300px){

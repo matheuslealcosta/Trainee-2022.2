@@ -98,7 +98,7 @@
 <div class="junt-rede-social">
 
   <div class="texto-rede-social">
-      <h1>Entre no nosso Discord e faça parte da comunidade:</h1>
+      <h1>Entre no nosso Discord e faça parte da nossa comunidade:</h1>
   </div>
   
   <div class="logo-rede-social">
